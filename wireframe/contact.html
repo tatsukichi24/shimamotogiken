@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | シマモト技研株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-placeholder">[ LOGO ]</div>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+        </div>
+      </nav>
+
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       Breadcrumb
+       ============================================ -->
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+        <li class="breadcrumb__item" aria-current="page">お問い合わせ</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       Page Header
+       ============================================ -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-header__label">CONTACT</p>
+      <h1 class="page-header__title">お問い合わせ</h1>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- イントロダクション -->
+        <div class="contact-intro">
+          <p class="contact-intro__text">
+            工作機械の購入・売却、メンテナンス、ロボット導入など、<br>
+            製造現場に関するご相談はお気軽にお問い合わせください。<br>
+            担当者より折り返しご連絡いたします。
+          </p>
+          <div class="contact-intro__tel">
+            <span class="contact-intro__tel-label">お電話でのお問い合わせ</span>
+            <a href="tel:048-442-0282" class="contact-intro__tel-number">048-442-0282</a>
+            <span class="contact-intro__tel-hours">受付時間：平日 9:00〜17:00 <span class="wire-note">要確認</span></span>
+          </div>
+        </div>
+
+        <!-- お問い合わせフォーム -->
+        <!-- 注: フォームの送信先(action)は本番実装時に設定が必要 -->
+        <form class="contact-form" action="#" method="post">
+
+          <!-- お問い合わせ内容 -->
+          <div class="form-section">
+            <h2 class="form-section__title">お問い合わせ内容</h2>
+
+            <div class="form-group">
+              <label class="form-label">
+                ご相談内容
+                <span class="form-label__required">必須</span>
+              </label>
+              <p class="form-hint">該当する項目をすべて選択してください（複数選択可）</p>
+              <div class="form-checkbox-group">
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="new_machine">
+                  新品工作機械の購入
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="used_machine">
+                  中古機械の購入
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="sell_machine">
+                  機械の売却・買取
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="overhaul">
+                  オーバーホール・修理
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="maintenance">
+                  定期メンテナンス
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="relocation">
+                  機械の搬入・据付・移設
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="robot">
+                  ロボット導入・自動化導入
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="subsidy">
+                  補助金活用のご相談
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="closure">
+                  廃業支援サービス
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="parts">
+                  部品・工具の購入
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="inquiry_type[]" value="other">
+                  その他
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="machine_type">
+                対象機械
+                <span class="form-label__optional">任意</span>
+              </label>
+              <p class="form-hint">お問い合わせに関連する機械の種類があればご選択ください</p>
+              <select class="form-select" id="machine_type" name="machine_type">
+                <option value="">選択してください</option>
+                <option value="automatic_lathe">自動盤（NC自動旋盤）</option>
+                <option value="cnc_lathe">CNC旋盤</option>
+                <option value="machining_center">マシニングセンタ</option>
+                <option value="grinding">研削盤</option>
+                <option value="milling">フライス盤</option>
+                <option value="wire_edm">ワイヤー放電加工機</option>
+                <option value="edm">型彫放電加工機</option>
+                <option value="other_machine">その他の工作機械</option>
+                <option value="robot">産業用ロボット</option>
+                <option value="peripheral">周辺機器（バーフィーダ等）</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="maker">
+                メーカー名
+                <span class="form-label__optional">任意</span>
+              </label>
+              <input type="text" class="form-input" id="maker" name="maker" placeholder="例：ツガミ、シチズン、スター精密 など">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="model">
+                機種名・型番
+                <span class="form-label__optional">任意</span>
+              </label>
+              <input type="text" class="form-input" id="model" name="model" placeholder="例：B0205-III、L32-VIII など">
+            </div>
+          </div>
+
+          <!-- お客様情報 -->
+          <div class="form-section">
+            <h2 class="form-section__title">お客様情報</h2>
+
+            <div class="form-group">
+              <label class="form-label" for="company">
+                会社名・屋号
+                <span class="form-label__required">必須</span>
+              </label>
+              <input type="text" class="form-input" id="company" name="company" required placeholder="例：株式会社○○製作所">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="department">
+                部署名
+                <span class="form-label__optional">任意</span>
+              </label>
+              <input type="text" class="form-input" id="department" name="department" placeholder="例：製造部、購買部">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="name">
+                お名前
+                <span class="form-label__required">必須</span>
+              </label>
+              <input type="text" class="form-input" id="name" name="name" required placeholder="例：山田 太郎">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                メールアドレス
+                <span class="form-label__required">必須</span>
+              </label>
+              <input type="email" class="form-input" id="email" name="email" required placeholder="例：yamada@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="tel">
+                電話番号
+                <span class="form-label__required">必須</span>
+              </label>
+              <input type="tel" class="form-input" id="tel" name="tel" required placeholder="例：048-000-0000">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="postal_code">
+                郵便番号
+                <span class="form-label__optional">任意</span>
+              </label>
+              <input type="text" class="form-input form-input--half" id="postal_code" name="postal_code" placeholder="例：335-0031">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="address">
+                ご住所
+                <span class="form-label__optional">任意</span>
+              </label>
+              <input type="text" class="form-input" id="address" name="address" placeholder="例：埼玉県戸田市美女木5-14-15">
+            </div>
+          </div>
+
+          <!-- ご希望・詳細 -->
+          <div class="form-section">
+            <h2 class="form-section__title">ご希望・詳細</h2>
+
+            <div class="form-group">
+              <label class="form-label">
+                ご希望の連絡方法
+                <span class="form-label__optional">任意</span>
+              </label>
+              <div class="form-radio-group">
+                <label class="form-radio">
+                  <input type="radio" name="contact_method" value="email">
+                  メール
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="contact_method" value="phone">
+                  電話
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="contact_method" value="either" checked>
+                  どちらでも可
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                ご検討時期
+                <span class="form-label__optional">任意</span>
+              </label>
+              <div class="form-radio-group">
+                <label class="form-radio">
+                  <input type="radio" name="timing" value="urgent">
+                  至急
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="timing" value="1month">
+                  1ヶ月以内
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="timing" value="3months">
+                  3ヶ月以内
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="timing" value="6months">
+                  半年以内
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="timing" value="undecided">
+                  未定・情報収集
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="budget">
+                ご予算
+                <span class="form-label__optional">任意</span>
+              </label>
+              <select class="form-select" id="budget" name="budget">
+                <option value="">選択してください</option>
+                <option value="under_500">500万円未満</option>
+                <option value="500_1000">500万円〜1,000万円</option>
+                <option value="1000_3000">1,000万円〜3,000万円</option>
+                <option value="3000_5000">3,000万円〜5,000万円</option>
+                <option value="over_5000">5,000万円以上</option>
+                <option value="undecided">未定</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">
+                お問い合わせ内容・ご質問
+                <span class="form-label__required">必須</span>
+              </label>
+              <p class="form-hint">ご質問、ご要望、機械の詳細など、できるだけ詳しくご記入ください</p>
+              <textarea class="form-textarea" id="message" name="message" required placeholder="例：○○製の自動盤を探しています。中古でも構いません。加工ワークは直径φ20mm程度の真鍮材で、月産1万個程度の生産を予定しています。"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="referral">
+                当社を知ったきっかけ
+                <span class="form-label__optional">任意</span>
+              </label>
+              <select class="form-select" id="referral" name="referral">
+                <option value="">選択してください</option>
+                <option value="search">インターネット検索</option>
+                <option value="introduction">知人・取引先からの紹介</option>
+                <option value="exhibition">展示会</option>
+                <option value="used_machine_site">中古機械百貨店</option>
+                <option value="repeat">以前から取引がある</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- プライバシーポリシー同意 -->
+          <div class="form-privacy">
+            <p class="form-privacy__text">
+              <a href="#" target="_blank">プライバシーポリシー</a>をご確認の上、<br>
+              同意いただける場合は下記ボタンよりお問い合わせください。
+            </p>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary btn--lg">
+              この内容で送信する <span class="arrow-icon arrow-icon--white"></span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__company">
+          <div class="footer__logo">[ LOGO ]</div>
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline-white btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>

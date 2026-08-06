@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お知らせ | シマモト技研株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-placeholder">[ LOGO ]</div>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+        </div>
+      </nav>
+
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       Breadcrumb
+       ============================================ -->
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+        <li class="breadcrumb__item" aria-current="page">お知らせ</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       Page Header
+       ============================================ -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-header__label">NEWS</p>
+      <h1 class="page-header__title">お知らせ</h1>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <div class="news-page__list">
+
+          <!-- News Item 1 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.12.15</time>
+              <span class="news-page__category">お知らせ</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">年末年始休業のお知らせ</a>
+              </h2>
+              <p class="news-page__excerpt">
+                誠に勝手ながら、2024年12月28日（土）〜2025年1月5日（日）まで年末年始休業とさせていただきます。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 2 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.11.20</time>
+              <span class="news-page__category">展示会</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">JIMTOF2024に出展いたします</a>
+              </h2>
+              <p class="news-page__excerpt">
+                11月5日（火）〜10日（日）に東京ビッグサイトで開催されるJIMTOF2024に出展いたします。皆様のご来場を心よりお待ちしております。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 3 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.10.01</time>
+              <span class="news-page__category">お知らせ</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">ホームページをリニューアルしました</a>
+              </h2>
+              <p class="news-page__excerpt">
+                シマモト技研株式会社のホームページをリニューアルいたしました。より見やすく、情報をお届けできるよう努めてまいります。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 4 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.09.15</time>
+              <span class="news-page__category">製品情報</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">ツガミ製自動盤の新機種取扱を開始しました</a>
+              </h2>
+              <p class="news-page__excerpt">
+                株式会社ツガミの最新自動盤の取扱いを開始いたしました。詳細はお気軽にお問い合わせください。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 5 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.08.10</time>
+              <span class="news-page__category">お知らせ</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">夏季休業のお知らせ</a>
+              </h2>
+              <p class="news-page__excerpt">
+                誠に勝手ながら、8月13日（火）〜8月16日（金）まで夏季休業とさせていただきます。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 6 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.07.01</time>
+              <span class="news-page__category">展示会</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">機械要素技術展に出展いたしました</a>
+              </h2>
+              <p class="news-page__excerpt">
+                6月19日〜21日に東京ビッグサイトで開催された機械要素技術展（M-Tech）に出展いたしました。多くのお客様にご来場いただき、誠にありがとうございました。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 7 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.05.20</time>
+              <span class="news-page__category">採用情報</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">営業職・技術職の採用を開始しました</a>
+              </h2>
+              <p class="news-page__excerpt">
+                業務拡大に伴い、営業職および技術職の採用を開始いたしました。詳細は採用情報ページをご覧ください。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 8 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.04.01</time>
+              <span class="news-page__category">お知らせ</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">九州営業所を開設いたしました</a>
+              </h2>
+              <p class="news-page__excerpt">
+                九州地区のお客様へのサービス向上を目的として、福岡県に九州営業所を開設いたしました。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 9 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.03.15</time>
+              <span class="news-page__category">製品情報</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">中古機械の在庫情報を更新しました</a>
+              </h2>
+              <p class="news-page__excerpt">
+                中古機械百貨店にて、新たに入荷した中古工作機械の在庫情報を更新いたしました。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+          <!-- News Item 10 -->
+          <article class="news-page__item">
+            <div class="news-page__meta">
+              <time class="news-page__date">2024.02.01</time>
+              <span class="news-page__category">お知らせ</span>
+            </div>
+            <div class="news-page__content">
+              <h2 class="news-page__title">
+                <a href="#">補助金活用支援サービスを開始しました</a>
+              </h2>
+              <p class="news-page__excerpt">
+                ものづくり補助金、事業再構築補助金など、各種補助金を活用した設備導入をサポートするサービスを開始いたしました。
+                <span class="wire-note">仮</span>
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="ページナビゲーション">
+          <a href="#" class="pagination__item pagination__prev">&lt; 前へ</a>
+          <a href="#" class="pagination__item is-active">1</a>
+          <a href="#" class="pagination__item">2</a>
+          <a href="#" class="pagination__item">3</a>
+          <span class="pagination__item">...</span>
+          <a href="#" class="pagination__item">10</a>
+          <a href="#" class="pagination__item pagination__next">次へ &gt;</a>
+        </nav>
+      </div>
+    </section>
+
+
+    <!-- Pre-Footer CTA -->
+    <section class="pre-footer-cta">
+      <div class="pre-footer-cta__inner">
+        <div class="pre-footer-cta__btn">
+          <a href="contact.html" class="btn btn--outline-white btn--lg">
+            お問い合わせ <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+        <div class="pre-footer-cta__btn">
+          <a href="#" class="btn btn--outline-white btn--lg external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            在庫情報はこちら <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__company">
+          <div class="footer__logo">[ LOGO ]</div>
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline-white btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>

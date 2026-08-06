@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用情報 | シマモト技研株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/recruit.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-placeholder">[ LOGO ]</div>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+        </div>
+      </nav>
+
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <!-- ============================================
+         RECRUIT Hero
+         ============================================ -->
+    <section class="recruit-hero">
+      <div class="recruit-hero__bg">
+        <div class="recruit-hero__bg-text">
+          [ 背景画像 ]<br>
+          工作機械を点検するサービスエンジニア
+        </div>
+      </div>
+      <div class="recruit-hero__overlay"></div>
+      <div class="recruit-hero__content">
+        <p class="recruit-hero__label">RECRUIT</p>
+        <h1 class="recruit-hero__title">機械を蘇らせ、<br>工場を進化させる。</h1>
+        <p class="recruit-hero__catch">工作機械からロボットまで、現場で通用する技術を。</p>
+        <div class="recruit-hero__lead">
+          <p>
+            止まった機械を復旧する。<br>
+            長く使われてきた設備を蘇らせる。<br>
+            ロボットを導入し、工場を自動化する。
+          </p>
+          <p>シマモト技研は、技術と提案で日本のものづくりを支える会社です。</p>
+        </div>
+        <div class="recruit-hero__tags">
+          <span class="recruit-hero__tag">サービスエンジニア募集</span>
+          <span class="recruit-hero__tag">提案営業募集</span>
+          <span class="recruit-hero__tag">経験者歓迎</span>
+          <span class="recruit-hero__tag">未経験者も基礎から育成</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         FOR YOU - ターゲット別訴求
+         ============================================ -->
+    <section class="recruit-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">FOR YOU</span>
+          <span class="section-title__ja">今の経験を、もっと広い技術へ。</span>
+        </h2>
+
+        <div class="for-you-grid">
+          <div class="for-you-card">
+            <h3 class="for-you-card__title">修理だけで終わらない技術者へ</h3>
+            <p class="for-you-card__text">
+              工作機械の修理や設備保全の経験を生かし、オーバーホール、据付、ロボット・自動化まで仕事の幅を広げられます。
+            </p>
+          </div>
+          <div class="for-you-card">
+            <h3 class="for-you-card__title">商品を案内するだけではない営業へ</h3>
+            <p class="for-you-card__text">
+              機械の販売だけでなく、修理、中古設備、自動化、補助金活用まで、現場の課題に合わせた提案に挑戦できます。
+            </p>
+          </div>
+          <div class="for-you-card">
+            <h3 class="for-you-card__title">未経験から、手に職をつけたい方へ</h3>
+            <p class="for-you-card__text">
+              機械やものづくりに興味があり、現場から学ぶ意欲があれば、工具の使い方や機械の構造から身につけられます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         WHY NOW - 今この仕事を選ぶ理由
+         ============================================ -->
+    <section class="recruit-section recruit-section--alt">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">WHY NOW</span>
+          <span class="section-title__ja">AI時代に、現場でしか磨けない力を。</span>
+        </h2>
+
+        <div class="why-now-content">
+          <div class="why-now-text">
+            <p>
+              AIやデジタル技術が進んでも、設備の状態を見極め、現場で機械を復旧させる仕事は、画面の中だけでは完結しません。
+            </p>
+            <p>
+              さらに、既存の工作機械とロボットをつなぐ自動化には、機械と現場の両方を理解する人が必要です。
+            </p>
+            <p class="why-now-highlight">
+              <strong>機械を診る。現場で直す。自動化を考える。</strong>
+            </p>
+            <p>
+              これからの製造業で、長く必要とされる技術を身につけられる仕事です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         MESSAGE - メッセージ
+         ============================================ -->
+    <section class="recruit-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">MESSAGE</span>
+          <span class="section-title__ja">決められた作業ではなく、<br>現場の答えをつくる。</span>
+        </h2>
+
+        <div class="message-content">
+          <div class="message-text">
+            <p>
+              工作機械のトラブルに、いつも同じ正解があるわけではありません。
+            </p>
+            <p>
+              機械の状態、使用年数、生産への影響、ご予算によって、修理するのか、オーバーホールするのか、設備を更新するのかは変わります。
+            </p>
+            <p>
+              だから私たちは、現場に足を運び、自分の目で確かめ、これまで培った知識と経験から最善の方法を考えます。
+            </p>
+            <div class="message-highlight">
+              <p>止まっていた機械が再び動く。</p>
+              <p>古い設備が本来の精度を取り戻す。</p>
+              <p>人が行っていた作業をロボットが担う。</p>
+            </div>
+            <p>
+              自分の仕事によって、目の前の工場が変わる。<br>
+              その手応えを直接感じられる仕事です。
+            </p>
+            <p>
+              シマモト技研は今、事業と組織の両方を次の段階へ進めています。
+            </p>
+            <p>
+              完成された仕組みの中で働くだけではなく、新しい技術、新しいサービス、新しい会社のかたちを、一緒につくっていける方を求めています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         FEATURE - シマモト技研で働く魅力
+         ============================================ -->
+    <section class="recruit-section recruit-section--alt">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">FEATURE</span>
+          <span class="section-title__ja">シマモト技研で働く魅力</span>
+        </h2>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-item__number">01</div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">古い機械から、ロボットまで</h3>
+              <p class="feature-item__subtitle">新旧の技術を横断して学べる</p>
+              <p class="feature-item__text">
+                メーカーサポートが終了した旧型機の修理・オーバーホールから、産業用ロボットや省力化システムまで携わります。<br>
+                機械を蘇らせる技術と、工場を進化させる技術の両方を身につけられます。
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__number">02</div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">お客様から、直接頼られる</h3>
+              <p class="feature-item__subtitle">自分の仕事が生産再開につながる</p>
+              <p class="feature-item__text">
+                故障した機械を復旧し、お客様の生産ラインが再び動き出す。<br>
+                自分の技術が現場を支えていることを、目の前で実感できます。
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__number">03</div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">技術と提案の両方が身につく</h3>
+              <p class="feature-item__subtitle">現場にとって最善の方法を考える</p>
+              <p class="feature-item__text">
+                新品、中古、修理、オーバーホール、自動化、補助金活用。<br>
+                一つの方法に限定せず、現場に合った選択肢を組み立てる力を磨けます。
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__number">04</div>
+            <div class="feature-item__content">
+              <h3 class="feature-item__title">会社をつくる側に立てる</h3>
+              <p class="feature-item__subtitle">成長段階の組織だからできる経験</p>
+              <p class="feature-item__text">
+                シマモト技研は、新しい体制や仕組みをつくっている段階です。<br>
+                決められた仕事をこなすだけでなく、仕事の進め方やサービス、組織づくりにも関われます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         WORKS - 募集する仕事
+         ============================================ -->
+    <section class="recruit-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">WORKS</span>
+          <span class="section-title__ja">募集する仕事</span>
+        </h2>
+
+        <!-- サービスエンジニア -->
+        <div class="job-card">
+          <div class="job-card__header">
+            <p class="job-card__label">SERVICE ENGINEER</p>
+            <h3 class="job-card__title">サービスエンジニア</h3>
+            <p class="job-card__catch">機械の復旧から、その先の自動化まで。</p>
+          </div>
+          <div class="job-card__body">
+            <div class="job-card__content">
+              <p class="job-card__lead">
+                工作機械の点検、修理、メンテナンス、オーバーホール、搬入・据付などを担当します。
+              </p>
+              <p>
+                現場で設備の状態を確認し、原因を調査。部品交換や精度調整を行い、機械の復旧へつなげます。
+              </p>
+              <p>
+                経験を積んだ後は、ロボットシステムの立ち上げやティーチング、自動化設備の保守にも携わります。
+              </p>
+
+              <h4 class="job-card__subtitle">主な仕事内容</h4>
+              <ul class="job-card__list">
+                <li>工作機械の点検・メンテナンス</li>
+                <li>突発故障への現地対応</li>
+                <li>部品交換・機械調整</li>
+                <li>精度測定・精度調整</li>
+                <li>オーバーホール</li>
+                <li>搬入・据付・立ち上げ</li>
+                <li>ロボット・自動化設備の導入支援</li>
+                <li>導入後のアフターサポート</li>
+              </ul>
+
+              <h4 class="job-card__subtitle">この仕事のやりがい</h4>
+              <p>
+                止まっていた機械が再び動き、生産が再開する。<br>
+                自分の判断と技術によって、お客様の現場を直接支えられる仕事です。
+              </p>
+            </div>
+            <div class="job-card__image">
+              <div class="img-placeholder" style="aspect-ratio: 4/3;">
+                [ 写真 ]<br>
+                工作機械を調整する技術者
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 提案営業 -->
+        <div class="job-card">
+          <div class="job-card__header">
+            <p class="job-card__label">SALES</p>
+            <h3 class="job-card__title">提案営業</h3>
+            <p class="job-card__catch">機械を案内するのではなく、現場の答えを考える。</p>
+          </div>
+          <div class="job-card__body">
+            <div class="job-card__content">
+              <p class="job-card__lead">
+                お客様の工場を訪問し、設備や生産工程の課題を確認します。
+              </p>
+              <p>
+                工作機械の導入だけでなく、中古機械の活用、既存設備の修理、オーバーホール、ロボットによる自動化、補助金活用などから、最適な方法をご提案します。
+              </p>
+              <p>
+                社内の技術者やゼロプラスと連携し、設備導入後までお客様を支える営業です。
+              </p>
+
+              <h4 class="job-card__subtitle">主な仕事内容</h4>
+              <ul class="job-card__list">
+                <li>既存顧客への訪問・フォロー</li>
+                <li>設備課題や導入条件のヒアリング</li>
+                <li>工作機械・周辺機器の提案</li>
+                <li>修理・オーバーホールの提案</li>
+                <li>ロボット・自動化システムの提案</li>
+                <li>見積り・導入スケジュールの調整</li>
+                <li>補助金活用に関する連携</li>
+                <li>導入後のアフターフォロー</li>
+              </ul>
+
+              <h4 class="job-card__subtitle">この仕事のやりがい</h4>
+              <p>
+                一つの商品を提案するのではなく、技術、予算、将来の設備計画まで踏まえて、お客様と一緒に答えをつくります。
+              </p>
+            </div>
+            <div class="job-card__image">
+              <div class="img-placeholder" style="aspect-ratio: 4/3;">
+                [ 写真 ]<br>
+                お客様と設備計画を確認する営業担当者
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         SKILLS - 身につく4つの力
+         ============================================ -->
+    <section class="recruit-section recruit-section--alt">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">SKILLS</span>
+          <span class="section-title__ja">身につく、4つの力。</span>
+        </h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 class="skill-card__title">機械を診る力</h3>
+            <p class="skill-card__text">
+              音、振動、精度、動作から、設備の状態や不具合の原因を見極めます。
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card__title">現場で直す力</h3>
+            <p class="skill-card__text">
+              部品交換、調整、修理、オーバーホールを通じて、設備を復旧へ導きます。
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card__title">自動化を考える力</h3>
+            <p class="skill-card__text">
+              工作機械とロボット、周辺機器を組み合わせ、現場に合う省力化を考えます。
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card__title">課題を提案に変える力</h3>
+            <p class="skill-card__text">
+              お客様の状況を理解し、技術、予算、将来性を踏まえた選択肢を提示します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         EDUCATION - 成長できる環境
+         ============================================ -->
+    <section class="recruit-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">EDUCATION</span>
+          <span class="section-title__ja">経験に合わせて、成長できる環境。</span>
+        </h2>
+
+        <div class="education-grid">
+          <div class="education-card">
+            <h3 class="education-card__title">現場で学ぶOJT</h3>
+            <p class="education-card__text">
+              先輩社員と現場へ同行し、工具の使い方、機械の構造、点検方法、顧客対応を実務の中で学びます。
+            </p>
+          </div>
+          <div class="education-card">
+            <h3 class="education-card__title">メーカーの勉強会</h3>
+            <p class="education-card__text">
+              工作機械やロボットメーカーの勉強会を通じて、製品知識や保守技術の基礎を身につけます。
+            </p>
+          </div>
+          <div class="education-card">
+            <h3 class="education-card__title">経験者は得意分野から</h3>
+            <p class="education-card__text">
+              設備保全、機械組立、電気制御、生産技術、営業など、これまでの経験を生かせる仕事から担当領域を広げます。
+            </p>
+          </div>
+        </div>
+
+        <div class="career-path">
+          <h3 class="career-path__title">将来のキャリア</h3>
+          <ul class="career-path__list">
+            <li>工作機械を究めるサービスエンジニア</li>
+            <li>ロボット・自動化を担う技術者</li>
+            <li>技術知識を生かす提案営業</li>
+            <li>チームや事業を動かすマネジメント職</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         VALUES - 大切にしていること
+         ============================================ -->
+    <section class="recruit-section recruit-section--alt">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">VALUES</span>
+          <span class="section-title__ja">私たちが大切にしていること</span>
+        </h2>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <h3 class="value-card__title">現場主義</h3>
+            <p class="value-card__text">
+              現場に足を運び、現場から学び、困ったときにはすぐに動く。
+            </p>
+          </div>
+          <div class="value-card">
+            <h3 class="value-card__title">誠実に、泥臭く</h3>
+            <p class="value-card__text">
+              目の前の課題から逃げず、できる方法を粘り強く探す。
+            </p>
+          </div>
+          <div class="value-card">
+            <h3 class="value-card__title">常に最善の方法を考える</h3>
+            <p class="value-card__text">
+              知識と経験をもとに、現場に適した選択肢を組み立てる。
+            </p>
+          </div>
+          <div class="value-card">
+            <h3 class="value-card__title">導入後まで責任を持つ</h3>
+            <p class="value-card__text">
+              設備を納入して終わりにせず、保守やオーバーホールまで長く向き合う。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         PERSON - こんな方と働きたい
+         ============================================ -->
+    <section class="recruit-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">PERSON</span>
+          <span class="section-title__ja">こんな方と働きたい。</span>
+        </h2>
+
+        <div class="person-content">
+          <ul class="person-list">
+            <li>機械やものづくりが好きな方</li>
+            <li>現場に足を運び、自分の目で確かめられる方</li>
+            <li>分からないことを学び続けられる方</li>
+            <li>お客様の困りごとに誠実に向き合える方</li>
+            <li>決められた方法だけでなく、自分で考えられる方</li>
+            <li>新しい技術や変化を前向きに楽しめる方</li>
+          </ul>
+          <p class="person-note">
+            工作機械、産業機械、設備保全、生産技術、機械組立、電気制御、機械・設備営業などの経験をお持ちの方は、その知識を生かせます。
+          </p>
+          <p class="person-note">
+            直接の経験がなくても、機械への興味と成長する意欲を持つ方を歓迎します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         GUIDELINES - 募集職種
+         ============================================ -->
+    <section class="recruit-section recruit-section--alt">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">GUIDELINES</span>
+          <span class="section-title__ja">募集職種</span>
+        </h2>
+
+        <div class="guidelines-grid">
+          <div class="guideline-card">
+            <h3 class="guideline-card__title">サービスエンジニア</h3>
+            <p class="guideline-card__text">
+              工作機械の点検、修理、メンテナンス、オーバーホール、搬入・据付、ロボット設備の導入支援などを担当します。
+            </p>
+            <a href="#" class="btn">募集要項を見る <span class="arrow-icon"></span></a>
+          </div>
+          <div class="guideline-card">
+            <h3 class="guideline-card__title">提案営業</h3>
+            <p class="guideline-card__text">
+              工作機械、メンテナンス、ロボット・自動化、補助金活用など、お客様の課題に合わせた提案を担当します。
+            </p>
+            <a href="#" class="btn">募集要項を見る <span class="arrow-icon"></span></a>
+          </div>
+        </div>
+
+        <p class="guidelines-note">
+          ※給与、勤務時間、休日、勤務地、福利厚生などは、確定した募集要項を掲載してください。
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         FLOW - 選考の流れ
+         ============================================ -->
+    <section class="recruit-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">FLOW</span>
+          <span class="section-title__ja">選考の流れ</span>
+        </h2>
+
+        <div class="flow-vertical">
+          <div class="flow-vertical__item">
+            <div class="flow-vertical__number">STEP 01</div>
+            <div class="flow-vertical__content">
+              <h3 class="flow-vertical__title">エントリー</h3>
+              <p class="flow-vertical__text">
+                応募フォームまたは採用媒体からご応募ください。<br>
+                仕事内容について詳しく聞いてから検討したい方のご相談も受け付けます。
+              </p>
+            </div>
+          </div>
+          <div class="flow-vertical__item">
+            <div class="flow-vertical__number">STEP 02</div>
+            <div class="flow-vertical__content">
+              <h3 class="flow-vertical__title">ご連絡・書類確認</h3>
+              <p class="flow-vertical__text">
+                担当者から今後の選考についてご連絡します。
+              </p>
+            </div>
+          </div>
+          <div class="flow-vertical__item">
+            <div class="flow-vertical__number">STEP 03</div>
+            <div class="flow-vertical__content">
+              <h3 class="flow-vertical__title">面談・会社説明</h3>
+              <p class="flow-vertical__text">
+                仕事内容や会社の方向性をご説明します。<br>
+                これまでの経験や、今後身につけたい技術についてもお聞かせください。
+              </p>
+            </div>
+          </div>
+          <div class="flow-vertical__item">
+            <div class="flow-vertical__number">STEP 04</div>
+            <div class="flow-vertical__content">
+              <h3 class="flow-vertical__title">選考・内定</h3>
+              <p class="flow-vertical__text">
+                選考結果をご連絡し、入社時期などをご相談します。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="flow-note">
+          ※面談回数や選考方法は、募集職種に合わせて確定してください。
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         ENTRY - エントリーCTA
+         ============================================ -->
+    <section class="recruit-cta">
+      <div class="container">
+        <div class="recruit-cta__inner">
+          <p class="recruit-cta__label">ENTRY</p>
+          <h2 class="recruit-cta__title">現場で役立つ技術を、次のキャリアに。</h2>
+          <div class="recruit-cta__lead">
+            <p>機械を蘇らせる。</p>
+            <p>工場を自動化する。</p>
+            <p>お客様と一緒に、最善の方法を考える。</p>
+          </div>
+          <p class="recruit-cta__text">
+            シマモト技研には、日本のものづくりを支えながら、<br>
+            自分自身の技術と可能性を広げられる仕事があります。
+          </p>
+          <div class="recruit-cta__buttons">
+            <a href="#" class="btn btn--outline-white btn--lg">
+              募集要項を見る <span class="arrow-icon arrow-icon--white"></span>
+            </a>
+            <a href="#" class="btn btn--outline-white btn--lg">
+              エントリーする <span class="arrow-icon arrow-icon--white"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pre-Footer CTA -->
+    <section class="pre-footer-cta">
+      <div class="pre-footer-cta__inner">
+        <div class="pre-footer-cta__btn">
+          <a href="contact.html" class="btn btn--outline-white btn--lg">
+            お問い合わせ <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+        <div class="pre-footer-cta__btn">
+          <a href="#" class="btn btn--outline-white btn--lg external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            在庫情報はこちら <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__company">
+          <div class="footer__logo">[ LOGO ]</div>
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline-white btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>

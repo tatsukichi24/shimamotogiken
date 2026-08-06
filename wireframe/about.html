@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シマモト技研とは | シマモト技研株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-placeholder">[ LOGO ]</div>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+        </div>
+      </nav>
+
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       Breadcrumb
+       ============================================ -->
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+        <li class="breadcrumb__item" aria-current="page">シマモト技研とは</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero__inner">
+          <p class="about-hero__label">ABOUT US</p>
+          <h1 class="about-hero__title">シマモト技研とは</h1>
+          <p class="about-hero__catch">工場の未来を、エンジニアリングする。</p>
+          <p class="about-hero__lead">マシンと技術をつなぎ、製造現場を支えます。</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Intro -->
+    <section class="about-intro">
+      <div class="container">
+        <div class="about-intro__inner">
+          <h2 class="about-intro__title">機械を、現場の力へ。</h2>
+          <div class="about-intro__content">
+            <p>
+              シマモト技研は、工作機械販売を主軸に、メンテナンス・オーバーホール、搬入・据付、ロボット導入まで一貫して支援するエンジニアリング商社です。
+            </p>
+            <p>
+              機械を導入して終わりではなく、現場で安定して稼働し、その先の改善や自動化につながるところまで支えます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Engineering Flow -->
+    <section class="engineering-flow">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">ENGINEERING FLOW</p>
+          <h2 class="section-title">製造現場を支える、一貫対応の仕組み</h2>
+        </header>
+
+        <div class="engineering-flow__intro">
+          <p>
+            シマモト技研は、工作機械の販売を起点に、搬入・据付、メンテナンス・オーバーホール、ロボット導入・自動化まで一貫して対応します。
+          </p>
+          <p>
+            設備の導入だけで終わらず、安定稼働とその先の生産性向上まで支えることが、私たちの強みです。
+          </p>
+        </div>
+
+        <ol class="engineering-flow__steps">
+          <li class="engineering-flow__step">
+            <div class="engineering-flow__step-inner">
+              <div class="engineering-flow__step-header">
+                <span class="engineering-flow__step-number">STEP 01</span>
+                <div class="engineering-flow__step-icon" aria-hidden="true">
+                  <div class="icon-placeholder">[ 工作機械・図面 ]</div>
+                </div>
+              </div>
+              <h3 class="engineering-flow__step-title">設備選定・提案</h3>
+              <p class="engineering-flow__step-desc">
+                加工内容、ワーク、生産量、必要精度、設置環境、ご予算を確認し、現場に適した工作機械や導入方法をご提案します。
+              </p>
+              <ul class="engineering-flow__tags">
+                <li>工作機械販売</li>
+                <li>中古機械探索</li>
+                <li>機種選定</li>
+                <li>査定・買取・下取り</li>
+              </ul>
+            </div>
+            <div class="engineering-flow__connector" aria-hidden="true"></div>
+          </li>
+
+          <li class="engineering-flow__step">
+            <div class="engineering-flow__step-inner">
+              <div class="engineering-flow__step-header">
+                <span class="engineering-flow__step-number">STEP 02</span>
+                <div class="engineering-flow__step-icon" aria-hidden="true">
+                  <div class="icon-placeholder">[ クレーン・搬送 ]</div>
+                </div>
+              </div>
+              <h3 class="engineering-flow__step-title">導入・立ち上げ</h3>
+              <p class="engineering-flow__step-desc">
+                機械の状態確認、整備、搬出、輸送、搬入、据付、レベル調整、試運転まで対応し、現場で使用できる状態へつなげます。
+              </p>
+              <ul class="engineering-flow__tags">
+                <li>状態確認</li>
+                <li>清掃・整備</li>
+                <li>搬出・輸送</li>
+                <li>搬入・据付</li>
+                <li>試運転</li>
+              </ul>
+            </div>
+            <div class="engineering-flow__connector" aria-hidden="true"></div>
+          </li>
+
+          <li class="engineering-flow__step">
+            <div class="engineering-flow__step-inner">
+              <div class="engineering-flow__step-header">
+                <span class="engineering-flow__step-number">STEP 03</span>
+                <div class="engineering-flow__step-icon" aria-hidden="true">
+                  <div class="icon-placeholder">[ 工具・歯車 ]</div>
+                </div>
+              </div>
+              <h3 class="engineering-flow__step-title">安定稼働支援</h3>
+              <p class="engineering-flow__step-desc">
+                突発故障への対応、定期点検、部品交換、精度調整、オーバーホールを通じて、設備の安定稼働を支援します。
+              </p>
+              <ul class="engineering-flow__tags">
+                <li>出張修理</li>
+                <li>定期点検</li>
+                <li>部品交換</li>
+                <li>精度調整</li>
+                <li>オーバーホール</li>
+                <li>旧式設備対応</li>
+              </ul>
+            </div>
+            <div class="engineering-flow__connector" aria-hidden="true"></div>
+          </li>
+
+          <li class="engineering-flow__step">
+            <div class="engineering-flow__step-inner">
+              <div class="engineering-flow__step-header">
+                <span class="engineering-flow__step-number">STEP 04</span>
+                <div class="engineering-flow__step-icon" aria-hidden="true">
+                  <div class="icon-placeholder">[ ロボット・制御盤 ]</div>
+                </div>
+              </div>
+              <h3 class="engineering-flow__step-title">生産性向上・自動化</h3>
+              <p class="engineering-flow__step-desc">
+                工作機械、給材機、ロボット、治具、センサー、安全設備を組み合わせ、現場に適した省人化・自動化を実現します。
+              </p>
+              <ul class="engineering-flow__tags">
+                <li>ロボット導入・自動化</li>
+                <li>既存設備の自動化</li>
+                <li>制御更新</li>
+                <li>工程改善</li>
+                <li>補助金活用支援</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="engineering-flow__summary">
+          <h3 class="engineering-flow__summary-title">設備の導入から、その先まで。</h3>
+          <p class="engineering-flow__summary-text">
+            シマモト技研は、工程ごとに分かれやすい設備導入・保守・自動化の業務を、一つの窓口でつなぎます。
+          </p>
+          <p class="engineering-flow__summary-text">
+            機械を導入することをゴールにせず、現場で安定して稼働し、さらに生産性を高めていくところまで継続して支援します。
+          </p>
+        </div>
+
+        <div class="engineering-flow__cta">
+          <!-- TODO: サービス一覧ページのURLを設定する -->
+          <a href="#" class="btn">サービス一覧を見る <span class="arrow-icon"></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Our Policy -->
+    <section class="about-policy">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">OUR POLICY</p>
+          <h2 class="section-title">私たちが大切にしていること</h2>
+        </header>
+
+        <div class="about-policy__grid">
+          <div class="about-policy__card">
+            <p class="about-policy__number">01</p>
+            <div class="about-policy__card-content">
+              <h3 class="about-policy__card-title">現場主義</h3>
+              <p class="about-policy__card-text">
+                現場に足を運び、現場から学び、現場の視点で役に立つ。<br>
+                そして、困ったときにはすぐに動き、迅速な対応で生産を支えます。
+              </p>
+            </div>
+          </div>
+
+          <div class="about-policy__card">
+            <p class="about-policy__number">02</p>
+            <div class="about-policy__card-content">
+              <h3 class="about-policy__card-title">誠実に、泥臭く</h3>
+              <p class="about-policy__card-text">
+                目の前の課題から逃げず、できる方法を粘り強く探す。<br>
+                一つひとつの仕事に手を抜かず、行動で信頼に応えます。
+              </p>
+            </div>
+          </div>
+
+          <div class="about-policy__card">
+            <p class="about-policy__number">03</p>
+            <div class="about-policy__card-content">
+              <h3 class="about-policy__card-title">常に最善の方法を考える</h3>
+              <p class="about-policy__card-text">
+                これまで培った知識や経験をもとに、<br>
+                新品、中古、修理、改造、自動化など、現場に最適な方法を考えます。
+              </p>
+            </div>
+          </div>
+
+          <div class="about-policy__card">
+            <p class="about-policy__number">04</p>
+            <div class="about-policy__card-content">
+              <h3 class="about-policy__card-title">導入後まで責任を持つ</h3>
+              <p class="about-policy__card-text">
+                設備を納入して終わりにはしない。<br>
+                修理、点検、メンテナンス、オーバーホールまで、長く責任を持って向き合います。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Our Strength -->
+    <section class="about-strength">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">OUR STRENGTH</p>
+          <h2 class="section-title">シマモト技研の強み</h2>
+          <h3 class="section-subtitle">現場に向き合い、設備のその先まで支える</h3>
+          <p class="section-lead">
+            迅速な現場対応と継続的な技術支援、<br>
+            経営まで見据えた提案力で、製造現場を支えます。
+          </p>
+        </header>
+
+        <div class="about-strength__grid">
+          <div class="about-strength__card">
+            <p class="about-strength__number">01</p>
+            <h3 class="about-strength__title">売って終わらない伴走力</h3>
+            <h4 class="about-strength__subtitle">設備の導入後も、長く現場に寄り添う</h4>
+            <p class="about-strength__text">
+              据付・立ち上げから、故障対応、予防保全、オーバーホール、その先の自動化まで。<br>
+              困ったときにすぐ相談できる技術パートナーとして、継続して現場を支えます。
+            </p>
+          </div>
+
+          <div class="about-strength__card">
+            <p class="about-strength__number">02</p>
+            <h3 class="about-strength__title">現場を止めない即応力</h3>
+            <h4 class="about-strength__subtitle">生産ラインを守るため、一刻も早く動く</h4>
+            <p class="about-strength__text">
+              突発的な故障や不調に対し、状況を素早く把握。<br>
+              お客様の生産ラインを止めないという強い使命感を持ち、地元・近郊では即日から翌日の訪問を目指して復旧に動きます。
+            </p>
+          </div>
+
+          <div class="about-strength__card">
+            <p class="about-strength__number">03</p>
+            <h3 class="about-strength__title">経営と現場を横断する総合提案力</h3>
+            <h4 class="about-strength__subtitle">設備導入を、事業の成長につなげる</h4>
+            <p class="about-strength__text">
+              工作機械、メンテナンス、ロボット・自動化、IoT・DXに加え、補助金・経営支援まで対応。<br>
+              設備の選定だけでなく、投資の実現とその後の生産性向上まで見据えてご提案します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Numbers -->
+    <section class="about-numbers section--alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">NUMBERS</p>
+          <h2 class="section-title">数字で見るシマモト技研</h2>
+        </header>
+
+        <div class="about-numbers__grid">
+          <div class="about-numbers__card">
+            <p class="about-numbers__label">累計対応実績</p>
+            <p class="about-numbers__value">1,500<span class="about-numbers__unit">件以上</span></p>
+            <p class="about-numbers__note">（仮）</p>
+          </div>
+
+          <div class="about-numbers__card">
+            <p class="about-numbers__label">ロボット・自動化支援実績</p>
+            <p class="about-numbers__value">500<span class="about-numbers__unit">件以上</span></p>
+            <p class="about-numbers__note">（仮）</p>
+          </div>
+
+          <div class="about-numbers__card">
+            <p class="about-numbers__label">対応エリア</p>
+            <p class="about-numbers__value-text">東日本</p>
+          </div>
+
+          <div class="about-numbers__card">
+            <p class="about-numbers__label">突発故障への訪問</p>
+            <p class="about-numbers__value-text">最短即日</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Company Overview CTA -->
+    <section class="about-company-cta">
+      <div class="container">
+        <div class="about-company-cta__inner">
+          <div class="about-company-cta__content">
+            <h2 class="about-company-cta__title">会社概要・拠点情報はこちら</h2>
+            <p class="about-company-cta__text">
+              シマモト技研の会社情報、代表挨拶、沿革、拠点・アクセス情報をご覧いただけます。
+            </p>
+          </div>
+          <div class="about-company-cta__action">
+            <a href="company.html" class="btn btn--lg">会社概要を見る <span class="arrow-icon"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+      <div class="container">
+        <div class="about-cta__inner">
+          <h2 class="about-cta__title">機械や製造現場の課題をご相談ください。</h2>
+          <p class="about-cta__text">
+            工作機械の導入、設備の故障や不調、既存設備の活用、自動化など、具体的な方法が決まっていない段階でもご相談いただけます。
+          </p>
+          <p class="about-cta__text">
+            現在の状況を確認し、設備の選定から導入、安定稼働、その先の改善まで、適切な進め方をご提案します。
+          </p>
+          <div class="about-cta__buttons">
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              シマモト技研に相談する <span class="arrow-icon arrow-icon--white"></span>
+            </a>
+            <a href="#" class="btn btn--outline-white btn--lg">
+              サービス一覧を見る <span class="arrow-icon arrow-icon--white"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pre-Footer CTA -->
+    <section class="pre-footer-cta">
+      <div class="pre-footer-cta__inner">
+        <div class="pre-footer-cta__btn">
+          <a href="contact.html" class="btn btn--outline-white btn--lg">
+            お問い合わせ <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+        <div class="pre-footer-cta__btn">
+          <a href="#" class="btn btn--outline-white btn--lg external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            在庫情報はこちら <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__company">
+          <div class="footer__logo">[ LOGO ]</div>
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline-white btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>

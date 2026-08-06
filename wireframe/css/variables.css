@@ -1,0 +1,139 @@
+/* ============================================
+   Wireframe Design System - CSS Variables
+   シマモト技研 ワイヤーフレーム用スタイル変数
+
+   WIRE_DESIGN.md 準拠
+   ============================================ */
+
+:root {
+  /* ============================================
+     Colors - Grayscale Only (Wireframe)
+     白黒グレースケールのみ使用
+     ============================================ */
+
+  /* Background */
+  --color-bg-main: #FFFFFF;
+  --color-bg-section: #FAFAFA;
+  --color-bg-section-alt: #F5F5F5;
+  --color-bg-placeholder: #EFEFEF;
+  --color-bg-dark: #1A1A1A;
+  --color-bg-dark-alt: #2A2A2A;
+  --color-bg-hover: #F8F8F8;
+
+  /* Text */
+  --color-text-primary: #404040;
+  --color-text-heading: #1A1A1A;
+  --color-text-muted: #707070;
+  --color-text-light: #9A9A9A;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.65);
+
+  /* Borders */
+  --color-border: #E5E5E5;
+  --color-border-light: #F0F0F0;
+  --color-border-placeholder: #BFBFBF;
+  --color-border-hover: #CCCCCC;
+
+  /* ============================================
+     Typography
+     ============================================ */
+  --font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
+  --font-family-en: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  /* Font Sizes - 一般的なWebサイト標準に準拠 */
+  --font-size-base: 16px;
+  --font-size-xs: 11px;      /* ラベル・キャプション */
+  --font-size-sm: 14px;      /* ボタン・小テキスト */
+  --font-size-md: 15px;      /* 本文 */
+  --font-size-lg: 17px;      /* 小見出し */
+  --font-size-xl: 20px;      /* h4 */
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;     /* h2 セクションタイトル下限 */
+  --font-size-4xl: 34px;     /* h2 セクションタイトル上限 */
+  --font-size-5xl: 40px;     /* h1 ページタイトル下限 */
+  --font-size-6xl: 48px;     /* h1 ページタイトル上限 */
+  --font-size-hero: 54px;    /* ヒーロー用大見出し */
+
+  /* Line Heights */
+  --line-height-tight: 1.35;
+  --line-height-base: 1.7;
+  --line-height-loose: 1.9;
+  --line-height-heading: 1.25;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-base: 0.02em;
+  --letter-spacing-wide: 0.08em;       /* ボタン用 */
+  --letter-spacing-wider: 0.12em;     /* ラベル用 */
+  --letter-spacing-widest: 0.18em;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ============================================
+     Spacing (8px Grid)
+     WIRE_DESIGN.md準拠
+     ============================================ */
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 56px;
+  --spacing-2xl: 72px;
+  --spacing-3xl: 96px;
+  --spacing-4xl: 120px;
+  --spacing-5xl: 140px;
+
+  /* ============================================
+     Layout
+     ============================================ */
+  --max-width: 1180px;
+  --max-width-narrow: 880px;
+  --max-width-wide: 1400px;
+  --max-width-content: 760px;
+
+  --container-padding: 48px;
+  --container-padding-mobile: 24px;
+
+  /* Header */
+  --header-height: 88px;
+  --header-height-mobile: 64px;
+
+  /* ============================================
+     Components
+     ============================================ */
+
+  /* Border Radius - ワイヤーでは最小限 */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows - ワイヤーでは控えめ */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+  /* ============================================
+     Z-Index Scale
+     ============================================ */
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-header: 1000;
+  --z-modal: 2000;
+
+  /* ============================================
+     Breakpoints (reference)
+     ============================================ */
+  /* Mobile: ~767px */
+  /* Tablet: 768px~1023px */
+  /* Desktop: 1024px~ */
+}

@@ -1,0 +1,928 @@
+/* ============================================
+   About Page Styles
+   シマモト技研 シマモト技研とはページ用スタイル
+
+   WIRE_DESIGN.md 準拠
+   ============================================ */
+
+/* ============================================
+   About Hero (ファーストビュー)
+   ============================================ */
+
+.about-hero {
+  background: var(--color-bg-section);
+  padding: var(--spacing-2xl) 0;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-hero__inner {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+.about-hero__label {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-hero__title {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.about-hero__catch {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-hero__lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+}
+
+/* ============================================
+   About Intro (機械を、現場の力へ。)
+   ============================================ */
+
+.about-intro {
+  padding: var(--spacing-2xl) 0;
+}
+
+.about-intro__inner {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+.about-intro__title {
+  font-size: var(--font-size-3xl);
+  text-align: left;
+  margin-bottom: var(--spacing-2xl);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.about-intro__content {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text-primary);
+}
+
+.about-intro__content p {
+  margin-bottom: var(--spacing-md);
+}
+
+.about-intro__list {
+  margin: var(--spacing-md) 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.about-intro__list li {
+  padding: var(--spacing-xs) 0;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.about-intro__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.9em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-text-heading);
+}
+
+/* ============================================
+   Engineering Trading Company
+   ============================================ */
+
+.about-trading {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-bg-section);
+}
+
+.about-trading__content {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto var(--spacing-3xl);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+.about-trading__content p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* ============================================
+   Engineering Flow (一貫対応の仕組み)
+   ============================================ */
+
+.engineering-flow {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-bg-main);
+}
+
+.engineering-flow__intro {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto var(--spacing-3xl);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+.engineering-flow__intro p {
+  margin-bottom: var(--spacing-md);
+}
+
+.engineering-flow__intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* Steps Container */
+.engineering-flow__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-3xl);
+  counter-reset: step-counter;
+}
+
+/* Individual Step */
+.engineering-flow__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.engineering-flow__step-inner {
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.engineering-flow__step-inner:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Step Header */
+.engineering-flow__step-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.engineering-flow__step-number {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+}
+
+.engineering-flow__step-icon {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.engineering-flow__step-icon .icon-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg-placeholder);
+  border: 1px dashed var(--color-border-placeholder);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* Step Content */
+.engineering-flow__step-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-text-heading);
+}
+
+.engineering-flow__step-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-md);
+  flex: 1;
+}
+
+/* Tags */
+.engineering-flow__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.engineering-flow__tags li {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-2xs) var(--spacing-sm);
+  white-space: nowrap;
+}
+
+/* Connector (Arrow) - PC */
+.engineering-flow__connector {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.engineering-flow__connector::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-text-heading);
+  transform: translateY(-50%);
+}
+
+.engineering-flow__connector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-text-heading);
+  border-bottom: 2px solid var(--color-text-heading);
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.engineering-flow__step:last-child .engineering-flow__connector {
+  display: none;
+}
+
+/* Summary */
+.engineering-flow__summary {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto var(--spacing-2xl);
+  text-align: center;
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+}
+
+.engineering-flow__summary-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.engineering-flow__summary-text {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-sm);
+}
+
+.engineering-flow__summary-text:last-child {
+  margin-bottom: 0;
+}
+
+/* CTA */
+.engineering-flow__cta {
+  text-align: center;
+}
+
+/* ============================================
+   Our Strength (強み)
+   ============================================ */
+
+.about-strength {
+  padding: var(--spacing-2xl) 0;
+}
+
+.about-strength__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.about-strength__card {
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.about-strength__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-text-heading);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.about-strength__card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-strength__card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-strength__number {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.about-strength__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-tight);
+}
+
+.about-strength__subtitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-strength__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-strength__text:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-strength__note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+}
+
+/* ============================================
+   Our Services (サービス)
+   ============================================ */
+
+.about-services {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-bg-section);
+}
+
+.about-services__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.about-services__card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  display: block;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-services__card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-text-heading);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.about-services__card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.about-services__card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-services__card-image {
+  aspect-ratio: 4/3;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-services__card-image .img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-placeholder);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  min-height: auto;
+  border: none;
+  position: relative;
+}
+
+.about-services__card-image .img-placeholder::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px dashed var(--color-border-placeholder);
+}
+
+.about-services__card-body {
+  padding: var(--spacing-md);
+}
+
+.about-services__card-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-services__card-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-base);
+}
+
+.about-services__cta {
+  text-align: center;
+}
+
+/* ============================================
+   Our Policy (大切にしていること)
+   ============================================ */
+
+.about-policy {
+  padding: var(--spacing-2xl) 0;
+}
+
+.about-policy__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.about-policy__card {
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.about-policy__card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-policy__number {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.about-policy__card-content {
+  flex: 1;
+}
+
+.about-policy__card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-policy__card-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Numbers (数字で見る)
+   ============================================ */
+
+.about-numbers {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-bg-section);
+}
+
+.about-numbers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.about-numbers__card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.about-numbers__card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-numbers__card--wide {
+  grid-column: span 2;
+}
+
+.about-numbers__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-numbers__value {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.about-numbers__unit {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+}
+
+.about-numbers__value-text {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.about-numbers__note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+/* ============================================
+   Company Overview CTA (会社概要への導線)
+   ============================================ */
+
+.about-company-cta {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-bg-section);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-company-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+}
+
+.about-company-cta__content {
+  flex: 1;
+}
+
+.about-company-cta__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.about-company-cta__text {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+}
+
+.about-company-cta__action {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   Our Vision (ビジョン)
+   ============================================ */
+
+.about-vision {
+  padding: var(--spacing-2xl) 0;
+}
+
+.about-vision__content {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text-primary);
+}
+
+.about-vision__content p {
+  margin-bottom: var(--spacing-md);
+}
+
+.about-vision__list {
+  margin: var(--spacing-lg) 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.about-vision__list li {
+  padding: var(--spacing-xs) 0;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.about-vision__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.9em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-text-heading);
+}
+
+/* ============================================
+   About CTA
+   ============================================ */
+
+.about-cta {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-bg-dark);
+  color: var(--color-text-on-dark);
+}
+
+.about-cta__inner {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-cta__title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.about-cta__text {
+  font-size: var(--font-size-md);
+  color: var(--color-text-on-dark-muted);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-cta__text:last-of-type {
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Responsive - About Page
+   ============================================ */
+
+@media screen and (max-width: 1023px) {
+  /* Engineering Flow - Tablet (縦並び) */
+  .engineering-flow__steps {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .engineering-flow__connector {
+    display: none;
+  }
+
+  .engineering-flow__step {
+    position: relative;
+  }
+
+  /* 縦方向の接続線（タブレット・モバイル共通） */
+  .engineering-flow__step:not(:last-child) .engineering-flow__step-inner::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: var(--spacing-lg);
+    background: var(--color-text-heading);
+    position: absolute;
+    bottom: calc(-1 * var(--spacing-lg));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .engineering-flow__step:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--color-text-heading);
+    border-bottom: 2px solid var(--color-text-heading);
+    position: absolute;
+    bottom: calc(-1 * var(--spacing-lg) + 2px);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+    background: var(--color-bg-main);
+  }
+
+  .engineering-flow__step {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .engineering-flow__step:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-strength__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-policy__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-policy__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-numbers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-numbers__card--wide {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-hero {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .about-hero__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about-hero__catch {
+    font-size: var(--font-size-xl);
+  }
+
+  .about-intro {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .about-intro__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about-trading,
+  .about-strength,
+  .about-services,
+  .about-policy,
+  .about-numbers,
+  .about-vision,
+  .engineering-flow {
+    padding: var(--spacing-xl) 0;
+  }
+
+  /* Engineering Flow - Mobile */
+  .engineering-flow__step-inner {
+    padding: var(--spacing-md);
+  }
+
+  .engineering-flow__step-title {
+    font-size: var(--font-size-md);
+  }
+
+  .engineering-flow__summary {
+    padding: var(--spacing-lg);
+  }
+
+  .engineering-flow__summary-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .engineering-flow__summary-text {
+    font-size: var(--font-size-sm);
+  }
+
+  .about-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-numbers__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-numbers__card--wide {
+    grid-column: auto;
+  }
+
+  .about-cta__buttons {
+    flex-direction: column;
+  }
+
+  .about-cta__buttons .btn {
+    width: 100%;
+  }
+
+  /* Company Overview CTA */
+  .about-company-cta {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .about-company-cta__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-company-cta__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .about-company-cta__text {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .about-company-cta__action .btn {
+    width: 100%;
+  }
+}

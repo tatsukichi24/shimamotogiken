@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シマモト技研 | TOPページ ワイヤーフレーム</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       要確認: ヘッダー固定表示の仕様
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-placeholder">[ LOGO ]</div>
+      </a>
+
+      <!-- PC Navigation -->
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <!-- Dropdown Menu -->
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+
+        <!-- CTA Buttons -->
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <!-- ============================================
+         First View (ファーストビュー)
+         背景: 動画をバックグラウンド再生
+         ============================================ -->
+    <section class="fv">
+      <div class="fv__bg">
+        <span class="fv__bg-text">
+          [ 背景動画 ]<br>
+          バックグラウンド再生
+        </span>
+      </div>
+      <div class="fv__content">
+        <h1 class="fv__copy">
+          工場の未来を、<br>
+          エンジニアリングする (仮)
+        </h1>
+        <p class="fv__subcopy">機械と技術をつなぎ、製造現場をトータルサポート</p>
+      </div>
+      <div class="fv__scroll">
+        <span class="fv__scroll-text">SCROLL</span>
+        <span class="fv__scroll-line"></span>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         Concept / シマモト技研について
+         ============================================ -->
+    <section class="concept section">
+      <div class="concept__inner">
+        <h2 class="concept__title">機械を現場の力へ。</h2>
+        <div class="concept__text">
+          <p>
+            シマモト技研は、工作機械販売を主軸に、メンテナンス・オーバーホール、搬入・据付、ロボット導入まで一貫して支援するエンジニアリング商社です。
+          </p>
+          <p>
+            長年培ってきた機械への知識と現場対応力を生かし、設備の導入から安定稼働、その先の自動化まで製造現場を支えます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         Services (サービス紹介)
+         5枚のカードで表示
+         ============================================ -->
+    <section class="services section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">SERVICE</p>
+          <h2 class="section-title">サービス概要</h2>
+        </header>
+
+        <div class="services__grid">
+          <!-- Service Card 1: 工作機械販売 -->
+          <a href="#" class="service-card">
+            <div class="service-card__img">[ 写真 ]</div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">工作機械販売</h3>
+            </div>
+          </a>
+
+          <!-- Service Card 2: オーバーホール・メンテナンス -->
+          <a href="#" class="service-card">
+            <div class="service-card__img">[ 写真 ]</div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">オーバーホール・<br>メンテナンス</h3>
+            </div>
+          </a>
+
+          <!-- Service Card 3: ロボット導入・自動化 -->
+          <a href="#" class="service-card">
+            <div class="service-card__img">[ 写真 ]</div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">ロボット導入・<br>自動化</h3>
+            </div>
+          </a>
+
+          <!-- Service Card 4: 補助金活用支援 -->
+          <a href="#" class="service-card">
+            <div class="service-card__img">[ 写真 ]</div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">補助金活用支援</h3>
+            </div>
+          </a>
+
+          <!-- Service Card 5: 廃業支援サービス -->
+          <a href="#" class="service-card">
+            <div class="service-card__img">[ 写真 ]</div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">廃業支援サービス</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="services__cta">
+          <!-- 仮リンク: サービス一覧ページへ -->
+          <a href="#" class="btn">サービス一覧を見る <span class="arrow-icon"></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         廃業支援サービス バナー
+         独立した訴求バナー（全幅背景画像）
+         ============================================ -->
+    <section class="banner-fullwidth">
+      <div class="banner-fullwidth__bg">[ 背景写真 ]</div>
+      <div class="banner-fullwidth__overlay"></div>
+      <div class="banner-fullwidth__content">
+        <p class="banner-fullwidth__label">SUPPORT SERVICE</p>
+        <h2 class="banner-fullwidth__title">廃業支援サービス</h2>
+        <p class="banner-fullwidth__text">
+          工場の閉鎖・廃業をお考えの方へ。<br>
+          機械の買取から、搬出・据付撤去まで一括サポートいたします。
+        </p>
+        <!-- 仮リンク: 廃業支援サービスページへ -->
+        <a href="#" class="btn btn--outline-white">詳しく見る <span class="arrow-icon arrow-icon--white"></span></a>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         主要取扱メーカー
+         ============================================ -->
+    <section class="manufacturers section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">MANUFACTURERS</p>
+          <h2 class="section-title">主要取扱メーカー</h2>
+        </header>
+
+        <ul class="manufacturers__list">
+          <li class="manufacturers__item">ツガミ</li>
+          <li class="manufacturers__item">シチズン</li>
+          <li class="manufacturers__item">スター精密</li>
+          <li class="manufacturers__item">ヤマザキマザック</li>
+          <li class="manufacturers__item">オークマ</li>
+          <li class="manufacturers__item">岡本工作機械製作所</li>
+          <li class="manufacturers__item">ニデックマシンツール</li>
+          <li class="manufacturers__item">山崎技研</li>
+        </ul>
+
+        <div class="manufacturers__cta">
+          <a href="company.html#partners" class="btn">取引先一覧を見る <span class="arrow-icon"></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         在庫情報への導線
+         外部サイト「中古機械百貨店」への大型バナー（全幅背景画像）
+         ============================================ -->
+    <section class="banner-fullwidth banner-fullwidth--light">
+      <div class="banner-fullwidth__bg">[ 中古工作機械の実機写真 ]</div>
+      <div class="banner-fullwidth__overlay"></div>
+      <div class="banner-fullwidth__content">
+        <p class="banner-fullwidth__label">USED MACHINE</p>
+        <h2 class="banner-fullwidth__title">中古機械をお探しの方へ</h2>
+        <p class="banner-fullwidth__text">
+          シマモト技研が取り扱う中古工作機械の在庫情報は、<br>
+          「中古機械百貨店」でご覧いただけます。
+        </p>
+        <div class="banner-fullwidth__cta">
+          <!-- 外部リンク: 中古機械百貨店 -->
+          <a href="#" class="btn btn--outline-white external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            中古機械を探す <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+          <span class="banner-fullwidth__note">外部サイトへ移動します</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         お知らせ
+         ============================================ -->
+    <section class="news section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">NEWS</p>
+          <h2 class="section-title">お知らせ</h2>
+        </header>
+
+        <ul class="news__list">
+          <!-- News Item 1 -->
+          <li class="news__item">
+            <time class="news__date">2024.XX.XX</time>
+            <span class="news__category">お知らせ</span>
+            <p class="news__title">
+              <a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。<span class="wire-note">仮</span></a>
+            </p>
+          </li>
+          <!-- News Item 2 -->
+          <li class="news__item">
+            <time class="news__date">2024.XX.XX</time>
+            <span class="news__category">お知らせ</span>
+            <p class="news__title">
+              <a href="#">ニュースタイトルが入ります。<span class="wire-note">仮</span></a>
+            </p>
+          </li>
+          <!-- News Item 3 -->
+          <li class="news__item">
+            <time class="news__date">2024.XX.XX</time>
+            <span class="news__category">お知らせ</span>
+            <p class="news__title">
+              <a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。<span class="wire-note">仮</span></a>
+            </p>
+          </li>
+        </ul>
+
+        <div class="news__more">
+          <a href="news.html" class="btn">お知らせ一覧を見る <span class="arrow-icon"></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         フッター上 CTA セクション
+         お問い合わせ / 在庫情報はこちら
+         ============================================ -->
+    <section class="pre-footer-cta">
+      <div class="pre-footer-cta__inner">
+        <div class="pre-footer-cta__btn">
+          <a href="contact.html" class="btn btn--outline-white btn--lg">
+            お問い合わせ <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+        <div class="pre-footer-cta__btn">
+          <!-- 外部リンク: 中古機械百貨店 -->
+          <a href="#" class="btn btn--outline-white btn--lg external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            在庫情報はこちら <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <!-- Company Info -->
+        <div class="footer__company">
+          <div class="footer__logo">[ LOGO ]</div>
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline-white btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <!-- Site Map -->
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JavaScript (モバイルメニュー用)
+       ============================================ -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>

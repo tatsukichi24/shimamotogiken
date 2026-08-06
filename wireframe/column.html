@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お役立ち情報 | シマモト技研株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-placeholder">[ LOGO ]</div>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+        </div>
+      </nav>
+
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       Breadcrumb
+       ============================================ -->
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+        <li class="breadcrumb__item" aria-current="page">お役立ち情報</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       Page Header
+       ============================================ -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-header__label">COLUMN</p>
+      <h1 class="page-header__title">お役立ち情報</h1>
+      <p class="page-header__desc">工作機械の選び方、メンテナンス、補助金活用など、<br>製造現場で役立つ情報をお届けします。</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <div class="column-layout">
+
+          <!-- 記事一覧 -->
+          <div class="column-main">
+
+            <div class="article-grid">
+              <!-- Article 1: 自動盤の選び方ガイド -->
+              <article class="article-card">
+                <a href="#" class="article-card__link">
+                  <div class="article-card__image">
+                    <div class="img-placeholder">[ 写真 ]</div>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <time class="article-card__date">2024.12.01</time>
+                    </div>
+                    <h2 class="article-card__title">自動盤の選び方ガイド</h2>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Article 2: メンテナンス -->
+              <article class="article-card">
+                <a href="#" class="article-card__link">
+                  <div class="article-card__image">
+                    <div class="img-placeholder">[ 写真 ]</div>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <time class="article-card__date">2024.11.15</time>
+                    </div>
+                    <h2 class="article-card__title">工作機械のメンテナンス頻度と点検項目</h2>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Article 3: 補助金 -->
+              <article class="article-card">
+                <a href="#" class="article-card__link">
+                  <div class="article-card__image">
+                    <div class="img-placeholder">[ 写真 ]</div>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <time class="article-card__date">2024.10.20</time>
+                    </div>
+                    <h2 class="article-card__title">ものづくり補助金を活用した設備投資</h2>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Article 4: ロボット導入・自動化 -->
+              <article class="article-card">
+                <a href="#" class="article-card__link">
+                  <div class="article-card__image">
+                    <div class="img-placeholder">[ 写真 ]</div>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <time class="article-card__date">2024.09.25</time>
+                    </div>
+                    <h2 class="article-card__title">ロボット導入で生産性を向上させる方法</h2>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Article 5: 中古機械 -->
+              <article class="article-card">
+                <a href="#" class="article-card__link">
+                  <div class="article-card__image">
+                    <div class="img-placeholder">[ 写真 ]</div>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <time class="article-card__date">2024.09.10</time>
+                    </div>
+                    <h2 class="article-card__title">中古工作機械の選び方と注意点</h2>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="pagination" aria-label="ページナビゲーション">
+              <a href="#" class="pagination__item is-active">1</a>
+              <a href="#" class="pagination__item">2</a>
+              <a href="#" class="pagination__item">3</a>
+              <a href="#" class="pagination__item pagination__next">次へ &gt;</a>
+            </nav>
+
+          </div>
+
+          <!-- サイドバー -->
+          <aside class="column-sidebar">
+
+            <!-- タグ一覧 -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-section__title">タグから探す</h3>
+              <div class="tag-cloud">
+                <a href="#" class="tag tag--link">#自動盤</a>
+                <a href="#" class="tag tag--link">#CNC旋盤</a>
+                <a href="#" class="tag tag--link">#マシニングセンタ</a>
+                <a href="#" class="tag tag--link">#研削盤</a>
+                <a href="#" class="tag tag--link">#機械選定</a>
+                <a href="#" class="tag tag--link">#中古機械</a>
+                <a href="#" class="tag tag--link">#メンテナンス</a>
+                <a href="#" class="tag tag--link">#オーバーホール</a>
+                <a href="#" class="tag tag--link">#予防保全</a>
+                <a href="#" class="tag tag--link">#ロボット導入</a>
+                <a href="#" class="tag tag--link">#自動化</a>
+                <a href="#" class="tag tag--link">#補助金</a>
+                <a href="#" class="tag tag--link">#ものづくり補助金</a>
+                <a href="#" class="tag tag--link">#事業再構築補助金</a>
+                <a href="#" class="tag tag--link">#設備投資</a>
+                <a href="#" class="tag tag--link">#生産性向上</a>
+                <a href="#" class="tag tag--link">#廃業支援</a>
+                <a href="#" class="tag tag--link">#機械買取</a>
+                <a href="#" class="tag tag--link">#技術情報</a>
+                <a href="#" class="tag tag--link">#導入事例</a>
+              </div>
+            </div>
+
+            <!-- アーカイブ -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-section__title">アーカイブ</h3>
+              <ul class="archive-list">
+                <li class="archive-list__item">
+                  <a href="#">2024年12月<span class="archive-list__count">(1)</span></a>
+                </li>
+                <li class="archive-list__item">
+                  <a href="#">2024年11月<span class="archive-list__count">(1)</span></a>
+                </li>
+                <li class="archive-list__item">
+                  <a href="#">2024年10月<span class="archive-list__count">(1)</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="sidebar-section sidebar-section--cta">
+              <h3 class="sidebar-section__title">お問い合わせ</h3>
+              <p class="sidebar-section__text">
+                工作機械の選定・導入に関するご相談はお気軽にどうぞ。
+              </p>
+              <a href="contact.html" class="btn btn--primary" style="width: 100%;">お問い合わせ</a>
+              <p class="sidebar-section__tel">
+                <a href="tel:048-442-0282">048-442-0282</a>
+              </p>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pre-Footer CTA -->
+    <section class="pre-footer-cta">
+      <div class="pre-footer-cta__inner">
+        <div class="pre-footer-cta__btn">
+          <a href="contact.html" class="btn btn--outline-white btn--lg">
+            お問い合わせ <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+        <div class="pre-footer-cta__btn">
+          <a href="#" class="btn btn--outline-white btn--lg external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            在庫情報はこちら <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__company">
+          <div class="footer__logo">[ LOGO ]</div>
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline-white btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>

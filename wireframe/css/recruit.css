@@ -1,0 +1,721 @@
+/* ============================================
+   Recruit Page Styles
+   採用ページ専用スタイル
+   ============================================ */
+
+/* ============================================
+   Recruit Hero
+   ============================================ */
+
+.recruit-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-top: var(--header-height);
+  overflow: hidden;
+  background: var(--color-bg-main);
+}
+
+.recruit-hero__bg {
+  display: none;
+}
+
+.recruit-hero__bg::after {
+  display: none;
+}
+
+.recruit-hero__bg-text {
+  display: none;
+}
+
+.recruit-hero__overlay {
+  display: none;
+}
+
+.recruit-hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--container-padding);
+  color: var(--color-text-primary);
+}
+
+.recruit-hero__label {
+  font-family: var(--font-family-en);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+}
+
+.recruit-hero__title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-heading);
+}
+
+.recruit-hero__catch {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.recruit-hero__lead {
+  font-size: var(--font-size-md);
+  line-height: 2;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xl);
+  max-width: 600px;
+}
+
+.recruit-hero__lead p + p {
+  margin-top: var(--spacing-md);
+}
+
+.recruit-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.recruit-hero__tag {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  letter-spacing: 0.02em;
+}
+
+
+/* ============================================
+   Recruit Section
+   ============================================ */
+
+.recruit-section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.recruit-section--alt {
+  background: var(--color-bg-section);
+}
+
+
+/* ============================================
+   FOR YOU - ターゲット別訴求
+   ============================================ */
+
+.for-you-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.for-you-card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+}
+
+.for-you-card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-heading);
+}
+
+.for-you-card__text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-muted);
+}
+
+
+/* ============================================
+   WHY NOW
+   ============================================ */
+
+.why-now-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-now-text {
+  font-size: var(--font-size-md);
+  line-height: 2;
+  color: var(--color-text-primary);
+}
+
+.why-now-text p + p {
+  margin-top: var(--spacing-md);
+}
+
+.why-now-highlight {
+  background: var(--color-bg-main);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  border-left: 3px solid var(--color-text-heading);
+  font-size: var(--font-size-lg);
+}
+
+
+/* ============================================
+   MESSAGE
+   ============================================ */
+
+.message-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message-text {
+  font-size: var(--font-size-md);
+  line-height: 2;
+  color: var(--color-text-primary);
+}
+
+.message-text p + p {
+  margin-top: var(--spacing-md);
+}
+
+.message-highlight {
+  background: var(--color-bg-section);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+  border: 1px solid var(--color-border);
+}
+
+.message-highlight p {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.message-highlight p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================
+   FEATURE - 働く魅力
+   ============================================ */
+
+.feature-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-item__number {
+  flex: 0 0 60px;
+  font-family: var(--font-family-en);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1;
+}
+
+.feature-item__content {
+  flex: 1;
+}
+
+.feature-item__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-heading);
+}
+
+.feature-item__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-item__text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-primary);
+}
+
+
+/* ============================================
+   JOB CARD - 募集職種カード
+   ============================================ */
+
+.job-card {
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.job-card:last-child {
+  margin-bottom: 0;
+}
+
+.job-card__header {
+  padding: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.job-card__label {
+  font-family: var(--font-family-en);
+  font-size: 11px;
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+
+.job-card__title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-heading);
+}
+
+.job-card__catch {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+}
+
+.job-card__body {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--spacing-xl);
+}
+
+.job-card__content {
+  padding: var(--spacing-xl);
+}
+
+.job-card__lead {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-md);
+}
+
+.job-card__content p {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.job-card__subtitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-heading);
+}
+
+.job-card__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xs) var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.job-card__list li {
+  font-size: var(--font-size-sm);
+  padding-left: 1.2em;
+  position: relative;
+  color: var(--color-text-primary);
+}
+
+.job-card__list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+.job-card__image {
+  padding: var(--spacing-xl);
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+/* ============================================
+   SKILLS - 身につく力
+   ============================================ */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.skill-card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.skill-card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-heading);
+}
+
+.skill-card__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-muted);
+}
+
+
+/* ============================================
+   EDUCATION - 成長環境
+   ============================================ */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.education-card {
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+}
+
+.education-card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-heading);
+}
+
+.education-card__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-muted);
+}
+
+.career-path {
+  background: var(--color-bg-section);
+  border: 2px solid var(--color-text-heading);
+  padding: var(--spacing-xl);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.career-path__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  color: var(--color-text-heading);
+}
+
+.career-path__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.career-path__list li {
+  font-size: var(--font-size-md);
+  padding-left: 1.5em;
+  position: relative;
+  color: var(--color-text-primary);
+}
+
+.career-path__list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-heading);
+}
+
+
+/* ============================================
+   VALUES - 大切にしていること
+   ============================================ */
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.value-card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.value-card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-heading);
+}
+
+.value-card__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-muted);
+}
+
+
+/* ============================================
+   PERSON - 求める人物像
+   ============================================ */
+
+.person-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.person-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm) var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.person-list li {
+  font-size: var(--font-size-md);
+  padding-left: 1.5em;
+  position: relative;
+  color: var(--color-text-primary);
+}
+
+.person-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-heading);
+  font-weight: bold;
+}
+
+.person-note {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-sm);
+}
+
+
+/* ============================================
+   GUIDELINES - 募集職種
+   ============================================ */
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.guideline-card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.guideline-card__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-heading);
+}
+
+.guideline-card__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+.guidelines-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+
+/* ============================================
+   FLOW - フローは service.css を流用
+   ============================================ */
+
+.flow-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+
+/* ============================================
+   RECRUIT CTA
+   ============================================ */
+
+.recruit-cta {
+  background: var(--color-bg-dark);
+  padding: var(--spacing-3xl) 0;
+}
+
+.recruit-cta__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-text-on-dark);
+}
+
+.recruit-cta__label {
+  font-family: var(--font-family-en);
+  font-size: 11px;
+  letter-spacing: var(--letter-spacing-widest);
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+}
+
+.recruit-cta__title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.recruit-cta__lead {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.recruit-cta__lead p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.recruit-cta__text {
+  font-size: var(--font-size-md);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--spacing-xl);
+  line-height: var(--line-height-loose);
+}
+
+.recruit-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+
+/* ============================================
+   Responsive - Recruit Page
+   ============================================ */
+
+@media screen and (max-width: 1023px) {
+  .for-you-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card__body {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card__image {
+    padding: 0 var(--spacing-xl) var(--spacing-xl);
+  }
+
+  .job-card__list {
+    grid-template-columns: 1fr;
+  }
+
+  .person-list {
+    grid-template-columns: 1fr;
+  }
+
+  .career-path__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .recruit-hero {
+    min-height: auto;
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .recruit-hero__content {
+    padding: var(--spacing-xl) var(--container-padding);
+  }
+
+  .recruit-hero__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .recruit-hero__catch {
+    font-size: var(--font-size-lg);
+  }
+
+  .recruit-hero__tags {
+    flex-direction: column;
+  }
+
+  .recruit-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .feature-item__number {
+    flex: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recruit-cta__buttons {
+    flex-direction: column;
+  }
+
+  .recruit-cta__buttons .btn {
+    width: 100%;
+  }
+}

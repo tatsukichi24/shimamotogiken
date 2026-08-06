@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会社概要 | シマモト技研株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-placeholder">[ LOGO ]</div>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+        </div>
+      </nav>
+
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       Breadcrumb
+       ============================================ -->
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+        <li class="breadcrumb__item" aria-current="page">会社概要</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       Page Header
+       ============================================ -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-header__label">COMPANY</p>
+      <h1 class="page-header__title">会社概要</h1>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <!-- 会社概要テーブル -->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">OVERVIEW</p>
+          <h2 class="section-title">会社情報</h2>
+        </header>
+
+        <div class="info-table">
+          <dl class="info-table__list">
+            <div class="info-table__row">
+              <dt class="info-table__label">商号</dt>
+              <dd class="info-table__value">シマモト技研株式会社</dd>
+            </div>
+            <div class="info-table__row">
+              <dt class="info-table__label">設立年月日</dt>
+              <dd class="info-table__value">1988年3月5日（昭和63年）</dd>
+            </div>
+            <div class="info-table__row">
+              <dt class="info-table__label">資本金</dt>
+              <dd class="info-table__value">1000万円</dd>
+            </div>
+            <div class="info-table__row">
+              <dt class="info-table__label">代表者名</dt>
+              <dd class="info-table__value">代表取締役　大場　正樹</dd>
+            </div>
+            <div class="info-table__row">
+              <dt class="info-table__label">事業内容</dt>
+              <dd class="info-table__value">
+                <ul class="info-table__list-items">
+                  <li>工作機械の販売・中古機械の販売・工具の販売</li>
+                  <li>自動盤、オートバー及び関連する部品の販売</li>
+                  <li>各種機械の修理　各種技術サービス</li>
+                </ul>
+              </dd>
+            </div>
+            <div class="info-table__row">
+              <dt class="info-table__label">取引銀行</dt>
+              <dd class="info-table__value">埼玉りそな銀行　戸田支店</dd>
+            </div>
+            <div class="info-table__row">
+              <dt class="info-table__label">加盟団体</dt>
+              <dd class="info-table__value">
+                <ul class="info-table__list-items">
+                  <li>日本工作機械販売協会</li>
+                  <li>東京機械業連合会（中央支部）</li>
+                  <li>株式会社ツガミ代理店</li>
+                  <li>シチズンマシナリー株式会社、スター精密株式会社 代理店</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 拠点一覧 -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">LOCATIONS</p>
+          <h2 class="section-title">拠点一覧</h2>
+        </header>
+
+        <!-- 本社・マシンセンター -->
+        <div class="location-group">
+          <h3 class="location-group__title">本社・マシンセンター</h3>
+          <div class="location-grid">
+            <!-- 本社 -->
+            <div class="location-card">
+              <h4 class="location-card__name">本社</h4>
+              <address class="location-card__address">
+                〒335-0031<br>
+                埼玉県戸田市美女木5-14-15
+              </address>
+              <div class="location-card__contact">
+                <p>TEL：<a href="tel:048-442-0282">048-442-0282</a></p>
+                <p>FAX：048-444-4620</p>
+              </div>
+            </div>
+
+            <!-- 戸田マシンセンター -->
+            <div class="location-card">
+              <h4 class="location-card__name">戸田マシンセンター</h4>
+              <address class="location-card__address">
+                〒335-0031<br>
+                埼玉県戸田市美女木5-14-15
+              </address>
+              <div class="location-card__contact">
+                <p>TEL＆FAX：<a href="tel:048-422-2558">048-422-2558</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 販売拠点 -->
+        <div class="location-group">
+          <h3 class="location-group__title">販売拠点（協力会社含む）</h3>
+          <div class="location-grid location-grid--3col">
+            <!-- 関西支店 -->
+            <div class="location-card">
+              <h4 class="location-card__name">関西支店</h4>
+              <address class="location-card__address">
+                〒664-0858<br>
+                兵庫県伊丹市西台1丁目5番7号　2階
+              </address>
+              <div class="location-card__contact">
+                <p>TEL：<a href="tel:072-764-5340">072-764-5340</a></p>
+                <p>FAX：03-6800-5265</p>
+              </div>
+            </div>
+
+            <!-- 名古屋支店 -->
+            <div class="location-card">
+              <h4 class="location-card__name">名古屋支店</h4>
+              <address class="location-card__address">
+                〒450-0004<br>
+                愛知県名古屋市中村区松重町4-51<br>
+                KAKOビル6A号室
+              </address>
+              <div class="location-card__contact">
+                <p>TEL：<a href="tel:052-684-9777">052-684-9777</a></p>
+                <p>FAX：03-6800-5265</p>
+              </div>
+            </div>
+
+            <!-- 岡山支店 -->
+            <div class="location-card">
+              <h4 class="location-card__name">岡山支店</h4>
+              <address class="location-card__address">
+                〒700-0024<br>
+                岡山県岡山市北区駅元町30-12<br>
+                飛鳥ビル 4F
+              </address>
+              <div class="location-card__contact">
+                <p>TEL：<a href="tel:086-252-7710">086-252-7710</a></p>
+                <p>FAX：03-6800-5265</p>
+              </div>
+            </div>
+
+            <!-- 仙台営業所 -->
+            <div class="location-card">
+              <h4 class="location-card__name">仙台営業所</h4>
+              <address class="location-card__address">
+                〒980-0021<br>
+                宮城県仙台市青葉区中央2-2-10<br>
+                仙都会館 5F
+              </address>
+              <div class="location-card__contact">
+                <p>TEL：<a href="tel:022-208-9606">022-208-9606</a></p>
+              </div>
+            </div>
+
+            <!-- 新潟営業所 -->
+            <div class="location-card">
+              <h4 class="location-card__name">新潟営業所</h4>
+              <address class="location-card__address">
+                〒959-1232<br>
+                新潟県燕市井土巻5丁目212番地<br>
+                Work Lab 燕内
+              </address>
+            </div>
+
+            <!-- 九州営業所 -->
+            <div class="location-card">
+              <h4 class="location-card__name">九州営業所</h4>
+              <address class="location-card__address">
+                〒811-2413<br>
+                福岡県糟屋郡篠栗町尾仲601-2
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- アクセス -->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">ACCESS</p>
+          <h2 class="section-title">アクセス</h2>
+        </header>
+
+        <!-- 本社アクセス -->
+        <div class="access-block">
+          <div class="access-block__header">
+            <h3 class="access-block__title">シマモト技研株式会社　本社</h3>
+            <address class="access-block__address">
+              〒335-0031　埼玉県戸田市美女木5-14-15<br>
+              TEL：048-442-0282　FAX：048-444-4620
+            </address>
+          </div>
+
+          <div class="access-block__content">
+            <div class="access-block__map">
+              <div class="img-placeholder">[ Google Map 埋め込み ]</div>
+            </div>
+
+            <div class="access-block__info">
+              <div class="access-info">
+                <h4 class="access-info__title">JR利用</h4>
+                <ul class="access-info__list">
+                  <li>埼京線　戸田公園駅　下車　徒歩３分</li>
+                </ul>
+              </div>
+
+              <div class="access-info">
+                <h4 class="access-info__title">車利用</h4>
+                <ul class="access-info__list">
+                  <li><strong>銀座方面より</strong>　「戸田南出口」最初の信号右折 →「オリンピック通り」戸田公園駅前</li>
+                  <li><strong>三郷方面より</strong>　「外環浦和出口」→「17号線　東京方面　川岸３丁目」右折 → 戸田公園駅前</li>
+                  <li><strong>大泉方面より</strong>　「美女木JCT」より →「首都高速　戸田出口」右側トンネル入り、出たら最初の信号左折 → 次も左折「オリンピック通り」戸田公園駅前</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 戸田マシンセンター アクセス -->
+        <div class="access-block">
+          <div class="access-block__header">
+            <h3 class="access-block__title">戸田マシンセンター</h3>
+            <address class="access-block__address">
+              〒335-0031　埼玉県戸田市美女木5-14-15<br>
+              TEL：048-422-2558　FAX：048-422-2558
+            </address>
+          </div>
+
+          <div class="access-block__content">
+            <div class="access-block__map">
+              <div class="img-placeholder">[ Google Map 埋め込み ]</div>
+            </div>
+
+            <div class="access-block__info">
+              <div class="access-info">
+                <h4 class="access-info__title">JR利用</h4>
+                <ul class="access-info__list">
+                  <li>埼京線戸田公園駅下車西口より「笹目行きバス」15分 →「終点」より徒歩5分</li>
+                </ul>
+              </div>
+
+              <div class="access-info">
+                <h4 class="access-info__title">車利用</h4>
+                <ul class="access-info__list">
+                  <li><strong>銀座方面より</strong>　「戸田南出口」→「17号バイパス」側道 → 北大通り左折 →「笹目6丁目」右折800m</li>
+                  <li><strong>大宮方面より</strong>　「戸田出口」→「17号バイパス」側道 → 北大通り左折 →「笹目6丁目」右折800m</li>
+                  <li><strong>三郷方面より</strong>　「戸田東出口」→「美女木6丁目」信号 左折800m</li>
+                  <li><strong>大泉方面より</strong>　「戸田西出口」→ 最初の信号「美女木6丁目」右折800m</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 取引先一覧 -->
+    <section id="partners" class="section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">PARTNERS</p>
+          <h2 class="section-title">取引先一覧</h2>
+        </header>
+
+        <div class="partners-grid">
+          <!-- 国内 -->
+          <div class="partners-block">
+            <h3 class="partners-block__title">国内</h3>
+            <ul class="partners-list">
+              <li class="partners-list__item">株式会社 アルプスツール</li>
+              <li class="partners-list__item">育良精機 株式会社</li>
+              <li class="partners-list__item">栄光精密工業 株式会社</li>
+              <li class="partners-list__item">株式会社 エーワン精密</li>
+              <li class="partners-list__item">株式会社 北村製作所</li>
+              <li class="partners-list__item">協和工業 株式会社</li>
+              <li class="partners-list__item">グリーンメタル 株式会社</li>
+              <li class="partners-list__item">三喜貿易 株式会社</li>
+              <li class="partners-list__item">株式会社 鹿浜製作所</li>
+              <li class="partners-list__item">シチズンマシナリー 株式会社</li>
+              <li class="partners-list__item">スター精密 株式会社</li>
+              <li class="partners-list__item">株式会社 精研</li>
+              <li class="partners-list__item">株式会社 ツガミ</li>
+              <li class="partners-list__item">株式会社 中山製作所</li>
+              <li class="partners-list__item">野村D・S 株式会社</li>
+              <li class="partners-list__item">株式会社 パーツ精工</li>
+              <li class="partners-list__item">富士フィルム 株式会社</li>
+              <li class="partners-list__item">株式会社 プレック</li>
+              <li class="partners-list__item">有限会社 真下製作所</li>
+              <li class="partners-list__item">株式会社 ミナト精工</li>
+              <li class="partners-list__item">株式会社 山善</li>
+              <li class="partners-list__item">ユウエツ精機 株式会社</li>
+            </ul>
+          </div>
+
+          <!-- 海外 -->
+          <div class="partners-block">
+            <h3 class="partners-block__title">海外</h3>
+            <ul class="partners-list">
+              <li class="partners-list__item">NTS Co.,Ltd</li>
+              <li class="partners-list__item">KYOWA PETROCHEMISTRY(S)PTE.LTD</li>
+              <li class="partners-list__item">MACHINE PLUS Co.,Ltd</li>
+              <li class="partners-list__item">大業機械公司（香港）</li>
+              <li class="partners-list__item">高達精密五金（深圳）有限公司</li>
+              <li class="partners-list__item">秩父精工業（東莞）有限公司</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pre-Footer CTA -->
+    <section class="pre-footer-cta">
+      <div class="pre-footer-cta__inner">
+        <div class="pre-footer-cta__btn">
+          <a href="contact.html" class="btn btn--outline-white btn--lg">
+            お問い合わせ <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+        <div class="pre-footer-cta__btn">
+          <a href="#" class="btn btn--outline-white btn--lg external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            在庫情報はこちら <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__company">
+          <div class="footer__logo">[ LOGO ]</div>
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline-white btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>
