@@ -6,20 +6,89 @@
    ============================================ */
 
 /* ============================================
+   Services Mosaic Breakdown (1279px以下)
+   カラム幅が狭まるとモザイク内のテキストがタグと重なるため、
+   タブレット〜モバイルまで一貫して縦一列レイアウトに切り替える
+   ============================================ */
+
+@media screen and (max-width: 1279px) {
+  .services .section-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .services__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .services__side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .services__side-row {
+    gap: var(--spacing-sm);
+  }
+
+  .service-card--primary {
+    aspect-ratio: 4 / 3;
+  }
+
+  .service-card--primary .service-card__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .service-card--secondary {
+    aspect-ratio: 16 / 10;
+  }
+
+  .service-card--secondary .service-card__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .service-card--tertiary {
+    aspect-ratio: 16 / 10;
+  }
+
+  .service-card--tertiary .service-card__body {
+    padding: var(--spacing-sm);
+  }
+
+  .service-card--tertiary .service-card__label {
+    margin-bottom: 4px;
+  }
+
+  .service-card--tertiary .service-card__title {
+    font-size: var(--font-size-sm);
+    margin-bottom: 4px;
+  }
+
+  .service-card--tertiary .service-card__desc {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .service-card--tertiary .service-card__more {
+    margin-top: 6px;
+    font-size: 10px;
+  }
+
+  .service-card__body {
+    padding: var(--spacing-sm);
+  }
+
+  .service-card__desc {
+    font-size: 12px;
+  }
+}
+
+/* ============================================
    Tablet (768px - 1023px)
    ============================================ */
 
 @media screen and (max-width: 1023px) {
-  /* Manufacturers Grid */
-  .manufacturers__list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* Services Grid */
-  .services__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   /* Used Machine Banner */
   .used-machine__banner {
     grid-template-columns: 1fr;
@@ -201,7 +270,7 @@
   }
 
   .fv__copy {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-4xl);
     line-height: 1.35;
   }
 
@@ -217,41 +286,113 @@
     height: 40px;
   }
 
-  /* Concept */
-  .concept {
-    padding: var(--spacing-2xl) 0;
+  /* Concept - フルビジュアルセクション */
+  .concept--visual {
+    min-height: 70vh;
+  }
+
+  .concept__inner {
+    padding: var(--spacing-2xl) var(--container-padding-mobile);
+  }
+
+  .concept__content {
+    margin-left: 0;
   }
 
   .concept__title {
-    font-size: var(--font-size-2xl);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
   }
 
-  .concept__text {
+  .concept__title-line {
+    font-size: clamp(22px, 6.4vw, 31px);
+    line-height: 1.5;
+  }
+
+  .concept__text-block {
     font-size: var(--font-size-md);
-    line-height: 1.8;
+    line-height: 1.9;
   }
 
-  /* Services */
-  .services {
-    padding: var(--spacing-2xl) 0;
+  .concept__text-block + .concept__text-block {
+    margin-top: var(--spacing-lg);
+  }
+
+  .concept__caption {
+    right: var(--container-padding-mobile);
+    bottom: var(--spacing-md);
+    font-size: 10px;
+  }
+
+  /* Services - モザイクは維持せず縦一列に。工作機械販売だけ高さを大きく残す */
+  .services .section-header {
+    margin-bottom: var(--spacing-lg);
   }
 
   .services__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xs);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .services__side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .services__side-row {
+    gap: var(--spacing-sm);
+  }
+
+  .service-card--primary {
+    aspect-ratio: 4 / 3;
+  }
+
+  .service-card--primary .service-card__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .service-card--secondary {
+    aspect-ratio: 16 / 10;
+  }
+
+  .service-card--secondary .service-card__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .service-card--tertiary {
+    aspect-ratio: 3 / 4;
+  }
+
+  .service-card--tertiary .service-card__body {
+    padding: var(--spacing-xs);
+  }
+
+  .service-card--tertiary .service-card__label {
+    margin-bottom: 4px;
+  }
+
+  .service-card--tertiary .service-card__title {
+    font-size: var(--font-size-sm);
+    margin-bottom: 4px;
+  }
+
+  .service-card--tertiary .service-card__desc {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .service-card--tertiary .service-card__more {
+    margin-top: 6px;
+    font-size: 10px;
   }
 
   .service-card__body {
     padding: var(--spacing-sm);
   }
 
-  .service-card__title {
-    font-size: var(--font-size-sm);
-  }
-
-  .service-card::before {
-    height: 2px;
+  .service-card__desc {
+    font-size: 12px;
   }
 
   /* Banner */
@@ -304,13 +445,11 @@
     padding: var(--spacing-xl) 0;
   }
 
-  .manufacturers__list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xs);
+  .manufacturers__item {
+    width: 160px;
   }
 
-  .manufacturers__item {
-    padding: var(--spacing-xs) var(--spacing-sm);
+  .manufacturers__name {
     font-size: var(--font-size-xs);
   }
 
@@ -379,27 +518,54 @@
     margin-top: var(--spacing-xs);
   }
 
-  /* Pre-Footer CTA */
-  .pre-footer-cta {
-    padding: var(--spacing-xl) 0;
+  /* Final CTA - 縦一列。並び順は 中古機械百貨店 → 廃業支援 → お問い合わせ（DOM順のまま） */
+  .final-cta {
+    padding: var(--spacing-lg) 0;
   }
 
-  .pre-footer-cta__inner {
-    flex-direction: column;
-    padding: 0 var(--container-padding);
+  .final-cta__top {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .final-cta__bar {
+    padding: var(--spacing-sm);
     gap: var(--spacing-sm);
+    min-height: auto;
   }
 
-  .pre-footer-cta__btn {
-    min-width: auto;
-    width: 100%;
+  .final-cta__media {
+    width: 48px;
+    height: 48px;
   }
 
-  .pre-footer-cta__btn .btn {
-    width: 100%;
-    justify-content: center;
-    font-size: var(--font-size-xs);
-    padding: 14px 24px;
+  .final-cta__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .final-cta__bar--contact {
+    padding: var(--spacing-md);
+  }
+
+  .final-cta__title--lg {
+    font-size: var(--font-size-2xl);
+  }
+
+  .final-cta__sub--lg {
+    font-size: var(--font-size-md);
+  }
+
+  .final-cta__arrow {
+    width: 40px;
+    height: 40px;
+    background-size: 16px;
+  }
+
+  .final-cta__arrow--lg {
+    width: 48px;
+    height: 48px;
+    background-size: 18px;
   }
 
   /* Footer */
@@ -508,19 +674,15 @@
    ============================================ */
 
 @media screen and (max-width: 375px) {
-  .services__grid {
-    grid-template-columns: 1fr;
-  }
-
   .fv__copy {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-3xl);
   }
 
   .fv__subcopy {
     font-size: var(--font-size-sm);
   }
 
-  .concept__title {
+  .concept__title-line {
     font-size: var(--font-size-xl);
   }
 }
@@ -532,7 +694,7 @@
 @media print {
   .header,
   .footer,
-  .pre-footer-cta,
+  .final-cta,
   .fv__scroll {
     display: none !important;
   }

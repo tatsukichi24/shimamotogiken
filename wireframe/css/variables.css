@@ -52,7 +52,7 @@
   --font-size-4xl: 34px;     /* h2 セクションタイトル上限 */
   --font-size-5xl: 40px;     /* h1 ページタイトル下限 */
   --font-size-6xl: 48px;     /* h1 ページタイトル上限 */
-  --font-size-hero: 54px;    /* ヒーロー用大見出し */
+  --font-size-hero: 72px;    /* ヒーロー用大見出し */
 
   /* Line Heights */
   --line-height-tight: 1.35;

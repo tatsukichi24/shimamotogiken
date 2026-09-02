@@ -171,11 +171,15 @@
 
 /* CTA Button */
 .header__cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-left: var(--spacing-sm);
 }
 
 .header__cta .btn {
-  padding: 12px 28px;
+  padding: 12px 22px;
+  white-space: nowrap;
 }
 
 /* Mobile Menu Button */
@@ -334,52 +338,146 @@
 }
 
 /* ============================================
-   Concept Section
+   Concept Section - フルビジュアル・ブランドセクション
+   「約40年の歴史」と「ものづくりのこれから」の対比を
+   大きな背景写真×強い見出し×大胆な余白で見せる
    ============================================ */
 
-.concept {
-  padding: var(--spacing-2xl) 0;
-  background: var(--color-bg-main);
+.concept--visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
+  overflow: hidden;
+  background: var(--color-bg-dark);
+  isolation: isolate;
+}
+
+/* 背景写真（本番では .concept__bg に background-image を設定する想定）
+   ワイヤー段階でも「写真の空気感」が伝わるよう、階調のあるグレー×グリーンで代用 */
+.concept__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(160deg, #6E6E6E 0%, #4C4C4C 38%, #333333 70%, #1F1F1F 100%);
+  background-position: var(--concept-bg-position, center center);
+  background-size: cover;
+  animation: concept-bg-zoom 24s ease-in-out infinite alternate;
+}
+
+@keyframes concept-bg-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* オーバーレイ: グレースケール（ワイヤーフレーム規約に準拠）。
+   テキスト側（左）を濃く、反対側は薄くして背景の質感を残す。
+   本番では色味（ブランドカラー）を検討 */
+.concept__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(100deg, rgba(10, 10, 10, 0.82) 0%, rgba(10, 10, 10, 0.6) 34%, rgba(10, 10, 10, 0.32) 62%, rgba(10, 10, 10, 0.14) 100%);
+}
+
+/* 写真キャプション（本番写真に対する簡易な補足情報） */
+.concept__caption {
+  position: absolute;
+  right: var(--container-padding);
+  bottom: var(--spacing-lg);
+  z-index: 2;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: right;
 }
 
 .concept__inner {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
-  text-align: left;
-  padding: 0 var(--container-padding);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: var(--spacing-4xl) var(--container-padding);
+}
+
+.concept__content {
+  max-width: 1040px;
+  margin-left: 6%;
+}
+
+.concept__label {
+  font-family: var(--font-family-en);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: var(--spacing-md);
 }
 
 .concept__title {
-  font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-lg);
-  line-height: 1.4;
-  letter-spacing: var(--letter-spacing-tight);
-  position: relative;
-  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
 }
 
-.concept__title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 48px;
-  height: 2px;
-  background: var(--color-text-heading);
+.concept__title-line {
+  display: block;
+  font-size: clamp(27px, 3.6vw, 51px);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.45;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-on-dark);
+}
+
+.concept__title-line + .concept__title-line {
+  margin-top: 0.3em;
 }
 
 .concept__text {
-  font-size: var(--font-size-md);
-  line-height: 2.1;
-  color: var(--color-text-primary);
+  max-width: 640px;
 }
 
-.concept__text p + p {
-  margin-top: var(--spacing-md);
+.concept__text-block {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-loose);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.concept__text-block + .concept__text-block {
+  margin-top: var(--spacing-xl);
+}
+
+/* スクロールフェードアップ（JS有効時のみ初期非表示にする） */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.6, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concept__bg {
+    animation: none;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ============================================
-   Services Section
+   Services Section - モザイク型グリッド
+   主軸(工作機械販売→メンテナンス→ロボット)は大きく、
+   支援領域(補助金・廃業支援)は小さく扱い、事業の強弱を見せる
    ============================================ */
 
 .services {
@@ -387,47 +485,297 @@
   background: var(--color-bg-section);
 }
 
-.services__grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-bottom: var(--spacing-xl);
+.services .section-header {
+  margin-bottom: var(--spacing-2xl);
 }
 
+.services__grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 16px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.services__side {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.services__side-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---- Card Base: 写真の上にテキストを載せる一枚のビジュアル ---- */
+
 .service-card {
-  background: var(--color-bg-main);
-  border: 1px solid var(--color-border);
-  text-decoration: none;
-  display: block;
-  transition: all var(--transition-base);
   position: relative;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+}
+
+.service-card__media {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, #EDEDED 0%, #DCDCDC 100%);
+  transition: transform var(--transition-slow);
+}
+
+.service-card__media::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px dashed var(--color-border-placeholder);
+  opacity: 0.6;
+}
+
+.service-card:hover .service-card__media {
+  transform: scale(1.05);
+}
+
+/* 写真プレースホルダーの注記。本文（左下固定）と衝突しないよう常に右上に固定 */
+.service-card__media-tag {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  right: 16px;
+  left: 16px;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+.service-card--primary .service-card__media-tag {
+  text-align: center;
+  font-size: 11px;
+}
+
+.service-card__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.78) 0%, rgba(20, 20, 20, 0.32) 45%, rgba(20, 20, 20, 0.04) 68%);
+  transition: background var(--transition-base);
+}
+
+.service-card:hover .service-card__scrim {
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.86) 0%, rgba(20, 20, 20, 0.42) 50%, rgba(20, 20, 20, 0.08) 72%);
+}
+
+.service-card__body {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  color: var(--color-text-on-dark);
+}
+
+.service-card__label {
+  display: block;
+  font-family: var(--font-family-en);
+  font-size: 10px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-widest);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.service-card__title {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+.service-card__desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 34em;
+}
+
+.service-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-on-dark);
+  transition: gap var(--transition-fast);
+}
+
+.service-card:hover .service-card__more {
+  gap: 10px;
+}
+
+/* ---- Size Variants ---- */
+
+.service-card--primary {
+  aspect-ratio: 1 / 1;
+}
+
+.service-card--primary .service-card__title {
+  font-size: var(--font-size-4xl);
+}
+
+.service-card--primary .service-card__desc {
+  font-size: var(--font-size-md);
+}
+
+.service-card--secondary .service-card__title {
+  font-size: var(--font-size-xl);
+}
+
+.service-card--tertiary .service-card__body {
+  padding: 20px;
+}
+
+.service-card--tertiary .service-card__label {
+  margin-bottom: 8px;
+}
+
+.service-card--tertiary .service-card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: 8px;
+}
+
+.service-card--tertiary .service-card__media {
+  padding-top: 14px;
+  font-size: 10px;
+}
+
+.service-card--tertiary .service-card__desc {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.service-card--tertiary .service-card__more {
+  margin-top: 10px;
+}
+
+.services__cta {
+  text-align: right;
+}
+
+.services__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border-hover);
+  padding-bottom: 2px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.services__cta-link:hover {
+  color: var(--color-text-heading);
+  border-color: var(--color-text-heading);
+}
+
+/* ============================================
+   Used Machine CTA - 中古機械百貨店への目立つボタン導線
+   （旧: 全幅バナー。サービス概要のすぐ下に配置）
+   ============================================ */
+
+.used-machine-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.used-machine-cta__text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.used-machine-cta__label {
+  font-family: var(--font-family-en);
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  margin-bottom: 8px;
+}
+
+.used-machine-cta__lead {
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+.used-machine-cta__inner .btn {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   Manufacturers Slider - 主要取扱メーカー（2列スライダー）
+   ============================================ */
+
+.manufacturers {
   overflow: hidden;
 }
 
-.service-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--color-text-heading);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-base);
+.manufacturers .section-header {
+  margin-bottom: var(--spacing-xl);
 }
 
-.service-card:hover {
-  border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-sm);
-  transform: translateY(-3px);
+.manufacturers__slider {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: var(--spacing-lg);
 }
 
-.service-card:hover::before {
-  transform: scaleX(1);
+.manufacturers__track {
+  display: flex;
+  width: max-content;
+  animation: manufacturers-scroll 150s linear infinite;
 }
 
-.service-card__img {
+.manufacturers__track--row1 {
+  animation-direction: normal;
+}
+
+.manufacturers__track--row2 {
+  animation-direction: reverse;
+}
+
+@keyframes manufacturers-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.manufacturers__item {
+  flex: 0 0 auto;
+  width: 220px;
+  margin-right: 16px;
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.manufacturers__img {
   aspect-ratio: 4/3;
   background: linear-gradient(145deg, #F5F5F5 0%, #EBEBEB 100%);
   border-bottom: 1px solid var(--color-border-light);
@@ -439,7 +787,7 @@
   position: relative;
 }
 
-.service-card__img::after {
+.manufacturers__img::after {
   content: "";
   position: absolute;
   top: 6px;
@@ -450,21 +798,18 @@
   opacity: 0.7;
 }
 
-.service-card__body {
-  padding: 18px 16px;
-  text-align: left;
-}
-
-.service-card__title {
-  font-size: 14px;
+.manufacturers__name {
+  padding: 14px 8px;
+  font-size: 13px;
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-heading);
-  line-height: 1.45;
   letter-spacing: 0.01em;
 }
 
-.services__cta {
-  text-align: center;
+@media (prefers-reduced-motion: reduce) {
+  .manufacturers__track {
+    animation: none;
+  }
 }
 
 /* ============================================
@@ -649,32 +994,12 @@
 }
 
 /* ============================================
-   Manufacturers Section
+   Manufacturers Section - 余白・CTA
+   （スライダー本体のスタイルは Manufacturers Slider ブロックを参照）
    ============================================ */
 
 .manufacturers {
   padding: var(--spacing-2xl) 0;
-  background: var(--color-bg-main);
-}
-
-.manufacturers__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-sm);
-}
-
-.manufacturers__item {
-  padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--color-bg-section);
-  border: 1px solid var(--color-border);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
-  transition: all var(--transition-fast);
-  text-align: center;
-}
-
-.manufacturers__item:hover {
-  border-color: var(--color-border-hover);
   background: var(--color-bg-main);
 }
 
@@ -852,33 +1177,139 @@
 }
 
 /* ============================================
-   Pre-Footer CTA Section
+   Final CTA Section - 上段2カラム（中古機械百貨店／廃業支援）＋下段フル幅（お問い合わせ）
+   優先順位: お問い合わせ ＞ 中古機械百貨店 ＞ 廃業支援サービス
+   参考デザインに合わせ、ラベルは枠の外側・上に配置し、
+   枠自体は白背景＋細い罫線のバー形状（グレースケール）にする
    ============================================ */
 
-.pre-footer-cta {
+.final-cta {
   padding: var(--spacing-xl) 0;
-  background: var(--color-bg-dark);
+  background: var(--color-bg-main);
 }
 
-.pre-footer-cta__inner {
+.final-cta__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.final-cta__label {
+  display: block;
+  font-family: var(--font-family-en);
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.final-cta__bar {
+  position: relative;
   display: flex;
-  justify-content: center;
-  gap: 16px;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  min-height: 110px;
+  text-decoration: none;
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border-hover);
+  transition: background var(--transition-base), border-color var(--transition-base);
 }
 
-.pre-footer-cta__btn {
-  width: 300px;
+.final-cta__bar:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-text-light);
+}
+
+.final-cta__media {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  background: linear-gradient(145deg, #F5F5F5 0%, #EBEBEB 100%);
+  border: 1px dashed var(--color-border-placeholder);
+  font-size: 9px;
+  line-height: 1.4;
+  color: var(--color-text-light);
 }
 
-.pre-footer-cta__btn .btn {
-  width: 100%;
-  padding: 22px 32px;
-  font-size: 14px;
-  justify-content: center;
+.final-cta__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.final-cta__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1.3;
+}
+
+.final-cta__sub {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.final-cta__sub.external-link::after {
+  width: 10px;
+  height: 10px;
+}
+
+.final-cta__arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-text-heading);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222' stroke-width='1.75'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+  transition: transform var(--transition-base), background-color var(--transition-base);
+}
+
+.final-cta__bar:hover .final-cta__arrow {
+  transform: translateX(6px);
+  background-color: var(--color-bg-main);
+}
+
+/* ---- Contact: 最優先CTA。フル幅・やや大きめ ---- */
+
+.final-cta__bar--contact {
+  min-height: 130px;
+  padding: 24px 32px;
+  border: 1px solid var(--color-text-heading);
+}
+
+.final-cta__bar--contact:hover {
+  background: var(--color-bg-hover);
+}
+
+.final-cta__title--lg {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-3xl);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.final-cta__sub--lg {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-heading);
+}
+
+.final-cta__arrow--lg {
+  width: 60px;
+  height: 60px;
+  background-size: 22px;
 }
 
 /* ============================================

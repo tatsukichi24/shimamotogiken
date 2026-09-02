@@ -176,7 +176,7 @@
 }
 
 .strength-card__title {
-  font-size: 14px;
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   margin-bottom: 8px;
   line-height: 1.5;
@@ -195,6 +195,190 @@
   font-size: 13px;
   color: var(--color-text-muted);
   line-height: 1.75;
+}
+
+/* ============================================
+   Service Hero - サブラベル（「サービス概要」等の中見出し）
+   ============================================ */
+
+.service-hero__sublabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-light);
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* ============================================
+   Features Section (サービスの特徴)
+   写真と交互に並ぶ特徴ブロック。各特徴にCASE（活用例）を添える
+   ============================================ */
+
+.features-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-xl);
+}
+
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+.feature-block--reverse .feature-block__content {
+  order: 2;
+}
+
+.feature-block--reverse .feature-block__image {
+  order: 1;
+}
+
+.feature-block--full {
+  grid-template-columns: 1fr;
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+/* ---- Plain variant: 写真なし、全項目を同じ縦積みレイアウトで統一 ---- */
+
+.features-list--plain {
+  max-width: var(--max-width-narrow);
+  margin: var(--spacing-xl) auto 0;
+  gap: var(--spacing-xl);
+}
+
+.feature-block--plain {
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.feature-block--plain:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.feature-block__label {
+  font-family: var(--font-family-en);
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-block__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-text-heading);
+}
+
+.feature-block__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+}
+
+.feature-block__case {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px dashed var(--color-border);
+}
+
+.feature-block__case-label {
+  font-family: var(--font-family-en);
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-block__case-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-block__case-list li {
+  position: relative;
+  padding-left: 1.4em;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+.feature-block__case-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-text-heading);
+}
+
+/* ============================================
+   Merit Section (シマモト技研に相談するメリット)
+   既存の strength-grid / strength-card を流用
+   ============================================ */
+
+.merit-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-bg-section);
+}
+
+/* ============================================
+   Tel Banner (お急ぎの方はお電話で)
+   ============================================ */
+
+.tel-banner {
+  padding: var(--spacing-lg) 0;
+  background: var(--color-bg-section);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tel-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+.tel-banner__text {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.tel-banner__tel {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: opacity var(--transition-fast);
+}
+
+.tel-banner__tel:hover {
+  opacity: 0.7;
 }
 
 /* ============================================
@@ -270,7 +454,7 @@
    ============================================ */
 
 .flow-section {
-  padding: var(--spacing-2xl) 0;
+  padding: var(--spacing-xl) 0;
   background: var(--color-bg-section);
 }
 
@@ -1298,15 +1482,16 @@
 .flow-grid-2col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .flow-grid-item {
   display: flex;
-  gap: var(--spacing-md);
+  align-items: center;
+  gap: var(--spacing-sm);
   background: var(--color-bg-main);
   border: 1px solid var(--color-border);
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   transition: all var(--transition-base);
 }
 
@@ -1318,7 +1503,7 @@
 .flow-grid-item__number {
   flex: 0 0 auto;
   font-family: var(--font-family-en);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: var(--font-weight-bold);
   color: var(--color-text-heading);
   line-height: 1;
@@ -1329,16 +1514,16 @@
 }
 
 .flow-grid-item__title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-heading);
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .flow-grid-item__text {
-  font-size: var(--font-size-sm);
+  font-size: 12px;
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* Makers Grid Uniform (均一メーカーグリッド) */
@@ -1617,8 +1802,18 @@
   }
 
   .strength-grid,
-  .strength-grid--5col {
+  .strength-grid--5col,
+  .strength-grid--3col {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-block,
+  .feature-block--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-block__image {
+    order: -1;
   }
 
   .machine-doctor__steps {
@@ -1718,6 +1913,19 @@
 
   .service-hero__catch {
     font-size: var(--font-size-lg);
+  }
+
+  .feature-block__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .tel-banner__inner {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .tel-banner__tel {
+    font-size: var(--font-size-2xl);
   }
 
   .strength-grid,

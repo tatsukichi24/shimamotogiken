@@ -52,58 +52,6 @@
 }
 
 /* ============================================
-   About Intro (機械を、現場の力へ。)
-   ============================================ */
-
-.about-intro {
-  padding: var(--spacing-2xl) 0;
-}
-
-.about-intro__inner {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
-}
-
-.about-intro__title {
-  font-size: var(--font-size-3xl);
-  text-align: left;
-  margin-bottom: var(--spacing-2xl);
-  letter-spacing: var(--letter-spacing-tight);
-}
-
-.about-intro__content {
-  font-size: 15px;
-  line-height: 2;
-  color: var(--color-text-primary);
-}
-
-.about-intro__content p {
-  margin-bottom: var(--spacing-md);
-}
-
-.about-intro__list {
-  margin: var(--spacing-md) 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.about-intro__list li {
-  padding: var(--spacing-xs) 0;
-  padding-left: 1.5em;
-  position: relative;
-}
-
-.about-intro__list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.9em;
-  width: 6px;
-  height: 6px;
-  background: var(--color-text-heading);
-}
-
-/* ============================================
    Engineering Trading Company
    ============================================ */
 
@@ -123,293 +71,6 @@
 
 .about-trading__content p {
   margin-bottom: var(--spacing-md);
-}
-
-/* ============================================
-   Engineering Flow (一貫対応の仕組み)
-   ============================================ */
-
-.engineering-flow {
-  padding: var(--spacing-2xl) 0;
-  background: var(--color-bg-main);
-}
-
-.engineering-flow__intro {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto var(--spacing-3xl);
-  font-size: 15px;
-  line-height: 2;
-  color: var(--color-text-primary);
-  text-align: left;
-}
-
-.engineering-flow__intro p {
-  margin-bottom: var(--spacing-md);
-}
-
-.engineering-flow__intro p:last-child {
-  margin-bottom: 0;
-}
-
-/* Steps Container */
-.engineering-flow__steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--spacing-3xl);
-  counter-reset: step-counter;
-}
-
-/* Individual Step */
-.engineering-flow__step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.engineering-flow__step-inner {
-  background: var(--color-bg-section);
-  border: 1px solid var(--color-border);
-  padding: var(--spacing-lg);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  transition: border-color var(--transition-base), box-shadow var(--transition-base);
-}
-
-.engineering-flow__step-inner:hover {
-  border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Step Header */
-.engineering-flow__step-header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
-}
-
-.engineering-flow__step-number {
-  font-family: var(--font-family-en);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-widest);
-  color: var(--color-text-light);
-  text-transform: uppercase;
-}
-
-.engineering-flow__step-icon {
-  width: 100%;
-  aspect-ratio: 16/9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.engineering-flow__step-icon .icon-placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--color-bg-placeholder);
-  border: 1px dashed var(--color-border-placeholder);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
-}
-
-/* Step Content */
-.engineering-flow__step-title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-heading);
-  margin-bottom: var(--spacing-sm);
-  padding-bottom: var(--spacing-sm);
-  border-bottom: 2px solid var(--color-text-heading);
-}
-
-.engineering-flow__step-desc {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-md);
-  flex: 1;
-}
-
-/* Tags */
-.engineering-flow__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-xs);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.engineering-flow__tags li {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
-  background: var(--color-bg-main);
-  border: 1px solid var(--color-border);
-  padding: var(--spacing-2xs) var(--spacing-sm);
-  white-space: nowrap;
-}
-
-/* Connector (Arrow) - PC */
-.engineering-flow__connector {
-  position: absolute;
-  top: 50%;
-  right: -12px;
-  width: 24px;
-  height: 24px;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.engineering-flow__connector::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-text-heading);
-  transform: translateY(-50%);
-}
-
-.engineering-flow__connector::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid var(--color-text-heading);
-  border-bottom: 2px solid var(--color-text-heading);
-  transform: translateY(-50%) rotate(-45deg);
-}
-
-.engineering-flow__step:last-child .engineering-flow__connector {
-  display: none;
-}
-
-/* Summary */
-.engineering-flow__summary {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto var(--spacing-2xl);
-  text-align: center;
-  background: var(--color-bg-section);
-  border: 1px solid var(--color-border);
-  padding: var(--spacing-xl);
-}
-
-.engineering-flow__summary-title {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-heading);
-  margin-bottom: var(--spacing-md);
-}
-
-.engineering-flow__summary-text {
-  font-size: var(--font-size-md);
-  color: var(--color-text-muted);
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-sm);
-}
-
-.engineering-flow__summary-text:last-child {
-  margin-bottom: 0;
-}
-
-/* CTA */
-.engineering-flow__cta {
-  text-align: center;
-}
-
-/* ============================================
-   Our Strength (強み)
-   ============================================ */
-
-.about-strength {
-  padding: var(--spacing-2xl) 0;
-}
-
-.about-strength__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
-}
-
-.about-strength__card {
-  background: var(--color-bg-section);
-  border: 1px solid var(--color-border);
-  padding: var(--spacing-md) var(--spacing-lg);
-  transition: all var(--transition-base);
-  position: relative;
-}
-
-.about-strength__card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--color-text-heading);
-  transform: scaleX(0);
-  transition: transform var(--transition-base);
-}
-
-.about-strength__card:hover {
-  border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-sm);
-}
-
-.about-strength__card:hover::before {
-  transform: scaleX(1);
-}
-
-.about-strength__number {
-  font-family: var(--font-family-en);
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-heading);
-  margin-bottom: var(--spacing-xs);
-  letter-spacing: var(--letter-spacing-tight);
-}
-
-.about-strength__title {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-xs);
-  line-height: var(--line-height-tight);
-}
-
-.about-strength__subtitle {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-muted);
-  margin-bottom: var(--spacing-sm);
-}
-
-.about-strength__text {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-sm);
-}
-
-.about-strength__text:last-of-type {
-  margin-bottom: 0;
-}
-
-.about-strength__note {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-light);
-  margin-top: var(--spacing-sm);
 }
 
 /* ============================================
@@ -520,18 +181,29 @@
 
 .about-policy__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
 }
 
 .about-policy__card {
+  position: relative;
   background: var(--color-bg-section);
   border: 1px solid var(--color-border);
-  padding: var(--spacing-lg) var(--spacing-xl);
   transition: all var(--transition-base);
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-lg);
+  overflow: hidden;
+}
+
+.about-policy__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-text-heading);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
 }
 
 .about-policy__card:hover {
@@ -539,24 +211,35 @@
   box-shadow: var(--shadow-sm);
 }
 
-.about-policy__number {
-  font-family: var(--font-family-en);
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-heading);
-  line-height: 1;
-  flex-shrink: 0;
+.about-policy__card:hover::before {
+  transform: scaleX(1);
 }
 
-.about-policy__card-content {
-  flex: 1;
+.about-policy__card-body {
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+}
+
+.about-policy__number {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-border-hover);
+  line-height: 1;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 .about-policy__card-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-heading);
+  line-height: 1.4;
+  min-height: 2.8em;
+  display: flex;
+  align-items: flex-start;
   margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .about-policy__card-text {
@@ -567,66 +250,178 @@
 }
 
 /* ============================================
-   Numbers (数字で見る)
+   Business Model (事業モデル図解)
+   シマモト技研 × ゼロプラスグループ、2社のソリューションが
+   掛け合わさってワンストップ支援になることを簡単な図解で見せる。
+   ワイヤー段階のため、凝った接続線は使わず「＋」記号と結果ボックスのみで表現
    ============================================ */
 
-.about-numbers {
+.business-model {
   padding: var(--spacing-2xl) 0;
-  background: var(--color-bg-section);
 }
 
-.about-numbers__grid {
+.business-model .section-lead {
+  max-width: 760px;
+}
+
+.model-diagram {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  max-width: var(--max-width-wide);
+  margin: var(--spacing-xl) auto 0;
+}
+
+.model-diagram__col {
+  flex: 1;
+  max-width: 420px;
+}
+
+.model-diagram__plus {
+  flex-shrink: 0;
+  align-self: center;
+  font-family: var(--font-family-en);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-border-hover);
+}
+
+.model-diagram__hub {
+  background: var(--color-bg-dark);
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.model-diagram__hub--alt {
+  background: var(--color-bg-dark-alt);
+}
+
+.model-diagram__hub-en {
+  font-family: var(--font-family-en);
+  font-size: 10px;
+  letter-spacing: var(--letter-spacing-widest);
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 6px;
+}
+
+.model-diagram__hub-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.35;
+  color: var(--color-text-on-dark);
+}
+
+.model-diagram__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.model-diagram__list li {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-heading);
+}
+
+.model-diagram__group {
+  margin-top: var(--spacing-md);
+}
+
+.model-diagram__group-title {
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.model-diagram__result {
+  max-width: var(--max-width-narrow);
+  margin: var(--spacing-xl) auto 0;
+  text-align: center;
+  border: 1px solid var(--color-text-heading);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.model-diagram__result-text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+/* ============================================
+   Machines (取り扱う機械)
+   メーカーではなく機械の大分類をビジュアルで見せる。
+   要確認: 正式分類が決まり次第、項目を差し替え
+   ============================================ */
+
+.machines {
+  padding: var(--spacing-2xl) 0;
+}
+
+.machines__list-title {
+  text-align: center;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.machines__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--spacing-md);
 }
 
-.about-numbers__card {
+.machines__item {
   background: var(--color-bg-main);
   border: 1px solid var(--color-border);
-  padding: var(--spacing-xl);
   text-align: center;
   transition: all var(--transition-base);
 }
 
-.about-numbers__card:hover {
+.machines__item:hover {
   border-color: var(--color-border-hover);
   box-shadow: var(--shadow-sm);
 }
 
-.about-numbers__card--wide {
-  grid-column: span 2;
-}
-
-.about-numbers__label {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  margin-bottom: var(--spacing-sm);
-}
-
-.about-numbers__value {
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-heading);
-  line-height: 1;
-  letter-spacing: var(--letter-spacing-tight);
-}
-
-.about-numbers__unit {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-regular);
-}
-
-.about-numbers__value-text {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-heading);
-}
-
-.about-numbers__note {
+.machines__img {
+  aspect-ratio: 4/3;
+  background: linear-gradient(145deg, #F5F5F5 0%, #EBEBEB 100%);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: var(--font-size-xs);
   color: var(--color-text-light);
-  margin-top: var(--spacing-xs);
+  position: relative;
+}
+
+.machines__img::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px dashed var(--color-border-placeholder);
+  opacity: 0.7;
+}
+
+.machines__name {
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-heading);
 }
 
 /* ============================================
@@ -710,124 +505,20 @@
 }
 
 /* ============================================
-   About CTA
-   ============================================ */
-
-.about-cta {
-  padding: var(--spacing-2xl) 0;
-  background: var(--color-bg-dark);
-  color: var(--color-text-on-dark);
-}
-
-.about-cta__inner {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-cta__title {
-  font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-lg);
-  letter-spacing: var(--letter-spacing-tight);
-}
-
-.about-cta__text {
-  font-size: var(--font-size-md);
-  color: var(--color-text-on-dark-muted);
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-md);
-}
-
-.about-cta__text:last-of-type {
-  margin-bottom: var(--spacing-xl);
-}
-
-.about-cta__buttons {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
-}
-
-/* ============================================
    Responsive - About Page
    ============================================ */
 
 @media screen and (max-width: 1023px) {
-  /* Engineering Flow - Tablet (縦並び) */
-  .engineering-flow__steps {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .engineering-flow__connector {
-    display: none;
-  }
-
-  .engineering-flow__step {
-    position: relative;
-  }
-
-  /* 縦方向の接続線（タブレット・モバイル共通） */
-  .engineering-flow__step:not(:last-child) .engineering-flow__step-inner::after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: var(--spacing-lg);
-    background: var(--color-text-heading);
-    position: absolute;
-    bottom: calc(-1 * var(--spacing-lg));
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .engineering-flow__step:not(:last-child)::after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid var(--color-text-heading);
-    border-bottom: 2px solid var(--color-text-heading);
-    position: absolute;
-    bottom: calc(-1 * var(--spacing-lg) + 2px);
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    z-index: 1;
-    background: var(--color-bg-main);
-  }
-
-  .engineering-flow__step {
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .engineering-flow__step:last-child {
-    margin-bottom: 0;
-  }
-
-  .about-strength__grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-policy__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-services__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .about-policy__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-numbers__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-numbers__card--wide {
-    grid-column: span 2;
+  .machines__grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -844,63 +535,38 @@
     font-size: var(--font-size-xl);
   }
 
-  .about-intro {
-    padding: var(--spacing-xl) 0;
-  }
-
-  .about-intro__title {
-    font-size: var(--font-size-2xl);
-  }
-
   .about-trading,
-  .about-strength,
   .about-services,
   .about-policy,
-  .about-numbers,
   .about-vision,
-  .engineering-flow {
+  .business-model,
+  .machines {
     padding: var(--spacing-xl) 0;
   }
 
-  /* Engineering Flow - Mobile */
-  .engineering-flow__step-inner {
-    padding: var(--spacing-md);
+  .about-policy__grid {
+    grid-template-columns: 1fr;
   }
 
-  .engineering-flow__step-title {
-    font-size: var(--font-size-md);
-  }
-
-  .engineering-flow__summary {
-    padding: var(--spacing-lg);
-  }
-
-  .engineering-flow__summary-title {
-    font-size: var(--font-size-lg);
-  }
-
-  .engineering-flow__summary-text {
-    font-size: var(--font-size-sm);
+  .about-policy__card-title {
+    min-height: 0;
   }
 
   .about-services__grid {
     grid-template-columns: 1fr;
   }
 
-  .about-numbers__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-numbers__card--wide {
-    grid-column: auto;
-  }
-
-  .about-cta__buttons {
+  /* Business Model - モバイルは2社を縦に積む */
+  .model-diagram {
     flex-direction: column;
   }
 
-  .about-cta__buttons .btn {
-    width: 100%;
+  .model-diagram__col {
+    max-width: none;
+  }
+
+  .machines__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Company Overview CTA */

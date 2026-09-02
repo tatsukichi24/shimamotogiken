@@ -147,7 +147,8 @@ address {
   text-align: center;
 }
 
-.section-header--center .section-subtitle {
+.section-header--center .section-subtitle,
+.section-header--center .section-lead {
   margin-left: auto;
   margin-right: auto;
 }
@@ -247,6 +248,19 @@ address {
   background: #000000;
   border-color: #000000;
   transform: translateY(-1px);
+}
+
+/* 廃業支援サービス専用の強調ボタン。通常のoutline/primaryと区別するため
+   淡いグレー塗りにする（色は使わずグレースケールで強弱をつける） */
+.btn--closure {
+  background: var(--color-bg-section-alt);
+  border-color: var(--color-border-hover);
+}
+
+.btn--closure:hover {
+  background: var(--color-text-heading);
+  border-color: var(--color-text-heading);
+  color: var(--color-bg-main);
 }
 
 .btn--outline-white {
@@ -426,9 +440,9 @@ address {
 /* Wireframe Note - 仮テキスト表示用 */
 .wire-note {
   display: inline-block;
-  background: #FFFBEB;
-  border: 1px solid #E5E0D5;
-  color: #7A6B4E;
+  background: var(--color-bg-placeholder);
+  border: 1px solid var(--color-border-placeholder);
+  color: var(--color-text-primary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   padding: 2px 8px;
