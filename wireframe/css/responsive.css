@@ -286,6 +286,14 @@
     height: 40px;
   }
 
+  .fv__closure-banner {
+    right: var(--container-padding);
+    bottom: var(--container-padding);
+    left: var(--container-padding);
+    min-width: 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
   /* Concept - フルビジュアルセクション */
   .concept--visual {
     min-height: 70vh;
