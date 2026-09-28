@@ -1,0 +1,77 @@
+:root {
+  /* Color: Primary (green) */
+  --color-primary: #1F8A62;
+  --color-primary-light: #6FC8A0;
+  --color-primary-pale: #E3F4EC;
+
+  /* Color: Navy (text-only in B案. no fill) */
+  --color-navy: #14213D;
+
+  /* Color: Accent */
+  --color-accent: #F2C230;
+
+  /* Backgrounds */
+  --color-bg: #FFFFFF;
+  --color-bg-white: #FFFFFF;
+  --color-bg-alt: #F7F9FB;
+  --color-bg-gray: #F2F4F3;
+  --color-photo-placeholder: #E8ECF2;
+
+  /* Text */
+  --color-text: #1E2A36;
+  --color-text-muted: #5B6963;
+  --color-text-placeholder: #4A5A78;
+  --color-text-on-dark: #FFFFFF;
+
+  /* Border */
+  --color-border: #DCE2E9;
+  --color-border-card: #CBD3DD;
+  --color-border-dashed: #9AA6BC;
+  --color-border-on-dark: rgba(255, 255, 255, 0.6);
+
+  /* Overlay */
+  --overlay-fv: linear-gradient(90deg, rgba(20, 33, 61, 0.7) 0%, rgba(20, 33, 61, 0.35) 55%, rgba(20, 33, 61, 0.1) 100%);
+
+  /* Font families */
+  --font-jp: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --font-en: "Montserrat", "Poppins", system-ui, sans-serif;
+
+  /* Font sizes */
+  --fs-h1: 2.25rem;
+  --fs-h1-mobile: 1.75rem;
+  --fs-h2: 1.875rem;
+  --fs-h2-mobile: 1.5rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 0.9375rem;
+  --fs-caption: 0.75rem;
+  --fs-label: 0.75rem;
+  --fs-nav: 0.875rem;
+
+  /* Letter spacing */
+  --ls-tight: 0.02em;
+  --ls-normal: 0.03em;
+  --ls-wide: 0.04em;
+  --ls-label: 0.12em;
+
+  /* Line height */
+  --lh-body: 2;
+  --lh-heading: 1.5;
+
+  /* Spacing (8px grid) */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 32px;
+  --sp-4: 64px;
+  --sp-5: 96px;
+
+  /* Layout */
+  --content-max-width: 1120px;
+  --border-width: 1px;
+  --border-width-heavy: 2px;
+
+  /* Radius（少しだけ丸く） */
+  --radius-sm: 4px;   /* ボタン・タグ・小要素 */
+  --radius-md: 6px;   /* カード・入力欄・画像 */
+
+  /* Breakpoints (for reference; used in media queries directly) */
+}

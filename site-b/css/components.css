@@ -1,0 +1,276 @@
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-1);
+  padding: 12px 20px;
+  border: var(--border-width-heavy) solid var(--color-navy);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: var(--ls-normal);
+  color: var(--color-navy);
+  background: transparent;
+  white-space: nowrap;
+}
+
+.btn--outline {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+  background: transparent;
+}
+
+.btn--closure {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.btn--primary {
+  border-color: var(--color-primary);
+  color: var(--color-text-on-dark);
+  background: var(--color-primary);
+}
+
+.btn--outline-white {
+  border-color: var(--color-text-on-dark);
+  color: var(--color-text-on-dark);
+  background: transparent;
+}
+
+.btn--sm {
+  padding: 8px 16px;
+  font-size: 0.75rem;
+}
+
+.btn--lg {
+  min-width: 260px;
+  padding: 16px 24px;
+  font-size: 0.9375rem;
+}
+
+/* ===== Arrow icon ===== */
+.arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: var(--border-width-heavy) solid currentColor;
+  border-radius: var(--radius-sm);
+  color: inherit;
+}
+
+.arrow-icon::after {
+  content: "\2192";
+  font-size: 14px;
+  line-height: 1;
+}
+
+.btn--primary .arrow-icon,
+.final-cta__bar--contact .arrow-icon {
+  border-color: var(--color-text-on-dark);
+  color: var(--color-text-on-dark);
+}
+
+/* ===== Section header ===== */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+
+.section-header--center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-label {
+  font-family: var(--font-en);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: var(--ls-label);
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: var(--fs-h2-mobile);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-normal);
+  color: var(--color-navy);
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+.section-header--center::after {
+  margin: 0 auto;
+}
+
+/* ===== External link marker ===== */
+.external-link::after {
+  content: "\26F6";
+  margin-left: 4px;
+  font-size: 0.75em;
+}
+
+.external-link--white::after {
+  content: "\26F6";
+}
+
+/* ===== Wireframe helper note (not real content) ===== */
+.wire-note {
+  margin-left: 6px;
+  font-size: 0.6875rem;
+  color: var(--color-text-placeholder);
+}
+
+/* ===== Image (photo not yet supplied: light gray placeholder fill via src, real alt for a11y) ===== */
+.media-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--color-photo-placeholder);
+}
+
+/* ===== Media frame: overlays the wireframe's [ ○○ ] label on top of the
+   placeholder <img> so reviewers can see what photo is expected, while the
+   <img alt> keeps carrying the real accessible description ===== */
+.media-frame {
+  position: relative;
+}
+
+.media-frame::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--sp-1);
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.6875rem;
+  color: var(--color-text-placeholder);
+  pointer-events: none;
+}
+
+/* ===== Mobile menu ===== */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  top: 116px;
+  background: var(--color-bg);
+  padding: var(--sp-3) var(--sp-2) 120px;
+  overflow-y: auto;
+  display: none;
+  z-index: 90;
+}
+
+.mobile-menu.is-active {
+  display: block;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__item {
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: var(--sp-2) 0;
+  font-weight: 700;
+  font-size: var(--fs-nav);
+  color: var(--color-navy);
+}
+
+.mobile-menu__sublist {
+  padding: 0 0 var(--sp-2) var(--sp-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.mobile-menu__sublink {
+  display: block;
+  padding: 6px 0;
+  font-size: 0.8125rem;
+  color: var(--color-text);
+}
+
+.mobile-menu__cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+}
+
+.mobile-menu__cta .btn {
+  width: 100%;
+}
+
+/* ===== Fixed bottom bar (mobile / tablet) ===== */
+.fixed-bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  display: flex;
+  border-top: var(--border-width-heavy) solid var(--color-navy);
+  background: var(--color-bg);
+}
+
+.fixed-bottom-bar__link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 8px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--color-navy);
+  text-align: center;
+}
+
+.fixed-bottom-bar__link--primary {
+  background: var(--color-primary);
+  color: var(--color-text-on-dark);
+}
+
+.fixed-bottom-bar__link + .fixed-bottom-bar__link {
+  border-left: var(--border-width) solid var(--color-border);
+}
+
+/* ===== Radius（トンマナ調整: 真四角→少し丸く） ===== */
+.header__logo-placeholder,.footer__logo,.img-placeholder,.media-frame,.media-frame img,.final-cta__media,
+.manufacturers__item,.manufacturers__img,.service-card,.service-card__media,.final-cta__bar,.final-cta__arrow,.services__cta-link,
+.location-card,.strength-card,.related-service-card,.about-policy__grid,.job-card,.for-you-card,.skill-card,.education-card,.value-card,.guideline-card,
+.machine-doctor__inner,.machine-doctor__steps,.tel-banner__inner,.used-machine-banner__inner,.about-company-cta__inner,.feature-block__case,
+.contact-intro__tel,.form-privacy,.sidebar-section--cta,.model-diagram__hub,.model-diagram__list,.model-diagram__result,.machines__item,
+.form-input,.form-select,.form-textarea,.fv__closure-banner,.recruit-hero__bg,.header__dropdown{border-radius:var(--radius-md)}
+.tag,.news__category,.news-page__category,.recruit-hero__tag,.pagination__item,.form-label__required,.form-label__optional,.fixed-bottom-bar__link--primary{border-radius:var(--radius-sm)}
+.manufacturers__img,.service-card__media,.related-service-card__image,.machines__img{border-radius:var(--radius-md) var(--radius-md) 0 0}
+.service-card--secondary .service-card__media,.service-card--tertiary .service-card__media{border-radius:var(--radius-md) 0 0 var(--radius-md)}
+.related-service-card__image{overflow:hidden}
+.service-card,.manufacturers__item,.machines__item,.related-service-card,.about-policy__grid,.job-card,.machine-doctor__steps{overflow:hidden}
+@media (max-width:600px){.service-card--secondary .service-card__media,.service-card--tertiary .service-card__media{border-radius:var(--radius-md) var(--radius-md) 0 0}}
+.container>*{min-width:0}
+.service-hero__content,.feature-block__content,.support-section__content,.recruit-hero__content,.job-card__content,.value-card,.skill-card,.for-you-card,.education-card{min-width:0;overflow-wrap:anywhere}

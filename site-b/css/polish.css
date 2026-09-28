@@ -1,0 +1,265 @@
+/* =========================================================
+   polish.css — 仕上げレイヤー（B案ブラッシュアップ）
+   読み込み順は最後。既存のトークン・構造は変えず、
+   「揃える／細くする／動かす」の3方針で密度を上げる。
+   ========================================================= */
+
+:root{
+  --ease:cubic-bezier(.2,.6,.2,1);
+  --dur:.25s;
+  --hair:rgba(20,33,61,.10);                /* 写真の内側ヘアライン */
+  --shadow-lift:0 1px 2px rgba(20,33,61,.04),0 16px 40px -20px rgba(20,33,61,.22);
+  --color-primary-deep:#17724F;             /* 緑ボタンの hover */
+}
+
+/* ---------- 0. ベース微調整 ---------- */
+html{scroll-behavior:smooth}
+::selection{background:var(--color-primary-pale);color:var(--color-navy)}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:2px}
+h1,h2,h3,h4{font-feature-settings:"palt";text-wrap:pretty}
+a,button{transition:color var(--dur) var(--ease),background-color var(--dur) var(--ease),border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.header__topbar-tel,.footer__tel,.news__date,.news-page__date,.article-card__date,.flow-grid-item__number,.feature-item__number,.flow-vertical__number,.contact-intro__tel-number,.tel-banner__tel,.sidebar-section__tel,.location-card__contact,.archive-list__count{font-variant-numeric:tabular-nums}
+
+/* ---------- 1. 左端の基準線を1本に（1440 / 120px） ----------
+   page-header と breadcrumb が <main> の外にあり、本文と左端がズレていた */
+@media (min-width:1024px){
+  .page-header .container,.breadcrumb .container,main .container,.footer>.footer__inner{max-width:1440px;margin-left:auto;margin-right:auto;padding-left:120px;padding-right:120px}
+}
+
+/* ---------- 2. 英字ラベル：右に24pxのヘアライン（中央揃えは両側） ---------- */
+.section-label,.section-title__en,.page-header__label,.service-hero__label,.support-section__label,.machine-doctor__label,
+.used-machine-banner__label,.used-machine-cta__label,.final-cta__label,.recruit-hero__label,.recruit-cta__label,.service-cta__label,
+.about-hero__label,.job-card__label{display:flex;align-items:center;gap:12px;line-height:1.2}
+.section-label::after,.section-title__en::after,.page-header__label::after,.service-hero__label::after,.support-section__label::after,.machine-doctor__label::after,
+.used-machine-banner__label::after,.used-machine-cta__label::after,.final-cta__label::after,.recruit-hero__label::after,.recruit-cta__label::after,.service-cta__label::after,
+.about-hero__label::after,.job-card__label::after{content:"";flex:none;width:24px;height:1px;background:currentColor;opacity:.7}
+.section-header--center .section-label,.used-machine-banner__label,.recruit-cta__label,.service-cta__label{justify-content:center}
+.section-header--center .section-label::before,.used-machine-banner__label::before,.recruit-cta__label::before,.service-cta__label::before{content:"";flex:none;width:24px;height:1px;background:currentColor;opacity:.7}
+
+/* ---------- 3. 見出しバー：3px→2px、h1=48px / h2=40px に統一 ---------- */
+.section-header::after,.section-title__ja::after,.page-header__title::after,.service-hero__title::after,.support-section__title::after,.machine-doctor__title::after,.about-hero__title::after,.recruit-hero__title::after{height:2px}
+.page-header__title::after,.service-hero__title::after,.about-hero__title::after,.recruit-hero__title::after{width:48px}
+/* TOPのh2だけ24pxのままだった → 下層と同じ30px */
+@media (min-width:1024px){.section-title{font-size:var(--fs-h2)}}
+
+/* ---------- 4. ボタン：1px枠 + 反転ホバー + 矢印の送り ---------- */
+.btn{border-width:1px;padding:13px 20px}
+.btn--sm{padding:9px 16px}
+.btn--lg{padding:17px 24px}
+.btn:hover{background:var(--color-navy);border-color:var(--color-navy);color:#fff}
+.btn--closure:hover{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
+.btn--primary:hover{background:var(--color-primary-deep);border-color:var(--color-primary-deep);color:#fff}
+.btn--outline-white:hover{background:#fff;border-color:#fff;color:var(--color-primary)}
+.btn--outline-white:hover .arrow-icon,.btn--outline-white:hover .arrow-icon--white,
+.pre-footer-cta .btn--outline-white:hover .arrow-icon,.service-cta .btn--outline-white:hover .arrow-icon,.recruit-cta .btn--outline-white:hover .arrow-icon{border-color:var(--color-primary);color:var(--color-primary)}
+.arrow-icon{border-width:1px;overflow:hidden}
+.arrow-icon::after{transition:transform var(--dur) var(--ease)}
+.btn:hover .arrow-icon::after,.services__cta-link:hover .arrow-icon::after,.fv__closure-banner:hover .arrow-icon::after,.service-card:hover .arrow-icon::after,.final-cta__bar:hover .final-cta__arrow::after{transform:translateX(3px)}
+.btn:hover .arrow-icon{border-color:currentColor}
+.services__cta-link{border-width:1px;border-radius:var(--radius-md)}
+.services__cta-link:hover{background:var(--color-navy);color:#fff}
+.features-section .services__cta{margin-top:56px}
+
+/* 外部リンク記号：⛶（環境依存で豆腐化）→ ↗ に統一。ボタン内は矢印ボックスの中に入れる */
+.external-link::after,.external-link--white::after{content:"\2197";margin-left:5px;font-size:.85em;vertical-align:.05em}
+.btn.external-link::after,.btn .external-link::after{display:none}
+.btn.external-link .arrow-icon::after,.btn:has(.external-link) .arrow-icon::after{content:"\2197"}
+
+/* ---------- 5. ヘッダー ---------- */
+.header{transition:box-shadow .35s var(--ease)}
+.header.is-scrolled{box-shadow:0 12px 32px -20px rgba(20,33,61,.28)}
+.header__logo-img{display:block;width:auto;height:26px}
+.footer__logo-img{display:block;width:auto;height:34px;align-self:flex-start}
+@media (min-width:1024px){.header__logo-img{height:30px}}
+/* 新ヘッダー: トップバー廃止。ロゴ＋説明文（左）／ナビ＋CTA＋TEL（右） */
+.header__logo{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:none}
+.header__logo-desc{font-size:9px;line-height:1.4;letter-spacing:.05em;color:var(--color-text-muted);max-width:250px}
+.header__tel{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;margin-left:8px;line-height:1;color:var(--color-navy)}
+.header__tel-label{font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--color-primary)}
+.header__tel-num{font-family:var(--font-en);font-weight:700;font-size:19px;letter-spacing:.01em;font-variant-numeric:tabular-nums;margin-top:3px;white-space:nowrap}
+@media (min-width:1280px){.header__logo-desc{font-size:10px}}
+/* 1280〜1439px: PCナビ表示直後の帯域は横幅が足りないため全体を少し詰める */
+@media (min-width:1280px) and (max-width:1439px){
+  .header__logo-img{height:24px}
+  .header__logo-desc{font-size:9px;max-width:190px}
+  .header__nav{gap:12px}
+  .header__nav-list{gap:10px}
+  .header__cta{gap:5px}
+  .header__cta .btn{padding-left:10px;padding-right:10px}
+  .header__tel{margin-left:4px}
+  .header__tel-num{font-size:15px}
+}
+@media (min-width:1280px){
+  .header__nav-item{display:flex;align-items:center;height:84px}
+  .header__nav-link{position:relative;padding:6px 0}
+  .header__nav-link::before{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--color-primary);transform:scaleX(0);transform-origin:left;transition:transform var(--dur) var(--ease)}
+  .header__nav-link:hover::before,.header__nav-item.is-current>.header__nav-link::before{transform:scaleX(1)}
+  .header__nav-link:hover{color:var(--color-primary)}
+  .header__nav-link--dropdown::after{display:inline-block;transition:transform var(--dur) var(--ease)}
+  .header__nav-item:hover .header__nav-link--dropdown::after{transform:rotate(180deg)}
+  .header__cta .btn{padding:10px 16px;font-size:.75rem}
+  .header__dropdown{display:flex;opacity:0;visibility:hidden;transform:translateY(8px);pointer-events:none;top:100%;padding:6px 0;border-top:2px solid var(--color-primary);border-radius:0 0 var(--radius-md) var(--radius-md);box-shadow:var(--shadow-lift);transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease),visibility 0s linear var(--dur)}
+  .header__nav-item:hover .header__dropdown,.header__nav-item:focus-within .header__dropdown{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition-delay:0s}
+  .header__dropdown-link{position:relative;padding:11px 20px 11px 22px;border-bottom:0;transition:color var(--dur) var(--ease),padding-left var(--dur) var(--ease),background-color var(--dur) var(--ease)}
+  .header__dropdown-link::before{content:"";position:absolute;left:12px;top:50%;width:0;height:1px;background:var(--color-primary);transition:width var(--dur) var(--ease)}
+  .header__dropdown-link:hover{color:var(--color-primary);background:var(--color-bg-alt);padding-left:30px}
+  .header__dropdown-link:hover::before{width:10px}
+}
+
+/* ---------- 6. パンくず：「／」→ 小さなシェブロン ---------- */
+.breadcrumb{padding:12px 0}
+.breadcrumb__list{gap:10px}
+.breadcrumb__item+.breadcrumb__item::before{content:"";width:5px;height:5px;margin:0 10px 0 0;border-right:1px solid var(--color-text-placeholder);border-bottom:1px solid var(--color-text-placeholder);transform:rotate(-45deg);color:transparent}
+.breadcrumb__item a:hover{color:var(--color-primary)}
+.breadcrumb__item[aria-current="page"]{color:var(--color-navy)}
+
+/* ---------- 7. 写真：内側1pxヘアライン + リンク内はホバーで微ズーム ---------- */
+.service-hero__image,.feature-block__image,.support-section__image,.article-card__image,.access-block__map,.final-cta__media,.service-card__media,.manufacturers__img,.related-service-card__image,.job-card__image,.recruit-hero__bg,.about-hero__image{position:relative;isolation:isolate}
+.service-hero__image::before,.feature-block__image::before,.support-section__image::before,.article-card__image::before,.access-block__map::before,.final-cta__media::before,.service-card__media::before,.manufacturers__img::before,.related-service-card__image::before,.job-card__image::before,.about-hero__image::before{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;box-shadow:inset 0 0 0 1px var(--hair);pointer-events:none}
+.service-card__media,.final-cta__media,.job-card__image{overflow:hidden}
+.service-card img,.related-service-card img,.article-card__image>*,.final-cta__media img,.manufacturers__img img{transition:transform .8s var(--ease),opacity var(--dur) var(--ease)}
+/* メーカー写真は白背景の切り抜き素材のため contain で全体を見せる */
+.manufacturers__img{background:var(--color-bg)}
+.manufacturers__img img{object-fit:contain;padding:6px}
+.service-card:hover img,.related-service-card:hover img,.article-card__link:hover .article-card__image>*,.final-cta__bar:hover .final-cta__media img{transform:scale(1.04)}
+.article-card__link:hover .article-card__image>*{opacity:1}
+.related-service-card:hover .related-service-card__image{opacity:1}
+.job-card__image>*{border-radius:var(--radius-md)}
+
+/* サービス／About ヒーロー写真：1px緑のオフセットフレーム（「手が込んでいる」の記号） */
+.service-hero__image,.about-hero__image{overflow:visible}
+.service-hero__image>*,.about-hero__image>*{border-radius:var(--radius-md)}
+.service-hero__image::before,.about-hero__image::before{border-radius:var(--radius-md)}
+.service-hero__image::after,.about-hero__image::after{content:"";position:absolute;inset:16px -16px -16px 16px;z-index:-1;border:1px solid var(--color-primary);border-radius:var(--radius-md);opacity:.75}
+@media (max-width:767px){.service-hero__image::after,.about-hero__image::after{display:none}}
+
+/* ---------- 8. カードを2種類に整理 ----------
+   リンクカード：ホバーで枠が紺・写真が微ズーム・矢印が送られる
+   情報カード　：上辺2pxの紺（静的であることを示す） */
+.service-card,.related-service-card,.final-cta__bar,.fv__closure-banner,.article-card__link,.manufacturers__item,.location-card,.strength-card{transition:border-color var(--dur) var(--ease),background-color var(--dur) var(--ease)}
+.service-card:hover,.related-service-card:hover,.final-cta__bar:not(.final-cta__bar--contact):hover{border-color:var(--color-navy)}
+.service-card__title,.related-service-card__title,.final-cta__title{transition:color var(--dur) var(--ease)}
+.service-card:hover .service-card__title,.related-service-card:hover .related-service-card__title,.final-cta__bar:not(.final-cta__bar--contact):hover .final-cta__title{color:var(--color-primary)}
+.related-service-card__link{display:inline-block;transition:transform var(--dur) var(--ease)}
+.related-service-card:hover .related-service-card__link{transform:translateX(4px)}
+.strength-card,.for-you-card,.skill-card,.education-card,.value-card,.guideline-card{border-top:2px solid var(--color-navy)}
+.for-you-card__title,.skill-card__title,.education-card__title,.value-card__title{border-bottom:1px solid var(--color-border-card)}
+.guideline-card__title{border-bottom:1px solid var(--color-border-card)}
+
+/* CASE ブロック：枠カード → 左2px緑＋薄地（カードと区別する） */
+.feature-block__case{border:0;border-left:2px solid var(--color-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;background:var(--color-bg-alt);padding:18px 24px}
+
+/* FEATURE ブロック間：ヘアラインで区切り、リズムを作る */
+.features-list{gap:0}
+.feature-block{padding:72px 0}
+.feature-block:first-child{padding-top:0}
+.feature-block:last-child{padding-bottom:0}
+.feature-block+.feature-block{border-top:1px solid var(--color-border)}
+@media (max-width:600px){.features-list{gap:0}.feature-block{padding:48px 0}}
+
+/* ---------- 9. TOP ---------- */
+/* FV：動画未設定でも黒くならない（ポスター写真を常に下敷き）＋ゆっくりズーム＋下部グラデ */
+.fv__bg{z-index:0;isolation:isolate}
+.fv__poster-fallback{display:block;animation:fv-zoom 36s var(--ease) infinite alternate;transform-origin:60% 50%}
+.fv__video{z-index:1}
+@keyframes fv-zoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+.fv::after{content:"";position:absolute;left:0;right:0;bottom:0;height:55%;z-index:1;background:linear-gradient(180deg,rgba(20,33,61,0) 0%,rgba(20,33,61,.5) 100%);pointer-events:none}
+.fv__copy{text-shadow:0 2px 28px rgba(20,33,61,.35)}
+.fv__scroll-line{position:relative;overflow:hidden;background:rgba(255,255,255,.3)}
+.fv__scroll-line::after{content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;background:#fff;animation:fv-scroll 2.2s var(--ease) infinite}
+@keyframes fv-scroll{0%{top:-100%}60%,100%{top:100%}}
+.fv__closure-banner{background:rgba(255,255,255,.94)}
+.fv__closure-banner .arrow-icon{transition:border-color var(--dur) var(--ease),color var(--dur) var(--ease)}
+/* NEWS：一覧ボタンが左カラムに落ちていた → リスト直下・右寄せ */
+@media (min-width:1024px){.news__more{grid-column:2;justify-content:flex-end;margin-top:24px}}
+.news__date{font-weight:600;color:var(--color-text-muted)}
+.news__category{font-weight:500}
+.news__title a{transition:color var(--dur) var(--ease)}
+.news__item:hover .news__title a{color:var(--color-primary)}
+/* CONCEPT：見出し右端が白い手袋に乗って読みづらい → 左〜中央を少し濃く */
+.concept__overlay{background:linear-gradient(100deg,rgba(20,33,61,.9) 0%,rgba(20,33,61,.74) 38%,rgba(20,33,61,.42) 68%,rgba(20,33,61,.16) 100%)}
+/* MAKERS：両端をフェード（白のグラデーション。mask より軽い）、ホバーで停止 */
+.manufacturers__slider{position:relative}
+.manufacturers__slider::before,.manufacturers__slider::after{content:"";position:absolute;top:0;bottom:0;width:96px;z-index:2;pointer-events:none}
+.manufacturers__slider::before{left:0;background:linear-gradient(90deg,var(--color-bg),rgba(255,255,255,0))}
+.manufacturers__slider::after{right:0;background:linear-gradient(270deg,var(--color-bg),rgba(255,255,255,0))}
+.manufacturers__slider:hover .manufacturers__track{animation-play-state:paused}
+.manufacturers__name{font-size:.8125rem;letter-spacing:.02em}
+/* SERVICE：小カードの本文で「。」だけ折り返していた */
+@media (min-width:1280px){.service-card--tertiary .service-card__body{padding:18px 20px}.service-card--tertiary .service-card__desc{letter-spacing:0}}
+.service-card__more{color:var(--color-navy)}
+/* FINAL CTA：塗り矢印 → 1px枠（他の矢印と同じ言語）、ホバーで緑に */
+.final-cta__arrow{background:transparent;border:1px solid var(--color-navy);border-radius:var(--radius-sm);color:var(--color-navy);transition:background-color var(--dur) var(--ease),border-color var(--dur) var(--ease),color var(--dur) var(--ease)}
+.final-cta__arrow::after{transition:transform var(--dur) var(--ease)}
+.final-cta__bar:hover .final-cta__arrow{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
+.final-cta__arrow--lg{border:1px solid rgba(255,255,255,.9);color:#fff}
+.final-cta__bar--contact:hover{background:var(--color-primary-deep)}
+.final-cta__bar--contact:hover .final-cta__arrow--lg{background:#fff;border-color:#fff;color:var(--color-primary)}
+.final-cta__title--lg{letter-spacing:.14em}
+/* セクション上余白（.section 相当の縦リズムに揃える） */
+.final-cta{padding-top:var(--sp-4)}
+@media (min-width:1024px){.final-cta{padding-top:var(--sp-5)}}
+/* モバイルで矢印がカード外へはみ出すのを防ぐ（flex の min-width:auto 対策） */
+.final-cta__text{min-width:0}
+
+/* ---------- 10. フッター ---------- */
+.footer{border-top-width:2px}
+.footer__nav-link{transition:color var(--dur) var(--ease)}
+.footer__nav-link:hover,.footer__tel:hover{color:var(--color-primary)}
+.footer__copyright{letter-spacing:.04em}
+
+/* ---------- 11. サービス下層 ---------- */
+/* 「サービス概要」サブラベルが h1 と本文の間で浮いていた → 緑のダッシュ付きキッカーに */
+.service-hero__sublabel{display:flex;align-items:center;gap:10px;margin-top:0;font-size:12px;letter-spacing:.06em;color:var(--color-text-muted)}
+.service-hero__sublabel::before{content:"";flex:none;width:16px;height:1px;background:var(--color-primary)}
+.strength-card__number,.feature-block__label,.about-policy__number,.service-card__label,.feature-block__case-label{letter-spacing:.14em}
+.machine-doctor__inner{border-top:2px solid var(--color-navy)}
+.tel-banner__inner{background:var(--color-bg-alt)}
+.used-machine-banner__inner{border:1px solid rgba(31,138,98,.18)}
+
+/* ---------- 12. 会社概要・お役立ち・お知らせ・お問い合わせ ---------- */
+.info-table__row{transition:background-color var(--dur) var(--ease)}
+.location-card:hover{border-color:var(--color-border-dashed)}
+.pagination__item{transition:border-color var(--dur) var(--ease),background-color var(--dur) var(--ease),color var(--dur) var(--ease)}
+.pagination__item.is-active{border-width:1px;background:var(--color-primary);color:#fff}
+.tag{transition:border-color var(--dur) var(--ease),color var(--dur) var(--ease)}
+.archive-list__item a{transition:color var(--dur) var(--ease)}
+.archive-list__item a:hover{color:var(--color-primary)}
+.news-page__item{transition:background-color var(--dur) var(--ease)}
+.news-page__title{transition:color var(--dur) var(--ease)}
+.news-page__item:hover .news-page__title{color:var(--color-primary)}
+.form-input,.form-select,.form-textarea{transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.form-input:hover,.form-select:hover,.form-textarea:hover{border-color:var(--color-border-dashed)}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(31,138,98,.14)}
+.form-privacy{background:var(--color-bg-alt)}
+.contact-intro__tel-number{transition:color var(--dur) var(--ease)}
+.contact-intro__tel-number:hover{color:var(--color-primary)}
+
+/* ---------- 13. About ---------- */
+.about-hero__inner{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:center;max-width:none}
+.about-hero__content{display:flex;flex-direction:column;gap:20px;max-width:640px}
+.about-hero__image{aspect-ratio:5/4;max-height:440px}
+.about-hero__image>*{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:960px){.about-hero__inner{grid-template-columns:minmax(0,1fr);gap:32px}.about-hero__image{order:-1;aspect-ratio:16/10;max-width:560px}}
+.about-company-cta__inner{background:var(--color-bg-alt)}
+
+/* ---------- 14. 採用 ---------- */
+/* ENTRY CTA（緑帯）の直後にもう1本緑帯が続いていた → 2本目は白地に */
+.recruit-cta+.pre-footer-cta{background:var(--color-bg);border-top:1px solid var(--color-border)}
+.recruit-cta+.pre-footer-cta .btn--outline-white{border-color:var(--color-navy);color:var(--color-navy)}
+.recruit-cta+.pre-footer-cta .btn--outline-white .arrow-icon{border-color:var(--color-navy);color:var(--color-navy)}
+.recruit-cta+.pre-footer-cta .btn--outline-white:hover{background:var(--color-navy);border-color:var(--color-navy);color:#fff}
+.recruit-cta+.pre-footer-cta .btn--outline-white:hover .arrow-icon{border-color:#fff;color:#fff}
+.recruit-hero__tag{border-color:var(--color-border-card);font-weight:500}
+.feature-item__number{letter-spacing:-.02em}
+
+/* ---------- 15. スクロール表示（全ページ共通・控えめに） ---------- */
+.js [data-reveal]{transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease),border-color var(--dur) var(--ease),background-color var(--dur) var(--ease),color var(--dur) var(--ease)}
+@media (prefers-reduced-motion:reduce){
+  .fv__poster-fallback,.fv__scroll-line::after{animation:none}
+  html{scroll-behavior:auto}
+}
+@media (min-width:1440px){.header__nav{margin-left:32px}}
+/* About 取り扱い機械: 白背景の切り抜き素材は contain で全体を見せる */
+.machines__img:has(img){background:var(--color-bg);padding:0}
+.machines__img img{width:100%;height:100%;object-fit:contain;padding:10px}

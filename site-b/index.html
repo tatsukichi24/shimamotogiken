@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シマモト技研株式会社 | 工作機械・ロボット自動化のエンジニアリング商社</title>
+
+  <!-- JSが有効な場合のみ data-reveal 要素をフェードアップ演出の対象にする -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       B案: 最上部32pxの白帯（サイト説明＋TEL）＋下段84px＋下罫線1px
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img" src="img/logo.png" alt="シマモト技研" width="400" height="66">
+        <span class="header__logo-desc">工作機械の販売・メンテナンス・ロボット自動化</span>
+      </a>
+
+      <!-- PC Navigation -->
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <!-- Dropdown Menu -->
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+
+        <!-- CTA Buttons -->
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="service-closure.html" class="btn btn--closure">廃業支援サービス</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+          <a href="tel:048-442-0282" class="header__tel"><span class="header__tel-label">TEL</span><span class="header__tel-num">048-442-0282</span></a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu" aria-hidden="true">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="index.html" class="mobile-menu__link">TOP</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="about.html" class="mobile-menu__link">シマモト技研について</a>
+        </li>
+        <li class="mobile-menu__item">
+          <span class="mobile-menu__link">サービス</span>
+          <ul class="mobile-menu__sublist">
+            <li><a href="service-machine.html" class="mobile-menu__sublink">工作機械販売</a></li>
+            <li><a href="service-maintenance.html" class="mobile-menu__sublink">オーバーホール・メンテナンス</a></li>
+            <li><a href="service-robot.html" class="mobile-menu__sublink">ロボット導入・自動化</a></li>
+            <li><a href="service-subsidy.html" class="mobile-menu__sublink">補助金活用支援</a></li>
+            <li><a href="service-closure.html" class="mobile-menu__sublink">廃業支援サービス</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="column.html" class="mobile-menu__link">お役立ち情報</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="company.html" class="mobile-menu__link">会社概要</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="news.html" class="mobile-menu__link">お知らせ</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="recruit.html" class="mobile-menu__link">採用情報</a>
+        </li>
+      </ul>
+      <div class="mobile-menu__cta">
+        <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+        <a href="service-closure.html" class="btn btn--closure">廃業支援サービス</a>
+        <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fixed Bottom Bar (Mobile / Tablet) -->
+  <div class="fixed-bottom-bar">
+    <a href="tel:048-442-0282" class="fixed-bottom-bar__link">TEL 048-442-0282</a>
+    <a href="contact.html" class="fixed-bottom-bar__link fixed-bottom-bar__link--primary">お問い合わせ</a>
+  </div>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <!-- ============================================
+         First View (ファーストビュー)
+         背景: 動画をバックグラウンド再生
+         ============================================ -->
+    <section class="fv">
+      <div class="fv__bg">
+        <video class="fv__video" autoplay muted loop playsinline poster="img/fv-poster.jpg">
+          <source src="video/fv.mp4" type="video/mp4">
+        </video>
+        <img class="fv__poster-fallback" src="img/fv-poster.jpg" alt="稼働中の工作機械">
+      </div>
+      <div class="fv__content">
+        <h1 class="fv__copy">
+          機械を現場の力へ。
+        </h1>
+        <p class="fv__subcopy">ものづくりの現場を支える、確かなパートナー。</p>
+      </div>
+
+      <!-- 廃業支援サービスへの導線バナー（FV右下・固定表示） -->
+      <a href="service-closure.html" class="fv__closure-banner">
+        <span class="fv__closure-banner-label">CLOSURE SUPPORT</span>
+        <span class="fv__closure-banner-title">廃業支援サービス</span>
+        <span class="arrow-icon"></span>
+      </a>
+
+      <div class="fv__scroll">
+        <span class="fv__scroll-text">SCROLL</span>
+        <span class="fv__scroll-line"></span>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         お知らせ（新着機械情報アナウンス）
+         FV直下に配置し、新着入荷機械などの情報をいち早く伝える
+         ============================================ -->
+    <section class="news section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">NEWS</p>
+          <h2 class="section-title">お知らせ</h2>
+        </header>
+
+        <ul class="news__list">
+          <!-- News Item 1 -->
+          <li class="news__item">
+            <time class="news__date">2024.XX.XX</time>
+            <span class="news__category">新着機械</span>
+            <p class="news__title">
+              <a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。<span class="wire-note">仮</span></a>
+            </p>
+          </li>
+          <!-- News Item 2 -->
+          <li class="news__item">
+            <time class="news__date">2024.XX.XX</time>
+            <span class="news__category">お知らせ</span>
+            <p class="news__title">
+              <a href="#">ニュースタイトルが入ります。<span class="wire-note">仮</span></a>
+            </p>
+          </li>
+          <!-- News Item 3 -->
+          <li class="news__item">
+            <time class="news__date">2024.XX.XX</time>
+            <span class="news__category">新着機械</span>
+            <p class="news__title">
+              <a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。<span class="wire-note">仮</span></a>
+            </p>
+          </li>
+        </ul>
+
+        <div class="news__more">
+          <a href="news.html" class="btn">お知らせ一覧を見る <span class="arrow-icon"></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         Concept / 私たちの想い
+         企業の歴史と姿勢を伝えるフルビジュアルセクション
+         背景写真は「積み重ね」が伝わるものを優先（工作機械／技術者の手元／金属加工／工場設備）。
+         要確認: 使用する背景写真（本番素材が決まり次第 .concept__bg の背景画像を差し替え）
+         ============================================ -->
+    <section class="concept concept--visual">
+      <div class="concept__bg"></div>
+      <div class="concept__overlay"></div>
+
+      <div class="concept__inner">
+        <div class="concept__content">
+          <p class="concept__label" data-reveal>CONCEPT / 私たちの想い</p>
+
+          <h2 class="concept__title" data-reveal>
+            <span class="concept__title-line">ひたむきに機械と向き合い約<wbr>40年。</span>
+            <span class="concept__title-line">その歩みをものづくりの<wbr>これからへ。</span>
+          </h2>
+
+          <div class="concept__text" data-reveal>
+            <p class="concept__text-block">
+              私たちが向き合うのは機械だけではありません。<br>
+              その先にあるものづくりの現場と課題です。
+            </p>
+            <p class="concept__text-block">
+              設備のことから工場のこれからまで。<br>
+              培ってきた技術とグループの力で共に答えを探していきます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         主要取扱メーカー
+         ロゴ未使用のため、機械画像＋メーカー名の2列スライダーで流す
+         要確認: 各メーカーに対応する機械写真素材
+         ============================================ -->
+    <section class="manufacturers section">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <p class="section-label">MAKERS</p>
+          <h2 class="section-title">主要取扱メーカー</h2>
+        </header>
+      </div>
+
+      <div class="manufacturers__slider">
+        <div class="manufacturers__track manufacturers__track--row1">
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-01.jpg" alt="ツガミのNCフライス盤"></div>
+            <p class="manufacturers__name">ツガミ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-02.jpg" alt="シチズンのCNC自動旋盤"></div>
+            <p class="manufacturers__name">シチズン</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-03.jpg" alt="スター精密のCNC自動旋盤"></div>
+            <p class="manufacturers__name">スター精密</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-04.jpg" alt="ヤマザキマザックの複合加工機"></div>
+            <p class="manufacturers__name">ヤマザキマザック</p>
+          </div>
+        </div>
+
+        <div class="manufacturers__track manufacturers__track--row2">
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-05.jpg" alt="オークマの工作機械"></div>
+            <p class="manufacturers__name">オークマ</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-06.jpg" alt="岡本工作機械製作所の研削盤"></div>
+            <p class="manufacturers__name">岡本工作機械製作所</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-07.jpg" alt="ニデックマシンツールの工作機械"></div>
+            <p class="manufacturers__name">ニデックマシンツール</p>
+          </div>
+          <div class="manufacturers__item" aria-hidden="true">
+            <div class="manufacturers__img media-frame"><img class="media-fill" src="img/maker-08.jpg" alt="山崎技研のNCフライス盤"></div>
+            <p class="manufacturers__name">山崎技研</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         Services (事業・サービス)
+         主軸(工作機械販売→メンテナンス→ロボット)と支援領域(補助金・廃業支援)で
+         カードの大きさに強弱をつけたモザイク型レイアウト
+         ============================================ -->
+    <section class="services section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">SERVICE</p>
+          <h2 class="section-title">サービス概要</h2>
+        </header>
+
+        <div class="services__grid">
+          <!-- SERVICE 01: 工作機械販売（主軸・大カード） -->
+          <a href="service-machine.html" class="service-card service-card--primary">
+            <div class="service-card__media media-frame"><img class="media-fill" src="img/service-machine.jpg" alt="プレス機を点検するエンジニア"></div>
+            <div class="service-card__scrim"></div>
+            <div class="service-card__body">
+              <span class="service-card__label">SERVICE 01</span>
+              <h3 class="service-card__title">工作機械販売</h3>
+              <p class="service-card__desc">中古工作機械を中心に選定から搬入・据付、その後の保守まで。</p>
+              <span class="service-card__more">VIEW MORE <span class="arrow-icon"></span></span>
+            </div>
+          </a>
+
+          <div class="services__side">
+            <!-- SERVICE 02: オーバーホール・メンテナンス（中カード） -->
+            <a href="service-maintenance.html" class="service-card service-card--secondary">
+              <div class="service-card__media media-frame"><img class="media-fill" src="img/service-maintenance.jpg" alt="技術者が修理している写真"></div>
+              <div class="service-card__scrim"></div>
+              <div class="service-card__body">
+                <span class="service-card__label">SERVICE 02</span>
+                <h3 class="service-card__title">オーバーホール・メンテナンス</h3>
+                <p class="service-card__desc">故障・精度低下からオーバーホールまで。<br>機械の状態を見極め必要な対応を考えます。</p>
+                <span class="service-card__more">VIEW MORE <span class="arrow-icon"></span></span>
+              </div>
+            </a>
+
+            <!-- SERVICE 03: ロボット導入・自動化（中カード） -->
+            <a href="service-robot.html" class="service-card service-card--secondary">
+
+              <div class="service-card__scrim"></div>
+              <div class="service-card__body">
+                <span class="service-card__label">SERVICE 03</span>
+                <h3 class="service-card__title">ロボット導入・自動化</h3>
+                <p class="service-card__desc">既存設備を活かしながら<br>現場に合った自動化を構想から支援します。</p>
+                <span class="service-card__more">VIEW MORE <span class="arrow-icon"></span></span>
+              </div>
+            </a>
+
+            <div class="services__side-row">
+              <!-- SERVICE 04: 補助金活用支援（小カード） -->
+              <a href="service-subsidy.html" class="service-card service-card--tertiary">
+                <div class="service-card__media media-frame"><img class="media-fill" src="img/service-subsidy.jpg" alt="設備投資・打合せ"></div>
+                <div class="service-card__scrim"></div>
+                <div class="service-card__body">
+                  <span class="service-card__label">SERVICE 04</span>
+                  <h3 class="service-card__title">補助金活用支援</h3>
+                  <p class="service-card__desc">設備投資と補助金をひとつの計画に。</p>
+                  <span class="service-card__more">VIEW MORE <span class="arrow-icon"></span></span>
+                </div>
+              </a>
+
+              <!-- SERVICE 05: 廃業支援サービス（小カード） -->
+              <a href="service-closure.html" class="service-card service-card--tertiary">
+                <div class="service-card__media media-frame"><img class="media-fill" src="img/service-closure.jpg" alt="工場整理・設備搬出"></div>
+                <div class="service-card__scrim"></div>
+                <div class="service-card__body">
+                  <span class="service-card__label">SERVICE 05</span>
+                  <h3 class="service-card__title">廃業支援サービス</h3>
+                  <p class="service-card__desc">工場の整理から設備・手続きまで。<br>製造業の廃業を支援します。</p>
+                  <span class="service-card__more">VIEW MORE <span class="arrow-icon"></span></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="services__cta">
+          <a href="#" class="services__cta-link">サービスについて詳しく見る <span class="arrow-icon"></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         在庫情報への導線
+         外部サイト「中古機械百貨店」への目立つボタン（旧: 全幅バナー）
+         ============================================ -->
+    <section class="used-machine-cta section section--alt">
+      <div class="container">
+        <div class="used-machine-cta__inner">
+          <div class="used-machine-cta__text">
+            <p class="used-machine-cta__label">MACHINE STOCK</p>
+            <p class="used-machine-cta__lead">
+              シマモト技研が取り扱う中古工作機械の<wbr>在庫情報は、「中古機械百貨店」でご覧いただけます。
+            </p>
+          </div>
+          <!-- 外部リンク: 中古機械百貨店 -->
+          <a href="#" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+            <span class="external-link external-link--white">中古機械を探す</span> <span class="arrow-icon"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         フッター上 CTA セクション
+         「中古機械百貨店」「廃業支援サービス」「お問い合わせ」の3つの導線を
+         役割別・大きさ別に見せる（上段2カラム＋下段フル幅）
+         優先順位: 1.お問い合わせ 2.中古機械百貨店 3.廃業支援サービス
+         ============================================ -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-cta__top">
+          <!-- 中古機械百貨店（外部サイト） -->
+          <div class="final-cta__group">
+            <p class="final-cta__label">MACHINE STOCK</p>
+            <a href="#" class="final-cta__bar" target="_blank" rel="noopener noreferrer">
+              <span class="final-cta__text">
+                <span class="final-cta__title">中古機械百貨店</span>
+                <span class="final-cta__sub external-link">現在販売中の中古工作機械はこちら</span>
+              </span>
+              <span class="final-cta__arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <!-- 廃業支援サービス（専用ページ） -->
+          <div class="final-cta__group">
+            <p class="final-cta__label">CLOSURE SUPPORT</p>
+            <a href="service-closure.html" class="final-cta__bar">
+              <span class="final-cta__text">
+                <span class="final-cta__title">廃業支援サービス</span>
+                <span class="final-cta__sub">工場の整理・設備・手続きまで製造業の廃業を総合支援。</span>
+              </span>
+              <span class="final-cta__arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="final-cta__bar final-cta__bar--contact">
+          <span class="final-cta__text">
+            <span class="final-cta__title final-cta__title--lg">CONTACT</span>
+            <span class="final-cta__sub final-cta__sub--lg">お問い合わせはこちら</span>
+            <span class="final-cta__sub">機械の導入・修理・自動化などお気軽にご相談ください。</span>
+          </span>
+          <span class="final-cta__arrow final-cta__arrow--lg" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <!-- Company Info -->
+        <div class="footer__company">
+          <img class="footer__logo-img" src="img/logo.png" alt="シマモト技研" width="400" height="66">
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <!-- Site Map -->
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JavaScript (モバイルメニュー用)
+       ============================================ -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+
+    // FV video: prefers-reduced-motion時は再生を止める（CSS側で表示も poster にフォールバック）
+    const fvVideo = document.querySelector('.fv__video');
+    const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function applyMotionPreference(matches) {
+      if (!fvVideo) return;
+      if (matches) {
+        fvVideo.pause();
+      } else {
+        fvVideo.play().catch(() => {});
+      }
+    }
+
+    applyMotionPreference(reduceMotionQuery.matches);
+    reduceMotionQuery.addEventListener('change', (e) => applyMotionPreference(e.matches));
+
+    // Concept Section - スクロールでラベル→見出し→本文の順にフェードアップ
+    const revealTargets = document.querySelectorAll('[data-reveal]');
+
+    if (revealTargets.length && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transitionDelay = (i * 0.12) + 's';
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      revealTargets.forEach((el) => revealObserver.observe(el));
+    } else {
+      revealTargets.forEach((el) => el.classList.add('is-visible'));
+    }
+  </script>
+
+</body>
+</html>

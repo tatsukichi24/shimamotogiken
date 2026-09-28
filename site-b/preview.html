@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B案 デザイン確認（PC幅 1440px 表示）</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans JP',sans-serif;color:#14213D;background:#E8ECF2;display:flex;flex-direction:column;height:100vh;overflow:hidden}
+a{color:inherit;text-decoration:none}
+.bar{flex:none;display:flex;align-items:center;gap:16px;padding:10px 16px;background:#fff;border-bottom:1px solid #C9D1DE;overflow-x:auto}
+.bar__title{flex:none;font:700 12px 'Montserrat',sans-serif;letter-spacing:.12em;color:#1F8A62;padding-right:16px;border-right:1px solid #C9D1DE}
+.tabs{display:flex;gap:4px}
+.tab{flex:none;padding:8px 12px;border:1px solid transparent;font:500 12px/1 'Noto Sans JP',sans-serif;color:#4A5A78;cursor:pointer;white-space:nowrap}
+.tab:hover{color:#14213D}
+.tab.is-active{border-color:#14213D;color:#14213D;font-weight:700}
+.width{flex:none;margin-left:auto;display:flex;gap:4px}
+.width button{padding:8px 12px;border:1px solid #C9D1DE;background:#fff;font:600 11px 'Montserrat',sans-serif;color:#4A5A78;cursor:pointer}
+.width button.is-active{border-color:#1F8A62;color:#1F8A62}
+.stage{flex:1;position:relative;overflow:hidden;padding:16px}
+.frame-wrap{position:relative;height:100%;margin:0 auto;background:#fff;border:1px solid #C9D1DE;overflow:hidden}
+iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;background:#fff}
+</style>
+</head>
+<body>
+<div class="bar">
+  <span class="bar__title">B案 PREVIEW</span>
+  <nav class="tabs" id="tabs"></nav>
+  <div class="width" id="widths">
+    <button data-w="1440" class="is-active">1440</button>
+    <button data-w="1024">1024</button>
+    <button data-w="375">375</button>
+  </div>
+</div>
+<div class="stage"><div class="frame-wrap" id="wrap"><iframe id="frame" title="preview"></iframe></div></div>
+<script>
+const pages=[
+ ['index.html','TOP'],['about.html','シマモト技研について'],
+ ['service-machine.html','工作機械販売'],['service-maintenance.html','メンテナンス'],['service-robot.html','ロボット・自動化'],['service-subsidy.html','補助金活用'],['service-closure.html','廃業支援'],
+ ['column.html','お役立ち情報'],['company.html','会社概要'],['news.html','お知らせ'],['recruit.html','採用情報'],['contact.html','お問い合わせ']
+];
+const tabs=document.getElementById('tabs'),frame=document.getElementById('frame'),wrap=document.getElementById('wrap'),stage=wrap.parentElement;
+let cur=localStorage.getItem('siteb-preview-page')||'index.html',W=+(localStorage.getItem('siteb-preview-w')||1440);
+pages.forEach(([f,l])=>{const b=document.createElement('button');b.className='tab';b.textContent=l;b.dataset.f=f;b.onclick=()=>{cur=f;localStorage.setItem('siteb-preview-page',f);render()};tabs.appendChild(b)});
+document.querySelectorAll('#widths button').forEach(b=>b.onclick=()=>{W=+b.dataset.w;localStorage.setItem('siteb-preview-w',W);render()});
+function render(){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('is-active',t.dataset.f===cur));
+  document.querySelectorAll('#widths button').forEach(b=>b.classList.toggle('is-active',+b.dataset.w===W));
+  if(frame.dataset.f!==cur){frame.src=cur;frame.dataset.f=cur}
+  const availW=stage.clientWidth-32,availH=stage.clientHeight-32;
+  const scale=Math.min(1,availW/W);
+  const wrapW=Math.min(W*scale,availW);
+  wrap.style.width=wrapW+'px';
+  frame.style.width=W+'px';frame.style.height=(availH/scale)+'px';frame.style.transform=`scale(${scale})`;
+}
+window.addEventListener('resize',render);render();
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* ---------- ABOUT ---------- */
+.about-hero{padding:96px 0;border-bottom:1px solid var(--color-border-card)}
+.about-hero__inner{display:flex;flex-direction:column;gap:20px;max-width:880px}
+.about-hero__label{font:700 12px var(--font-en);letter-spacing:.12em;color:var(--color-primary)}
+.about-hero__title{position:relative;padding-bottom:20px;font:700 40px/1.4 var(--font-jp);letter-spacing:.04em}
+.about-hero__title::after{content:"";position:absolute;left:0;bottom:0;width:48px;height:3px;background:var(--color-primary)}
+.about-hero__catch{margin-top:16px;font:700 28px/1.6 var(--font-jp);letter-spacing:.03em;color:var(--color-navy)}
+.about-hero__lead{font-size:15px;line-height:2.1}
+
+/* OUR POLICY — 写真上に文字を置かない。枠線カード */
+.about-policy{padding:var(--sec-pad) 0}
+.about-policy__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--color-border-card)}
+.about-policy__card{display:flex;flex-direction:column;justify-content:flex-start;min-height:0;background:#fff;border-right:1px solid var(--color-border-card);border-bottom:1px solid var(--color-border-card)}
+.about-policy__card:nth-child(2n){border-right:0}
+.about-policy__card:nth-last-child(-n+2){border-bottom:0}
+.about-policy__card-body{display:flex;flex-direction:column;gap:10px;padding:40px 44px}
+.about-policy__number{font:700 12px var(--font-en);letter-spacing:.12em;color:var(--color-primary)}
+.about-policy__card-title{font:700 24px/1.4 var(--font-jp)}
+.about-policy__card-text{font-size:14px;line-height:1.9}
+
+/* 事業モデル図 */
+.business-model .section-header{margin-bottom:56px}
+.model-diagram{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);gap:24px;align-items:start;max-width:960px;margin:0 auto}
+.model-diagram__col{display:flex;flex-direction:column;gap:16px}
+.model-diagram__hub{display:flex;flex-direction:column;gap:4px;padding:24px 28px;background:#fff;border:2px solid var(--color-navy)}
+.model-diagram__hub-en{font:700 11px var(--font-en);letter-spacing:.12em;color:var(--color-primary)}
+.model-diagram__hub-title{font:700 18px/1.5 var(--font-jp)}
+.model-diagram__hub--alt{border-color:var(--color-primary)}
+.model-diagram__list{display:flex;flex-direction:column;background:#fff;border:1px solid var(--color-border-card)}
+.model-diagram__list li{position:relative;padding:12px 16px 12px 34px;font-size:14px;line-height:1.6;border-bottom:1px solid var(--color-border-card)}
+.model-diagram__list li:last-child{border-bottom:0}
+.model-diagram__list li::before{content:"";position:absolute;left:16px;top:23px;width:8px;height:1px;background:var(--color-primary)}
+.model-diagram__plus{display:flex;align-items:center;justify-content:center;height:96px;font:600 40px var(--font-en);color:var(--color-primary)}
+.model-diagram__group{display:flex;flex-direction:column;gap:8px}
+.model-diagram__group-title{font:700 14px/1.5 var(--font-jp);color:var(--color-primary)}
+.model-diagram__result{position:relative;max-width:960px;margin:48px auto 0;padding:28px 40px;border:2px solid var(--color-primary);text-align:center}
+.model-diagram__result::before{content:"";position:absolute;left:50%;top:-26px;transform:translateX(-50%);width:1px;height:24px;background:var(--color-primary)}
+.model-diagram__result-text{font:700 20px/1.5 var(--font-jp);letter-spacing:.03em;color:var(--color-navy)}
+
+/* 取り扱い機械 */
+.machines__list-title{display:flex;align-items:center;gap:12px;margin-bottom:24px;font:700 16px/1.5 var(--font-jp)}
+.machines__list-title::after{content:"";flex:1;height:1px;background:var(--color-border-card)}
+.machines__grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.machines__item{display:flex;flex-direction:column;border:1px solid var(--color-border-card)}
+.machines__img{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:var(--color-photo-placeholder);font:500 11px/1.6 ui-monospace,Menlo,monospace;color:var(--color-text-placeholder);text-align:center;padding:8px}
+.machines__name{padding:10px 8px;border-top:1px solid var(--color-border-card);font:700 13px/1.5 var(--font-jp);color:var(--color-navy);text-align:center}
+
+/* 会社概要CTA */
+.about-company-cta{padding:0 0 var(--sec-pad)}
+.about-company-cta__inner{display:flex;align-items:center;justify-content:space-between;gap:48px;padding:40px 48px;border:1px solid var(--color-border-card)}
+.about-company-cta__content{display:flex;flex-direction:column;gap:8px}
+.about-company-cta__title{font:700 22px/1.5 var(--font-jp)}
+.about-company-cta__text{font-size:14px;line-height:1.9;color:var(--color-text-muted)}
+.about-company-cta__action{flex:none}
+.about-company-cta__action .btn{min-width:260px;justify-content:space-between}

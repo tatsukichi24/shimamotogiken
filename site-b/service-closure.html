@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>廃業支援サービス | シマモト技研株式会社</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+
+  <!-- ============================================
+       Header (共通コンポーネント)
+       ============================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img" src="img/logo.png" alt="シマモト技研" width="400" height="66">
+        <span class="header__logo-desc">工作機械の販売・メンテナンス・ロボット自動化</span>
+      </a>
+
+      <!-- PC Navigation -->
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">TOP</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">シマモト技研について</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--dropdown">サービス</a>
+            <!-- Dropdown Menu -->
+            <div class="header__dropdown">
+              <a href="service-machine.html" class="header__dropdown-link">工作機械販売</a>
+              <a href="service-maintenance.html" class="header__dropdown-link">オーバーホール・メンテナンス</a>
+              <a href="service-robot.html" class="header__dropdown-link">ロボット導入・自動化</a>
+              <a href="service-subsidy.html" class="header__dropdown-link">補助金活用支援</a>
+              <a href="service-closure.html" class="header__dropdown-link">廃業支援サービス</a>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="column.html" class="header__nav-link">お役立ち情報</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="company.html" class="header__nav-link">会社概要</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="news.html" class="header__nav-link">お知らせ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="recruit.html" class="header__nav-link">採用情報</a>
+          </li>
+        </ul>
+
+        <!-- CTA Buttons -->
+        <div class="header__cta">
+          <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+          <a href="service-closure.html" class="btn btn--closure">廃業支援サービス</a>
+          <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+          <a href="tel:048-442-0282" class="header__tel"><span class="header__tel-label">TEL</span><span class="header__tel-num">048-442-0282</span></a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu" aria-hidden="true">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="index.html" class="mobile-menu__link">TOP</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="about.html" class="mobile-menu__link">シマモト技研について</a>
+        </li>
+        <li class="mobile-menu__item">
+          <span class="mobile-menu__link">サービス</span>
+          <ul class="mobile-menu__sublist">
+            <li><a href="service-machine.html" class="mobile-menu__sublink">工作機械販売</a></li>
+            <li><a href="service-maintenance.html" class="mobile-menu__sublink">オーバーホール・メンテナンス</a></li>
+            <li><a href="service-robot.html" class="mobile-menu__sublink">ロボット導入・自動化</a></li>
+            <li><a href="service-subsidy.html" class="mobile-menu__sublink">補助金活用支援</a></li>
+            <li><a href="service-closure.html" class="mobile-menu__sublink">廃業支援サービス</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="column.html" class="mobile-menu__link">お役立ち情報</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="company.html" class="mobile-menu__link">会社概要</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="news.html" class="mobile-menu__link">お知らせ</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="recruit.html" class="mobile-menu__link">採用情報</a>
+        </li>
+      </ul>
+      <div class="mobile-menu__cta">
+        <a href="#" class="btn btn--outline" target="_blank" rel="noopener noreferrer">在庫情報</a>
+        <a href="service-closure.html" class="btn btn--closure">廃業支援サービス</a>
+        <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fixed Bottom Bar (Mobile / Tablet) -->
+  <div class="fixed-bottom-bar">
+    <a href="tel:048-442-0282" class="fixed-bottom-bar__link">TEL 048-442-0282</a>
+    <a href="contact.html" class="fixed-bottom-bar__link fixed-bottom-bar__link--primary">お問い合わせ</a>
+  </div>
+
+
+  <!-- ============================================
+       Breadcrumb
+       ============================================ -->
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+        <li class="breadcrumb__item" aria-current="page">廃業支援サービス</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       Main Content
+       ============================================ -->
+  <main>
+
+    <!-- Service Hero (SERVICE / サービス概要) -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="service-hero__inner">
+          <div class="service-hero__content">
+            <p class="service-hero__label">SERVICE</p>
+            <h1 class="service-hero__title">廃業支援サービス</h1>
+            <p class="service-hero__sublabel">サービス概要</p>
+            <p class="service-hero__catch">ものづくりの幕引きに、最後まで伴走する。</p>
+            <div class="service-hero__lead">
+              <p>
+                工場を閉じると決めても、何から始めればいいのか分からない。<br>
+                機械の売却、在庫や材料の整理、搬出・撤去、原状回復、各種手続きまで、廃業には多くの対応が必要です。
+              </p>
+              <p>
+                シマモト技研では、設備の査定・買取から工場内の整理、搬出・撤去、原状回復、その後の手続きまでまとめて対応します。<br>
+                相談先をいくつも探す必要はありません。<br>
+                廃業に必要なことを整理しながら、工場の明け渡しまで一緒に進めます。
+              </p>
+            </div>
+          </div>
+          <div class="service-hero__image">
+            <img class="photo-fill" src="img/closure-hero.jpg" style="aspect-ratio: 4/3; min-height: 300px;" alt="工場内の設備を確認している様子">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">FEATURES</span>
+          <span class="section-title__ja">シマモト技研の廃業支援サービスの特徴</span>
+        </h2>
+
+        <div class="features-list">
+          <div class="feature-block">
+            <div class="feature-block__content">
+              <p class="feature-block__label">FEATURE 01</p>
+              <h3 class="feature-block__title">廃業に必要なことを、まとめて任せられる。</h3>
+              <p class="feature-block__text">
+                機械の売却、工場内の片付け、搬出、撤去、原状回復、各種手続き。<br>
+                それぞれ別の業者へ依頼するのではなく、シマモト技研が窓口となってまとめて進めます。
+              </p>
+              <div class="feature-block__case">
+                <p class="feature-block__case-label">CASE</p>
+                <ul class="feature-block__case-list">
+                  <li>従業員20名規模の金属加工工場で、設備買取から工場の明け渡しまで一括対応。</li>
+                  <li>閉鎖まで3か月の工場で、設備売却・片付け・撤去・原状回復をまとめて進行。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="feature-block__image">
+              <img class="photo-fill" src="img/closure-sodan.jpg" style="aspect-ratio: 4/3;" alt="廃業対応のご相談">
+            </div>
+          </div>
+
+          <div class="feature-block feature-block--reverse">
+            <div class="feature-block__content">
+              <p class="feature-block__label">FEATURE 02</p>
+              <h3 class="feature-block__title">工場に残ったものを、まとめて整理。</h3>
+              <p class="feature-block__text">
+                工作機械だけでなく、周辺設備、鋼材、工具、治具、仕掛品、不要品まで。<br>
+                工場内を確認し、売るもの、移すもの、処分するものに分けながら整理します。<br>
+                何を残し、何を処分すればいいか分からない状態からでも進められます。
+              </p>
+              <div class="feature-block__case">
+                <p class="feature-block__case-label">CASE</p>
+                <ul class="feature-block__case-list">
+                  <li>NC旋盤やマシニングセンタ約20台を、買取・移設・処分に振り分けて整理。</li>
+                  <li>鋼材、治具、工具、仕掛品まで仕分けし、設備搬出とあわせて工場内を整理。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="feature-block__image">
+              <img class="photo-fill" src="img/closure-seiri.jpg" style="aspect-ratio: 4/3;" alt="工場内設備の仕分け・整理">
+            </div>
+          </div>
+
+          <div class="feature-block">
+            <div class="feature-block__content">
+              <p class="feature-block__label">FEATURE 03</p>
+              <h3 class="feature-block__title">手続きや専門家とのやり取りも、窓口をひとつに。</h3>
+              <p class="feature-block__text">
+                廃業には、工場の片付けだけでなく、さまざまな手続きが必要になります。<br>
+                専門家が必要な内容は、グループ各社や外部の専門家と連携。<br>
+                お客様がそれぞれの相談先を探し回らなくても済むよう、窓口をまとめて進めます。
+              </p>
+              <div class="feature-block__case">
+                <p class="feature-block__case-label">CASE</p>
+                <ul class="feature-block__case-list">
+                  <li>後継者不在による廃業で、設備整理と並行して専門家との各種手続きを連携。</li>
+                  <li>工場撤去に活用できる補助制度を確認し、申請から撤去完了まで支援。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="feature-block__image">
+              <img class="photo-fill" src="img/closure-tetsuzuki.jpg" style="aspect-ratio: 4/3;" alt="専門家との連携・手続き対応">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Merit Section -->
+    <section class="merit-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">MERIT</span>
+          <span class="section-title__ja">選ばれる理由</span>
+        </h2>
+
+        <div class="strength-grid strength-grid--3col">
+          <div class="strength-card">
+            <p class="strength-card__number">MERIT 01</p>
+            <h3 class="strength-card__title">何から始めればいいか分からなくても進められる</h3>
+            <p class="strength-card__text">
+              廃業時期や工場の状況を確認し、必要なことと進める順番から整理します。
+            </p>
+          </div>
+          <div class="strength-card">
+            <p class="strength-card__number">MERIT 02</p>
+            <h3 class="strength-card__title">何社もの業者とやり取りしなくていい</h3>
+            <p class="strength-card__text">
+              設備買取、片付け、搬出、撤去、原状回復、専門家との連携まで、窓口をまとめられます。
+            </p>
+          </div>
+          <div class="strength-card">
+            <p class="strength-card__number">MERIT 03</p>
+            <h3 class="strength-card__title">売れるものは売り、残ったものまで整理できる</h3>
+            <p class="strength-card__text">
+              工作機械を扱ってきた経験を活かし、価値のある設備を見極めながら、買取・移設・処分を振り分けます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Flow Section -->
+    <section class="flow-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">FLOW</span>
+          <span class="section-title__ja">ご依頼の流れ</span>
+        </h2>
+
+        <div class="flow-grid-2col">
+          <div class="flow-grid-item">
+            <div class="flow-grid-item__number">01</div>
+            <div class="flow-grid-item__content">
+              <h3 class="flow-grid-item__title">ご相談</h3>
+              <p class="flow-grid-item__text">廃業時期や工場の状況を伺います。</p>
+            </div>
+          </div>
+          <div class="flow-grid-item">
+            <div class="flow-grid-item__number">02</div>
+            <div class="flow-grid-item__content">
+              <h3 class="flow-grid-item__title">現地確認</h3>
+              <p class="flow-grid-item__text">設備・在庫・工場内を確認します。</p>
+            </div>
+          </div>
+          <div class="flow-grid-item">
+            <div class="flow-grid-item__number">03</div>
+            <div class="flow-grid-item__content">
+              <h3 class="flow-grid-item__title">進め方・お見積り</h3>
+              <p class="flow-grid-item__text">必要な作業と進め方を整理します。</p>
+            </div>
+          </div>
+          <div class="flow-grid-item">
+            <div class="flow-grid-item__number">04</div>
+            <div class="flow-grid-item__content">
+              <h3 class="flow-grid-item__title">設備買取・工場内整理</h3>
+              <p class="flow-grid-item__text">機械・在庫・不要品を整理します。</p>
+            </div>
+          </div>
+          <div class="flow-grid-item">
+            <div class="flow-grid-item__number">05</div>
+            <div class="flow-grid-item__content">
+              <h3 class="flow-grid-item__title">搬出・撤去・原状回復</h3>
+              <p class="flow-grid-item__text">設備搬出から原状回復まで対応します。</p>
+            </div>
+          </div>
+          <div class="flow-grid-item">
+            <div class="flow-grid-item__number">06</div>
+            <div class="flow-grid-item__content">
+              <h3 class="flow-grid-item__title">各種手続き・専門家連携</h3>
+              <p class="flow-grid-item__text">必要な手続きや専門家連携を進めます。</p>
+            </div>
+          </div>
+          <div class="flow-grid-item">
+            <div class="flow-grid-item__number">07</div>
+            <div class="flow-grid-item__content">
+              <h3 class="flow-grid-item__title">明け渡し・完了</h3>
+              <p class="flow-grid-item__text">最後の確認まで一緒に進めます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Related Services -->
+    <section class="related-services">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">RELATED</span>
+          <span class="section-title__ja">関連サービス</span>
+        </h2>
+
+        <div class="related-services__grid">
+          <a href="service-machine.html" class="related-service-card">
+            <div class="related-service-card__image"><img src="img/service-machine.jpg" alt="工作機械販売のイメージ写真"></div>
+            <div class="related-service-card__body">
+              <h3 class="related-service-card__title">工作機械販売</h3>
+              <p class="related-service-card__desc">新品・中古機械の販売から据付まで</p>
+              <span class="related-service-card__link">詳しく見る →</span>
+            </div>
+          </a>
+          <a href="service-maintenance.html" class="related-service-card">
+            <div class="related-service-card__image"><img src="img/service-maintenance.jpg" alt="オーバーホール・メンテナンスのイメージ写真"></div>
+            <div class="related-service-card__body">
+              <h3 class="related-service-card__title">オーバーホール・メンテナンス</h3>
+              <p class="related-service-card__desc">機械の性能を維持・回復するサービス</p>
+              <span class="related-service-card__link">詳しく見る →</span>
+            </div>
+          </a>
+          <a href="service-robot.html" class="related-service-card">
+            <div class="related-service-card__image"><img src="img/service-robot.jpg" alt="ロボット導入・自動化のイメージ写真"></div>
+            <div class="related-service-card__body">
+              <h3 class="related-service-card__title">ロボット導入・自動化</h3>
+              <p class="related-service-card__desc">生産ラインの自動化・省人化をサポート</p>
+              <span class="related-service-card__link">詳しく見る →</span>
+            </div>
+          </a>
+          <a href="service-subsidy.html" class="related-service-card">
+            <div class="related-service-card__image"><img src="img/service-subsidy.jpg" alt="補助金活用支援のイメージ写真"></div>
+            <div class="related-service-card__body">
+              <h3 class="related-service-card__title">補助金活用支援</h3>
+              <p class="related-service-card__desc">設備投資の補助金申請をトータルサポート</p>
+              <span class="related-service-card__link">詳しく見る →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pre-Footer CTA -->
+    <section class="pre-footer-cta">
+      <div class="pre-footer-cta__inner">
+        <div class="pre-footer-cta__btn">
+          <a href="contact.html" class="btn btn--outline-white btn--lg">
+            お問い合わせ <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+        <div class="pre-footer-cta__btn">
+          <a href="#" class="btn btn--outline-white btn--lg external-link external-link--white" target="_blank" rel="noopener noreferrer">
+            在庫情報はこちら <span class="arrow-icon arrow-icon--white"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       Footer (共通コンポーネント)
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__company">
+          <img class="footer__logo-img" src="img/logo.png" alt="シマモト技研" width="400" height="66">
+          <address class="footer__address">
+            〒335-0031<br>
+            埼玉県戸田市美女木5-14-15
+          </address>
+          <div class="footer__contact">
+            <a href="tel:048-442-0282" class="footer__tel">TEL: 048-442-0282</a>
+            <a href="contact.html" class="btn btn--outline btn--sm">お問い合わせ</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>事業内容</h4>
+            <ul class="footer__nav-list">
+              <li><a href="service-machine.html" class="footer__nav-link">工作機械販売</a></li>
+              <li><a href="service-maintenance.html" class="footer__nav-link">オーバーホール・メンテナンス</a></li>
+              <li><a href="service-robot.html" class="footer__nav-link">ロボット導入・自動化</a></li>
+              <li><a href="service-subsidy.html" class="footer__nav-link">補助金活用支援</a></li>
+              <li><a href="service-closure.html" class="footer__nav-link">廃業支援サービス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>会社情報</h4>
+            <ul class="footer__nav-list">
+              <li><a href="about.html" class="footer__nav-link">シマモト技研について</a></li>
+              <li><a href="company.html" class="footer__nav-link">会社概要</a></li>
+              <li><a href="news.html" class="footer__nav-link">お知らせ</a></li>
+              <li><a href="recruit.html" class="footer__nav-link">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>サポート</h4>
+            <ul class="footer__nav-list">
+              <li><a href="column.html" class="footer__nav-link">お役立ち情報</a></li>
+              <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+              <li><a href="#" class="footer__nav-link external-link external-link--white" target="_blank" rel="noopener noreferrer">在庫情報</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4>その他</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Shimamoto Giken Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.querySelector('.header__mobile-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('is-active');
+        mobileMenu.setAttribute('aria-hidden', isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>
