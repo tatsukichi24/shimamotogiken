@@ -162,7 +162,7 @@
             </div>
           </div>
           <div class="service-hero__image">
-            <img class="photo-fill" src="img/mainte-hero.jpg" style="aspect-ratio: 4/3; min-height: 300px;" alt="サービスエンジニアが工作機械を点検している様子">
+            <img class="photo-fill" src="img/mainte-hero.jpg" style="aspect-ratio: 4/3; min-height: 300px;" alt="盤内の配線を修理している様子">
           </div>
         </div>
       </div>
@@ -173,6 +173,23 @@
     <section class="machine-doctor">
       <div class="container">
         <div class="machine-doctor__inner">
+          <div class="machine-doctor__deco" aria-hidden="true">
+            <svg class="machine-doctor__deco-main" viewBox="0 0 120 120" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path class="md-icon-navy" stroke-width="3" d="M46.44,41.58 L47.53,34.30 L56.47,34.30 L57.56,41.58 A27,27 0 0 1 63.03,43.36 L68.19,38.10 L75.43,43.36 L72.03,49.89 A27,27 0 0 1 75.41,54.55 L82.67,53.33 L85.44,61.84 L78.85,65.12 A27,27 0 0 1 78.85,70.88 L85.44,74.16 L82.67,82.67 L75.41,81.45 A27,27 0 0 1 72.03,86.11 L75.43,92.64 L68.19,97.90 L63.03,92.64 A27,27 0 0 1 57.56,94.42 L56.47,101.70 L47.53,101.70 L46.44,94.42 A27,27 0 0 1 40.97,92.64 L35.81,97.90 L28.57,92.64 L31.97,86.11 A27,27 0 0 1 28.59,81.45 L21.33,82.67 L18.56,74.16 L25.15,70.88 A27,27 0 0 1 25.15,65.12 L18.56,61.84 L21.33,53.33 L28.59,54.55 A27,27 0 0 1 31.97,49.89 L28.57,43.36 L35.81,38.10 L40.97,43.36 A27,27 0 0 1 46.44,41.58 Z"/>
+              <circle class="md-icon-navy" stroke-width="3" cx="52" cy="68" r="11"/>
+              <path class="md-icon-green" stroke-width="3" d="M84 14 v14 a14 14 0 0 0 28 0 v-14"/>
+              <circle class="md-icon-green-fill" cx="84" cy="12" r="2.6"/>
+              <circle class="md-icon-green-fill" cx="112" cy="12" r="2.6"/>
+              <path class="md-icon-green" stroke-width="3" d="M98 42 v18 c0 20 -14 26 -28 20"/>
+              <circle class="md-icon-green" stroke-width="3" fill="#fff" cx="64" cy="76" r="9"/>
+              <circle class="md-icon-green-fill" cx="64" cy="76" r="3.2"/>
+            </svg>
+            <svg class="machine-doctor__deco-sub" viewBox="0 0 80 80" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8">
+              <path class="md-icon-navy" d="M52 10 a12 12 0 0 0 -11 16 L14 53 a5 5 0 0 0 7 7 L48 33 a12 12 0 0 0 16 -11 l-7 5 l-6 -1 l-1 -6 z"/>
+              <path class="md-icon-green" d="M18 14 l8 8 M22 18 l24 24"/>
+              <path class="md-icon-green" d="M46 42 l6 -2 l12 12 a4 4 0 0 1 -6 6 l-12 -12 z"/>
+            </svg>
+          </div>
           <p class="machine-doctor__label">MACHINE DOCTOR</p>
           <h2 class="machine-doctor__title">マシンドクター</h2>
           <h3 class="machine-doctor__catch">機械を診て、原因を見つけ、直す。</h3>
@@ -191,16 +208,37 @@
           </div>
           <div class="machine-doctor__steps">
             <div class="machine-doctor__step">
-              <h4 class="machine-doctor__step-title">診る</h4>
-              <p class="machine-doctor__step-text">音、振動、動き、精度から機械の状態を確認します。</p>
+              <h4 class="machine-doctor__step-title">
+                <svg class="machine-doctor__step-icon" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6">
+                  <path class="md-icon-navy" d="M12 8 v10 a8 8 0 0 0 16 0 v-10"/>
+                  <path class="md-icon-navy" d="M20 26 v6 a8 8 0 0 0 16 0 v-4"/>
+                  <circle class="md-icon-green" fill="#fff" cx="36" cy="24" r="4.5"/>
+                  <circle class="md-icon-green-fill" cx="36" cy="24" r="1.5"/>
+                </svg>
+                <span>診る</span>
+              </h4>
+              <p class="machine-doctor__step-text">音、振動、動き、<br>精度から機械の状態を確認します。</p>
             </div>
             <div class="machine-doctor__step">
-              <h4 class="machine-doctor__step-title">見つける</h4>
+              <h4 class="machine-doctor__step-title">
+                <svg class="machine-doctor__step-icon" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <circle class="md-icon-navy" stroke-width="2.6" cx="21" cy="21" r="13"/>
+                  <path class="md-icon-navy" stroke-width="4" d="M31 31 L41 41"/>
+                  <path class="md-icon-green" stroke-width="2.4" d="M14 22 h4 l2 -5 l3 9 l2 -4 h3"/>
+                </svg>
+                <span>見つける</span>
+              </h4>
               <p class="machine-doctor__step-text">どこが悪いのか、何が原因なのかを探ります。</p>
             </div>
             <div class="machine-doctor__step">
-              <h4 class="machine-doctor__step-title">治す</h4>
-              <p class="machine-doctor__step-text">修理、部品交換、調整、オーバーホールを行います。</p>
+              <h4 class="machine-doctor__step-title">
+                <svg class="machine-doctor__step-icon" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="md-icon-navy" stroke-width="2.6" d="M30 8 a9 9 0 0 0 -8 12 L9 33 a3.5 3.5 0 0 0 5 5 L27 25 a9 9 0 0 0 12 -8 l-5 4 l-5 -1 l-1 -5 z"/>
+                  <path class="md-icon-green" stroke-width="2.8" d="M33 36 l3 3 l7 -8"/>
+                </svg>
+                <span>治す</span>
+              </h4>
+              <p class="machine-doctor__step-text">修理、部品交換、調整、<br>オーバーホールを行います。</p>
             </div>
           </div>
         </div>
@@ -235,7 +273,7 @@
               </div>
             </div>
             <div class="feature-block__image">
-              <img class="photo-fill" src="img/mainte-shindan.jpg" style="aspect-ratio: 4/3;" alt="現場での迅速な診断">
+              <img class="photo-fill" src="img/mainte-genba.jpg" style="aspect-ratio: 4/3;" alt="現場で機械を確認している様子">
             </div>
           </div>
 
@@ -278,7 +316,7 @@
               </div>
             </div>
             <div class="feature-block__image">
-              <img class="photo-fill" src="img/mainte-tenken.jpg" style="aspect-ratio: 4/3;" alt="他社導入機の点検対応">
+              <img class="photo-fill" src="img/mainte-tasha.jpg" style="aspect-ratio: 4/3;" alt="他社メーカー機への対応作業">
             </div>
           </div>
         </div>
@@ -384,7 +422,7 @@
     <section class="used-machine-banner">
       <div class="container">
         <div class="used-machine-banner__inner">
-          <p class="used-machine-banner__label">USED MACHINE</p>
+          <p class="used-machine-banner__label">MACHINE BUYBACK</p>
           <h2 class="used-machine-banner__title">中古工作機械の買取にも対応しています。</h2>
           <p class="used-machine-banner__text">
             旋盤、マシニングセンタをはじめ、工場内の工作機械を査定・買取。<br>

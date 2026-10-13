@@ -41,8 +41,8 @@
 .merit-section+.used-machine-banner{margin-top:-1px}
 /* バナー直後にセクションが続く場合、双方の余白が重なって空きすぎるため片方を相殺 */
 .used-machine-banner+.features-section{border-top:0;padding-top:0}
-.used-machine-banner+.used-machine-banner{border-top:0;margin-top:-1px;padding-top:0}
 .used-machine-banner+.related-services{border-top:0;padding-top:0}
+.used-machine-banner__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .used-machine-banner__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:48px;background:var(--color-primary-pale)}
 .used-machine-banner__label{font:700 12px var(--font-en);letter-spacing:.12em;color:var(--color-primary)}
 .used-machine-banner__title{font:700 26px/1.5 var(--font-jp);letter-spacing:.03em}
@@ -76,17 +76,26 @@
 
 /* ---------- Machine Doctor ---------- */
 .machine-doctor{padding:var(--sec-pad) 0;border-top:1px solid var(--color-border-card)}
-.machine-doctor__inner{display:flex;flex-direction:column;gap:16px;padding:64px;border:1px solid var(--color-border-card)}
+.machine-doctor__inner{position:relative;display:flex;flex-direction:column;gap:16px;padding:64px;border:1px solid var(--color-border-card)}
 .machine-doctor__label{font:700 12px var(--font-en);letter-spacing:.12em;color:var(--color-primary)}
 .machine-doctor__title{position:relative;padding-bottom:18px;font:700 32px/1.5 var(--font-jp);letter-spacing:.04em}
 .machine-doctor__title::after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--color-primary)}
-.machine-doctor__catch{font:700 22px/1.6 var(--font-jp);color:var(--color-navy)}
+.machine-doctor__catch{position:relative;max-width:640px;font:700 22px/1.6 var(--font-jp);color:var(--color-navy)}
 .machine-doctor__lead{display:flex;flex-direction:column;gap:12px;max-width:760px;font-size:15px;line-height:2}
-.machine-doctor__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:32px;border:1px solid var(--color-border-card)}
+.machine-doctor__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border:1px solid var(--color-border-card);border-radius:4px;overflow:hidden}
 .machine-doctor__step{display:flex;flex-direction:column;gap:10px;padding:28px}
 .machine-doctor__step+.machine-doctor__step{border-left:1px solid var(--color-border-card)}
-.machine-doctor__step-title{padding-bottom:10px;border-bottom:2px solid var(--color-primary);font:700 22px/1.4 var(--font-jp);color:var(--color-navy)}
+.machine-doctor__step-title{display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--color-primary);font:700 22px/1.4 var(--font-jp);color:var(--color-navy)}
+.machine-doctor__step-icon{flex:none;width:30px;height:30px}
 .machine-doctor__step-text{font-size:14px;line-height:1.9}
+
+/* 右上の装飾イラスト（聴診ギア＋スパナ×ドライバー） */
+.machine-doctor__deco{pointer-events:none}
+.machine-doctor__deco-main{position:absolute;top:28px;right:28px;width:190px;height:190px}
+.machine-doctor__deco-sub{position:absolute;top:232px;right:180px;width:96px;height:96px}
+.md-icon-navy{stroke:var(--color-navy)}
+.md-icon-green{stroke:var(--color-primary)}
+.md-icon-green-fill{fill:var(--color-primary)}
 
 /* ---------- Tel Banner ---------- */
 .tel-banner{padding:0 0 var(--sec-pad)}
