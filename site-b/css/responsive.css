@@ -292,7 +292,7 @@
   }
 
   .news__more {
-    margin-top: var(--sp-3);
+    margin-top: 0;
   }
 
   /* ---- Final CTA ---- */
@@ -350,18 +350,75 @@
    ここでカンプの寸法に厳密に合わせる:
    1) ヘッダーのフルナビ（リンク7個+ボタン3個+ロゴ、
       合計必要幅 約1440px）は1024pxには収まらない
+      → 実測で1280px台だと横はみ出しが起きるため、
+        ナビ表示の切り替え自体は下の1440pxブロックで行う
+        （1024〜1439pxはハンバーガーメニュー＋下部固定バー）
    2) サービスカード04/05の横並び・120px画像・小フォント
    3) CONCEPTの写真幅520px固定
-   1024〜1279pxはハンバーガーメニュー＋下部固定バー、
-   サービスカード04/05は縦積み、CONCEPT写真は比率幅で表示する。
+   1024〜1279pxはサービスカード04/05が縦積み、
+   CONCEPT写真は比率幅で表示する。
    ============================================ */
 @media (min-width: 1280px) {
+  /* ---- Service card tertiary (04/05): top-b.html準拠の寸法 ---- */
+  .service-card--tertiary {
+    flex-direction: row;
+    height: 150px;
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .service-card--tertiary .service-card__media {
+    flex: none;
+    width: 120px;
+    height: auto;
+  }
+
+  .service-card--tertiary .service-card__body {
+    justify-content: center;
+    padding: 20px 22px;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .service-card--tertiary .service-card__label {
+    font-size: 0.625rem;
+  }
+
+  .service-card--tertiary .service-card__title {
+    font-size: 1.0625rem;
+    line-height: 1.4;
+  }
+
+  .service-card--tertiary .service-card__desc {
+    font-size: 0.75rem;
+    line-height: 1.7;
+  }
+
+  /* ---- Final CTA bar media/title: top-b.html準拠の寸法 ---- */
+  .final-cta__media {
+    width: 140px;
+    height: 96px;
+  }
+
+  .final-cta__title {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================
+   ヘッダーのPCフルナビ切り替え（1440px〜）
+   リンク7個+ボタン3個+ロゴ+電話番号の合計必要幅は約1440px。
+   以前は1280pxで切り替えていたため、1280〜1330px程度の
+   やや狭いPC画面幅でナビが横にはみ出す不具合があった。
+   1024〜1439pxはハンバーガーメニュー＋下部固定バーを使う。
+   ============================================ */
+@media (min-width: 1440px) {
   .header__topbar {
-    padding: 0 var(--sp-3);
+    padding: 0 48px;
   }
 
   .header__inner {
-    padding: 0 var(--sp-3);
+    padding: 0 48px;
   }
 
   .header__logo-placeholder {
@@ -372,7 +429,7 @@
   .header__nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 40px;
   }
 
   .header__nav-list {
@@ -444,51 +501,6 @@
   .mobile-menu,
   .fixed-bottom-bar {
     display: none;
-  }
-
-  /* ---- Service card tertiary (04/05): top-b.html準拠の寸法 ---- */
-  .service-card--tertiary {
-    flex-direction: row;
-    height: 150px;
-    min-height: 0;
-    min-width: 0;
-  }
-
-  .service-card--tertiary .service-card__media {
-    flex: none;
-    width: 120px;
-    height: auto;
-  }
-
-  .service-card--tertiary .service-card__body {
-    justify-content: center;
-    padding: 20px 22px;
-    gap: 6px;
-    min-width: 0;
-  }
-
-  .service-card--tertiary .service-card__label {
-    font-size: 0.625rem;
-  }
-
-  .service-card--tertiary .service-card__title {
-    font-size: 1.0625rem;
-    line-height: 1.4;
-  }
-
-  .service-card--tertiary .service-card__desc {
-    font-size: 0.75rem;
-    line-height: 1.7;
-  }
-
-  /* ---- Final CTA bar media/title: top-b.html準拠の寸法 ---- */
-  .final-cta__media {
-    width: 140px;
-    height: 96px;
-  }
-
-  .final-cta__title {
-    font-size: 1.25rem;
   }
 }
 

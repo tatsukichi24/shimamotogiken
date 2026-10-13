@@ -1,0 +1,250 @@
+/* =========================================================
+   recruit-theme.css — 採用ページ専用（v4: 30〜40代向けトーン調整）
+   recruit.html だけが読み込む。polish.css の後。
+   クラスは rc- 接頭辞で独立（コーポレート側の CSS と干渉しない）
+   ========================================================= */
+.page-recruit{--r-card:8px;--r-inner:6px;--r-pill:4px;--font-script:"Anton","Barlow Condensed",sans-serif;--rc-ease:cubic-bezier(.2,.6,.2,1)}
+
+/* ---------- 基本 ---------- */
+.rc-sec{position:relative;padding:104px 0 96px;overflow:clip;word-break:normal;line-break:strict;overflow-wrap:anywhere}
+.rc-h1,.rc-h2,.rc-card__title,.rc-feat__title,.rc-job__title,.rc-flow__title,.rc-hero__catch,.rc-job__catch,.rc-why__highlight,.rc-msg__highlight,.rc-entry__lead{word-break:auto-phrase;text-wrap:balance}
+.rc-face-gray{background:var(--color-bg-gray)}
+.rc-face-white{background:var(--color-bg)}
+.rc-face-green{background:var(--color-primary)}
+.rc-face-light{background:var(--color-bg-alt)}
+.rc-wrap{position:relative;max-width:1440px;margin:0 auto;padding:0 120px;box-sizing:border-box}
+.rc-sec h1,.rc-sec h2,.rc-sec h3,.rc-sec h4,.rc-sec p,.rc-sec ul{margin:0}
+.rc-sec ul{padding:0;list-style:none}
+.rc-sec p,.rc-sec li{text-wrap:pretty}
+.rc-sec img{display:block;max-width:none}
+.rc-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- 見出しの型（筆記体 + h2）---------- */
+.rc-head{position:relative;padding-top:64px;display:flex;flex-direction:column;gap:16px}
+.rc-script{position:absolute;left:-2px;top:-10px;font:400 84px/1 var(--font-script);letter-spacing:.01em;text-transform:uppercase;color:var(--color-navy);opacity:.09;white-space:nowrap;pointer-events:none;user-select:none}
+.rc-h2{font-size:32px;line-height:1.5;font-weight:700;letter-spacing:.01em;color:var(--color-navy)}
+.rc-head--center{align-items:center;text-align:center}
+.rc-head--center .rc-script{left:50%;transform:translateX(-50%)}
+.rc-face-green .rc-script,.rc-face-green .rc-h2{color:var(--color-text-on-dark)}
+.rc-face-green .rc-script{opacity:.22}
+.rc-note{font-size:14px;line-height:2;color:var(--color-text-muted)}
+
+/* 左見出し / 右コンテンツ */
+.rc-split{display:grid;grid-template-columns:320px minmax(0,1fr);gap:56px;align-items:start}
+.rc-split__head{position:sticky;top:120px}
+
+/* ---------- ボタン ---------- */
+.rc-btn{display:inline-flex;align-items:center;gap:14px;padding:15px 28px;border:1px solid transparent;border-radius:var(--r-pill);font-size:14px;font-weight:700;letter-spacing:.06em;line-height:1.4;text-decoration:none;transition:background-color .25s var(--rc-ease),color .25s var(--rc-ease),border-color .25s var(--rc-ease),filter .25s var(--rc-ease)}
+.rc-btn,.rc-tag,.rc-entry__box-ja,.rc-flow__label{overflow-wrap:normal;word-break:keep-all}
+.rc-btn--accent{background:var(--color-accent);color:var(--color-navy)}
+.rc-btn--accent:hover{filter:brightness(.94);color:var(--color-navy)}
+.rc-btn--outline{background:transparent;border-color:var(--color-navy);color:var(--color-navy)}
+.rc-btn--outline:hover{background:var(--color-navy);color:var(--color-text-on-dark)}
+.rc-btn--primary{background:var(--color-primary);color:var(--color-text-on-dark)}
+.rc-btn--primary:hover{background:var(--color-primary-deep);color:var(--color-text-on-dark)}
+.rc-arrow{display:inline-flex;flex:none;align-items:center;justify-content:center;width:22px;height:22px;border:1px solid currentColor;border-radius:2px;font-size:12px;line-height:1;overflow:hidden}
+.rc-arrow::after{content:"\2192";transition:transform .25s var(--rc-ease)}
+a:hover .rc-arrow::after{transform:translateX(3px)}
+
+/* 英字ラベル（コーポレート共通の 24px ヘアライン） */
+.rc-label{display:flex;align-items:center;gap:10px;font:700 11px/1.2 var(--font-en);letter-spacing:.14em;color:var(--color-primary)}
+.rc-label::after{content:"";flex:none;width:24px;height:1px;background:currentColor;opacity:.7}
+
+/* 写真 + 色面 */
+.rc-photo{position:relative}
+.rc-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-card)}
+.rc-block{position:absolute;border-radius:var(--r-card)}
+.rc-block--accent{background:var(--color-accent)}
+.rc-block--primary{background:var(--color-primary)}
+.rc-block--light{background:var(--color-navy)}
+
+
+/* ---------- HERO ---------- */
+.rc-hero{padding:56px 0 72px}
+.rc-hero__bgword{position:absolute;right:-8px;bottom:-40px;font:400 260px/1 var(--font-script);letter-spacing:.01em;color:var(--color-bg-white);opacity:.9;white-space:nowrap;pointer-events:none;user-select:none}
+.rc-hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.rc-hero__text{position:relative;padding-top:68px;display:flex;flex-direction:column;gap:24px}
+.rc-hero__text .rc-script{top:-12px;font-size:92px}
+.rc-h1{font-size:50px;line-height:1.36;font-weight:700;letter-spacing:0;color:var(--color-navy)}
+.rc-hero__catch{font-size:18px;font-weight:700;line-height:1.7;color:var(--color-primary)}
+.rc-hero__lead{display:flex;flex-direction:column;gap:8px;max-width:480px;font-size:15px;line-height:2}
+.rc-hero__btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.rc-tags{display:flex;flex-wrap:wrap;gap:8px;max-width:520px;padding-top:12px;border-top:1px solid var(--color-border)}
+.rc-tag{padding:5px 12px;border:1px solid var(--color-border-card);border-radius:2px;background:var(--color-bg-white);font-size:11px;letter-spacing:.04em;line-height:1.6;color:var(--color-text-muted)}
+.rc-hero__photo{height:540px;margin-right:20px}
+.rc-hero__photo .rc-block--accent{right:-20px;bottom:-20px;width:60%;height:60%}
+.rc-hero__photo .rc-block--primary{left:-20px;top:-20px;width:120px;height:120px}
+.rc-hero__badge{position:absolute;left:24px;bottom:24px;z-index:1;padding:9px 14px;border-radius:3px;background:rgba(255,255,255,.94)}
+
+/* ---------- カード（FOR YOU / SKILLS / EDUCATION / VALUES / GUIDELINES）---------- */
+.rc-cards{display:grid;gap:20px}
+.rc-cards--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rc-cards--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rc-card{position:relative;display:flex;flex-direction:column;gap:14px;padding:28px 28px 32px;border:1px solid var(--color-border);border-radius:var(--r-card);background:var(--color-bg-white)}
+.rc-face-gray .rc-card{border-color:transparent}
+/* カード番号 = 主役（アイコンの代わり）。数字の下に短い紺のバー */
+.rc-card__no{position:relative;display:flex;flex-direction:column;gap:12px;font:400 44px/1 var(--font-script);letter-spacing:.02em;color:var(--color-navy)}
+.rc-card__no::after{content:"";width:28px;height:2px;background:var(--color-primary)}
+.rc-card__title{font-size:17px;line-height:1.6;font-weight:700;color:var(--color-navy)}
+.rc-card__text{font-size:14px;line-height:1.9}
+.rc-card .rc-btn{align-self:flex-start;margin-top:auto}
+
+/* ---------- WHY NOW（緑の帯）---------- */
+.rc-why{padding:96px 0}
+.rc-why__bgword{position:absolute;left:-10px;top:-40px;font:400 300px/1 var(--font-script);text-transform:uppercase;color:var(--color-text-on-dark);opacity:.07;white-space:nowrap;pointer-events:none;user-select:none}
+.rc-why__inner{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:20px;text-align:center;color:var(--color-text-on-dark);font-size:15px;line-height:2.1}
+.rc-why__inner .rc-head{margin-bottom:8px;padding-top:0}
+.rc-why__inner .rc-head .rc-script{display:none}
+.rc-why__highlight{padding:8px 0;font-size:34px;line-height:1.6;font-weight:700;letter-spacing:.04em;color:var(--color-accent)}
+.rc-why__highlight strong{font-weight:700}
+
+/* ---------- MESSAGE（コラージュ）---------- */
+.rc-msg{padding:120px 0 112px}
+.rc-msg__inner{position:relative;z-index:1;max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:28px;text-align:center}
+.rc-msg__body{display:flex;flex-direction:column;gap:14px;font-size:15px;line-height:2.2}
+.rc-msg__highlight{padding:16px 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);font-size:19px;font-weight:700;line-height:2;color:var(--color-primary)}
+.rc-collage{position:absolute;inset:0;pointer-events:none}
+.rc-collage__item{position:absolute}
+.rc-collage__item>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-inner)}
+.rc-collage__item .rc-block{border-radius:var(--r-inner)}
+.rc-collage__item--1{left:24px;top:-8px;width:200px;height:250px}
+.rc-collage__item--1 .rc-block{right:-24px;top:-24px;width:120px;height:120px}
+.rc-collage__item--2{left:0;top:320px;width:250px;height:170px}
+.rc-collage__item--2 .rc-block{left:-24px;bottom:-24px;width:110px;height:110px}
+.rc-collage__item--3{right:48px;top:-24px;width:150px;height:110px}
+.rc-collage__item--3 .rc-block{left:-20px;top:-20px;width:80px;height:80px}
+.rc-collage__item--4{right:24px;top:200px;width:230px;height:290px}
+.rc-collage__item--4 .rc-block{right:-24px;top:-24px;width:160px;height:200px}
+
+/* ---------- FEATURE ---------- */
+.rc-feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.rc-feat__item{display:flex;flex-direction:column;gap:12px;padding:20px 20px 28px;border-radius:var(--r-card);background:var(--color-bg-white)}
+.rc-feat__media{position:relative}
+.rc-feat__media img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-inner)}
+.rc-feat__no{position:absolute;left:-4px;top:-26px;z-index:1;font:400 56px/1 var(--font-script);letter-spacing:.02em;color:var(--color-navy)}
+.rc-feat__title{padding-top:6px;font-size:19px;line-height:1.6;font-weight:700;color:var(--color-navy)}
+.rc-feat__sub{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--color-primary)}
+.rc-feat__text{font-size:14px;line-height:1.9}
+
+/* ---------- WORKS（うす緑の面）---------- */
+.rc-works__ring{position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid var(--color-border);pointer-events:none}
+.rc-works__ring--1{right:-20px;top:-20px}
+.rc-works__ring--2{right:60px;top:60px;border-color:var(--color-border)}
+.rc-face-light .rc-job{border:1px solid var(--color-border)}
+.rc-jobs{display:flex;flex-direction:column;gap:24px}
+.rc-job{display:flex;flex-direction:column;gap:24px;padding:16px 16px 32px;border-radius:var(--r-card);background:var(--color-bg-white)}
+.rc-job__top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:center}
+.rc-job__top img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-inner)}
+.rc-job__head{display:flex;flex-direction:column;gap:12px;padding-right:16px}
+.rc-job__title{font-size:24px;line-height:1.5;font-weight:700;color:var(--color-navy)}
+.rc-job__catch{font-size:15px;font-weight:700;line-height:1.7;color:var(--color-primary)}
+.rc-job__lead{font-size:14px;line-height:1.9}
+.rc-job__body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 32px;padding:24px 16px 0;border-top:1px solid var(--color-border)}
+.rc-job__col{display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.9}
+.rc-job__col--wide{grid-column:1/-1;padding:20px 24px;border-radius:var(--r-inner);background:var(--color-primary-pale)}
+.rc-job__sub{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--color-navy)}
+.rc-job__sub::before{content:"";flex:none;width:3px;height:14px;background:var(--color-primary)}
+.rc-job__list{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+.rc-job__list li{position:relative;padding-left:14px;font-size:13px;line-height:1.8}
+.rc-job__list li::before{content:"";position:absolute;left:0;top:.85em;width:6px;height:1px;background:var(--color-primary)}
+
+/* ---------- EDUCATION: キャリア ---------- */
+.rc-career{display:flex;flex-direction:column;gap:18px;margin-top:24px;padding:28px 32px;border-radius:var(--r-card);background:var(--color-bg-white)}
+.rc-career__title{font-size:15px;font-weight:700;color:var(--color-navy)}
+.rc-career__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px}
+.rc-career__list li{position:relative;display:flex;align-items:center;padding:14px 16px;border-radius:var(--r-inner);border:1px solid var(--color-border);background:var(--color-bg-alt);font-size:13px;font-weight:700;line-height:1.6;color:var(--color-navy)}
+.rc-career__list li:nth-child(even)::before{content:"";position:absolute;left:-18px;top:50%;width:7px;height:7px;border-top:1px solid var(--color-primary);border-right:1px solid var(--color-primary);transform:translateY(-50%) rotate(45deg)}
+
+/* ---------- PERSON ---------- */
+.rc-person__notes{display:flex;flex-direction:column;gap:6px}
+.rc-sec .rc-checks{display:grid;grid-template-columns:1fr 1fr;gap:20px 36px;align-self:center;padding:40px 44px;border-radius:var(--r-card);background:var(--color-bg-white)}
+.rc-checks li{display:flex;align-items:center;gap:14px;font-size:15px;font-weight:500;line-height:1.6}
+.rc-checks li::before{content:"";flex:none;width:24px;height:24px;border-radius:3px;background:var(--color-navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 5l3.5 3.5L11 1'/%3E%3C/svg%3E") center/12px 10px no-repeat}
+
+/* ---------- GUIDELINES ---------- */
+.rc-sec .rc-guide__note{margin-top:20px;font-size:12px;line-height:1.9;color:var(--color-text-muted)}
+
+/* ---------- FLOW ---------- */
+.rc-flow{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:56px}
+.rc-flow__line{position:absolute;left:12.5%;right:12.5%;top:28px;border-top:1px dashed var(--color-navy);opacity:.4}
+.rc-flow__step{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;padding:0 20px;text-align:center}
+.rc-flow__dot{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border:1px solid var(--color-navy);border-radius:3px;background:var(--color-bg-white);font:400 20px var(--font-script);letter-spacing:.04em;color:var(--color-navy)}
+.rc-flow__step:last-child .rc-flow__dot{background:var(--color-navy);border-color:var(--color-navy);color:var(--color-text-on-dark)}
+.rc-flow__label{font:700 10px var(--font-en);letter-spacing:.14em;color:var(--color-text-muted)}
+.rc-flow__title{font-size:18px;font-weight:700;color:var(--color-navy)}
+.rc-flow__text{font-size:13px;line-height:1.9}
+.rc-sec .rc-flow__note{margin-top:40px;text-align:center;font-size:12px;color:var(--color-text-muted)}
+
+/* ---------- ENTRY ---------- */
+.rc-entry{padding:104px 0 120px}
+.rc-entry__grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:64px;align-items:center}
+.rc-entry__text{display:flex;flex-direction:column;gap:28px}
+.rc-entry__text .rc-head{padding-top:68px}
+.rc-entry__text .rc-script{top:-12px;font-size:92px}
+.rc-entry__text .rc-h2{font-size:34px}
+.rc-entry__lead{font-size:17px;font-weight:700;line-height:2;color:var(--color-navy)}
+.rc-entry__body{font-size:15px;line-height:2}
+.rc-entry__boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:560px}
+.rc-entry__box{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:28px 24px;border:1px solid transparent;border-radius:var(--r-card);color:var(--color-navy);text-decoration:none;transition:filter .25s var(--rc-ease),background-color .25s var(--rc-ease),color .25s var(--rc-ease)}
+.rc-entry__box--accent{background:var(--color-accent)}
+.rc-entry__box--accent:hover{filter:brightness(.95);color:var(--color-navy)}
+.rc-entry__box--outline{border-color:var(--color-navy);background:var(--color-bg-white)}
+.rc-entry__box--outline:hover{background:var(--color-navy);color:var(--color-text-on-dark)}
+.rc-entry__box-text{display:flex;flex-direction:column;gap:6px}
+.rc-entry__box-en{font:700 11px var(--font-en);letter-spacing:.14em}
+.rc-entry__box--accent .rc-entry__box-en{color:var(--color-navy)}
+.rc-entry__box--outline .rc-entry__box-en{color:var(--color-primary)}
+.rc-entry__box--outline:hover .rc-entry__box-en{color:var(--color-text-on-dark)}
+.rc-entry__box-ja{font-size:17px;font-weight:700}
+.rc-entry__box .rc-arrow{width:36px;height:36px;font-size:15px;border-radius:3px}
+.rc-entry__photo{height:500px;margin-right:20px}
+.rc-entry__photo .rc-block--light{right:-20px;top:-20px;width:55%;height:55%}
+.rc-entry__photo .rc-block--accent{left:-20px;bottom:-20px;width:110px;height:110px}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width:1199px){
+  .rc-wrap{padding:0 56px}
+  .rc-collage{position:static;display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:600px;margin:56px auto 0}
+  .rc-collage__item{position:relative;inset:auto;width:auto;height:200px}
+  .rc-collage__item .rc-block{width:45%;height:45%}
+}
+@media (max-width:1023px){
+  .rc-sec{padding:88px 0 80px}
+  .rc-split{grid-template-columns:minmax(0,1fr);gap:40px}
+  .rc-split__head{position:static}
+  .rc-hero__grid,.rc-entry__grid{grid-template-columns:minmax(0,1fr);gap:48px}
+  .rc-hero__photo,.rc-entry__photo{order:-1;height:380px;margin:20px 20px 0}
+  .rc-hero__bgword{font-size:120px}
+  .rc-feat{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:767px){
+  .rc-wrap{padding:0 20px}
+  .rc-sec,.rc-why,.rc-msg,.rc-entry{padding:72px 0 64px}
+  .rc-hero{padding:32px 0 56px}
+  .rc-head{padding-top:46px}
+  .rc-script{top:-8px;font-size:56px}
+  .rc-hero__text,.rc-entry__text .rc-head{padding-top:50px}
+  .rc-hero__text .rc-script,.rc-entry__text .rc-script{top:-8px;font-size:64px}
+  .rc-h1{font-size:32px}
+  .rc-h2,.rc-entry__text .rc-h2{font-size:24px}
+  .rc-hero__photo,.rc-entry__photo{height:260px;margin:14px 14px 0}
+  .rc-hero__photo .rc-block,.rc-entry__photo .rc-block{transform:scale(.7)}
+  .rc-hero__bgword{font-size:96px;bottom:-14px}
+  .rc-why__bgword{font-size:160px}
+  .rc-why__highlight{font-size:24px}
+  .rc-cards--3,.rc-cards--2,.rc-feat,.rc-job__body,.rc-job__list,.rc-checks,.rc-entry__boxes,.rc-career__list,.rc-job__top{grid-template-columns:minmax(0,1fr)}
+  .rc-career__list li::before{display:none}
+  .rc-sec .rc-checks{padding:28px 24px}
+  .rc-card{padding:28px 24px}
+  .rc-job__head{padding:0 8px}
+  .rc-job__body{padding:20px 8px 0}
+  .rc-collage{gap:20px}
+  .rc-collage__item{height:140px}
+  .rc-flow{grid-template-columns:minmax(0,1fr);gap:32px;margin-top:40px}
+  .rc-flow__line{left:28px;right:auto;top:28px;bottom:28px;border-top:0;border-left:1px dashed var(--color-navy)}
+  .rc-flow__step{display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:20px;row-gap:6px;padding:0;text-align:left;justify-items:start}
+  .rc-flow__dot{grid-row:1/span 3}
+  .rc-hero__btns .rc-btn{flex:1 1 100%;justify-content:space-between}
+  .rc-entry__body br,.rc-msg__body br,.rc-flow__text br{display:none}
+}
+@media (prefers-reduced-motion:reduce){.rc-btn,.rc-arrow::after,.rc-entry__box{transition:none}}
