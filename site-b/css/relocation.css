@@ -1,0 +1,30 @@
+/* =========================================================
+   relocation.css — ワンポイント特設：設備エンジニアリング 移設サービス
+   サイト共通パーツ（section / section-header / tag / btn / 情報カード）で構成。
+   このCSSはレイアウトと工程リストのみ。接頭辞 rl-。
+   ========================================================= */
+.rl.section--alt{border-top-color:var(--color-primary);border-bottom-color:var(--color-primary)}
+.rl__inner{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+.rl .section-header{margin-bottom:24px}
+.rl__catch{font-weight:700;font-size:1.125rem;line-height:1.7;color:var(--color-navy)}
+.rl__text{margin-top:12px;line-height:2}
+.rl__action{margin-top:32px}
+
+/* 情報カード（サイト共通：白・1px枠・上辺2px紺） */
+.rl__card{padding:28px 32px 20px;background:var(--color-bg-white);border:1px solid var(--color-border-card);border-top:2px solid var(--color-navy);border-radius:var(--radius-md)}
+.rl__card-title{padding-bottom:14px;border-bottom:1px solid var(--color-border-card);font-weight:700;font-size:1rem;color:var(--color-navy)}
+.rl__steps{margin:0;padding:0;list-style:none}
+.rl__step{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border)}
+.rl__step:last-child{border-bottom:0}
+.rl__no{font-family:var(--font-en);font-weight:700;font-size:.75rem;letter-spacing:.14em;color:var(--color-primary)}
+.rl__name{font-weight:700;color:var(--color-navy)}
+.rl__name small{margin-left:10px;font-weight:400;font-size:.8125rem;color:var(--color-text-muted)}
+
+@media (min-width:1024px){
+  .rl__inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+}
+@media (max-width:600px){
+  .rl__card{padding:24px 20px 12px}
+  .rl__name small{display:block;margin:2px 0 0}
+  .rl__action .btn{width:100%}
+}
